@@ -1,0 +1,44 @@
+#page .nav-link.navBtn:hover {
+    transform: translateY(-3px);
+    -webkit-box-shadow: 0 10px 15px rgb(245 220 175 / 30%);
+    box-shadow: 0 10px 15px rgb(245 220 175 / 30%);
+}
+
+#page .navbar .nav-link:hover {
+  color: var(--color-primary);
+  text-shadow: 0 0 10px rgb(245 220 175), 0 0 10px rgb(245 220 175);
+}
+
+#page .nav-link.navBtn {
+  margin-right: 0;
+  transition: all 0.2s;
+}
+
+.navbar .navBtn.btnPrimary {
+	font-family:'Royal'
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transition: all 0.5s;
+}
+
+.navbar.sticky {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.nav-item .nav-link.disabled{
+  color: var(--color-disabled);
+  pointer-events: none;
+  cursor: default;
+}
+
+.mm-listitem:last-child {
+  color: var(--color-disabled);
+  pointer-events: none;
+  cursor: default;
+}

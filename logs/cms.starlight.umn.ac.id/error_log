@@ -1,0 +1,2 @@
+[Sun Jul 18 03:51:28.070071 2021] [ssl:warn] [pid 23896:tid 140366067030144] AH01909: RSA certificate configured for cms.starlight.umn.ac.id:443 does NOT include an ID which matches the server name
+[Sun Jul 18 03:51:34.309003 2021] [ssl:warn] [pid 23896:tid 140366067030144] AH01909: RSA certificate configured for cms.starlight.umn.ac.id:443 does NOT include an ID which matches the server name

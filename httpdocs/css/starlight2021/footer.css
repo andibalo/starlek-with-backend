@@ -1,0 +1,15 @@
+.socialLinks a {
+   color: var(--color-primary);
+}
+
+.footer {
+	position:relative
+}
+
+#backToTop {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
