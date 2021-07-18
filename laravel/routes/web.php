@@ -69,8 +69,10 @@ Route::group(['prefix'=>'admin'], function(){
 	Route::get('/registration/{dataUmum}','PanelController@registration_detail')->name('panel.registration.detail')->middleware('auth');
 });
 
-
-
+Route::group(['prefix'=>'contestant'], function(){
+	Route::get('/','ContestantRegistrationController@index')->name('panel.registration');
+	
+});
 Route::any('{query}',
   function() { return redirect('/'); })
   ->where('query', '.*');
