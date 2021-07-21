@@ -38,6 +38,7 @@ Route::get('/about','CMSController@aboutusnew')->name('aboutusnew');
 
 
 
+
 Route::group(['prefix'=>'vote'], function(){
 	Route::get('/','VotingStellarController@index')->name('vote');
 	Route::post('post', 'VotingStellarController@storeVoteData')->name('vote.store');
@@ -70,7 +71,8 @@ Route::group(['prefix'=>'admin'], function(){
 });
 
 Route::group(['prefix'=>'contestant'], function(){
-	Route::get('/','ContestantRegistrationController@index')->name('panel.registration');
+	Route::get('/','ContestantRegistrationController@index')->name('i');
+	Route::post('/','ContestantRegistrationController@createIsthara')->name('createIsthara');
 	
 });
 Route::any('{query}',
