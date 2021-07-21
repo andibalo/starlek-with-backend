@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/','CMSController@home')->name('home');
+Route::get('/', 'CMSController@home')->name('home');
 
 //Route::get('/aboutus','CMSController@aboutus')->name('aboutus');
 
@@ -25,15 +25,15 @@ Route::get('/','CMSController@home')->name('home');
 
 //Route::get('/email','CMSController@email')->name('email');
 
-Route::get('/recruitment','CMSController@recruitment')->name('recruitment');
+Route::get('/recruitment', 'CMSController@recruitment')->name('recruitment');
 
-Route::get('/faq','CMSController@faq')->name('faq');
+Route::get('/faq', 'CMSController@faq')->name('faq');
 
-Route::get('/citymap','CMSController@citymap')->name('citymap');
+Route::get('/citymap', 'CMSController@citymap')->name('citymap');
 
 //Route::get('/','CMSController@homenew')->name('homenew');
 
-Route::get('/about','CMSController@aboutusnew')->name('aboutusnew');
+Route::get('/about', 'CMSController@aboutusnew')->name('aboutusnew');
 
 
 
@@ -43,20 +43,20 @@ Route::group(['prefix'=>'vote'], function(){
 	Route::get('/','VotingStellarController@index')->name('vote');
 	Route::post('post', 'VotingStellarController@storeVoteData')->name('vote.store');
 	Route::post('check', 'VotingStellarController@checkVotedData')->name('vote.check');
-	Route::get('announcement','CMSController@announcement')->name('announcement');
+	Route::get('announcement', 'CMSController@announcement')->name('announcement');
 });
 
-Route::group(['prefix'=>'registration'], function(){
-	Route::get('','RegistrationController@index')->name('registration');
+Route::group(['prefix' => 'registration'], function () {
+	Route::get('', 'RegistrationController@index')->name('registration');
 	Route::post('/post', 'RegistrationController@registrationPost')->name('registrationPost');
-	Route::group(['prefix'=>'result'], function(){
-		Route::get('','RegistrationResultCheckController@index')->name('search');
+	Route::group(['prefix' => 'result'], function () {
+		Route::get('', 'RegistrationResultCheckController@index')->name('search');
 		Route::post('post', 'RegistrationResultCheckController@searchPost')->name('searchPost');
 	});
 });
 
-Route::group(['prefix'=>'twibbon'], function(){
-	Route::get('','TwibbonController@index')->name('twibbon');
+Route::group(['prefix' => 'twibbon'], function () {
+	Route::get('', 'TwibbonController@index')->name('twibbon');
 	Route::post('post', 'TwibbonController@twibbonPost')->name('twibbonPost');
 });
 
@@ -65,9 +65,9 @@ Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
-Route::group(['prefix'=>'admin'], function(){
-	Route::get('/registration','PanelController@registration')->name('panel.registration')->middleware('auth');
-	Route::get('/registration/{dataUmum}','PanelController@registration_detail')->name('panel.registration.detail')->middleware('auth');
+Route::group(['prefix' => 'admin'], function () {
+	Route::get('/registration', 'PanelController@registration')->name('panel.registration')->middleware('auth');
+	Route::get('/registration/{dataUmum}', 'PanelController@registration_detail')->name('panel.registration.detail')->middleware('auth');
 });
 
 Route::group(['prefix'=>'contestant'], function(){
@@ -75,6 +75,21 @@ Route::group(['prefix'=>'contestant'], function(){
 	Route::post('/','ContestantRegistrationController@createIsthara')->name('createIsthara');
 	
 });
-Route::any('{query}',
-  function() { return redirect('/'); })
-  ->where('query', '.*');
+
+Route::group(['prefix' => 'regisContestant'], function () {
+	Route::get('/', 'CMSController@regisContestant')->name('panel.regis');
+});
+
+use Illuminate\Http\Request;
+
+Route::post('/upload', function (Request $request) {
+	dd($request->file("gambar")->store("1aOE8KhzgAI4QuIZI65q7H7XlpATx_N0L", "google"));
+});
+
+Route::any(
+	'{query}',
+	function () {
+		return redirect('/');
+	}
+)
+	->where('query', '.*');

@@ -41,21 +41,23 @@ class CMSController extends Controller
         return view('cms.contact', compact('title', 'nav_menu'));
     }
 
-    public function event(){
+    public function event()
+    {
         $title = "Event";
         $nav_menu = "event";
-        
+
         return view('cms.event', compact('title', 'nav_menu'));
     }
 
-    public function announcement(){
+    public function announcement()
+    {
         $title = "Announcement of Sirius";
         $nav_menu = "announcement";
-        
+
         return view('cms.announcement', compact('title', 'nav_menu'));
     }
 
-     public function homenew()
+    public function homenew()
     {
         $title = "Home";
         $nav_menu = 'home';
@@ -71,24 +73,35 @@ class CMSController extends Controller
         return view('starlight2021.about', compact('title', 'nav_menu'));
     }
 
-    public function recruitment(){
+    public function recruitment()
+    {
         $title = "Recruitment";
         $nav_menu = "announcement";
-        
+
         return view('starlight2021.recruitment', compact('title', 'nav_menu'));
     }
 
-    public function faq(){
+    public function faq()
+    {
         $title = "FAQ";
         $nav_menu = "faq";
-        
+
         return view('starlight2021.faq', compact('title', 'nav_menu'));
     }
 
-    public function citymap(){
+    public function citymap()
+    {
         $title = "City Map";
         $nav_menu = "citymap";
-        
+
         return view('starlight2021.city', compact('title', 'nav_menu'));
+    }
+
+    public function regisContestant()
+    {
+        $title = "Contestant Form";
+        $nav_menu = "regis";
+
+        return view('starlight2021.regis', compact('title', 'nav_menu'));
     }
 }
