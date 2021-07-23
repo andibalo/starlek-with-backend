@@ -71,9 +71,15 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 Route::group(['prefix'=>'contestant'], function(){
-	Route::get('/','ContestantRegistrationController@index')->name('i');
-	Route::post('/','ContestantRegistrationController@createIsthara')->name('createIsthara');
+	Route::get('/','ContestantRegistrationController@index')->name('choices');
+
+	Route::get('/isthara','ContestantRegistrationController@welcome')->name('welcome');
+
+	Route::get('/group','ContestantRegistrationController@registrationGroup')->name('group');
+	Route::post('/group','ContestantRegistrationController@createGroupIsthara')->name('group');
 	
+	Route::get('/solo','ContestantRegistrationController@registrationSolo')->name('solo');
+	Route::post('/solo','ContestantRegistrationController@createSoloIsthara')->name('solo');
 });
 
 Route::group(['prefix' => 'regisContestant'], function () {

@@ -20,8 +20,8 @@
             <div class="welcome-box">
                 <h1>Welkam</h1>
             </div>
-            <form name="formIsthara" action="" onsubmit="return validateForm()" method="post">
-                @csrf
+            <form id="formIsthara" name="formIsthara" method="POST" >
+                
                 <div class="row ">
                         <div class="col-12 p-2">
                             <label for="fname">Link Video</label><br>
@@ -56,7 +56,7 @@
                             
                         </div>
                     </div>
-                    <input type="submit" value="Submit">
+                    <input type="button" onclick="istharaFunction()" value="click">
             </form> 
         </div>
     </div>
@@ -65,7 +65,7 @@
 
     @section('custom_js')
         <script src="{{asset('js/starlight2021/smarttab/dist/js/jquery.smartTab.js')}}"></script>
-        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script>
             function validateForm() {
                 let x = document.forms["formIsthara"]["link-video"].value;
@@ -74,6 +74,37 @@
                     return false;
                 }
             }
+            
+            function istharaFunction(){
+                
+                const data = {
+                    "link-video": document.forms["formIsthara"]["link-video"].value,
+                    "stage-name":   document.forms["formIsthara"]["stage-name"].value,
+                    "talent": document.forms["formIsthara"]["talent"].value,
+                    "line-id": document.forms["formIsthara"]["line-id"].value,
+                    "phone-number": document.forms["formIsthara"]["phone-number"].value,
+                };
+
+                fetch("https://sheet.best/api/sheets/93dcd35d-ad53-41fe-a844-fb49dfdbf1c5", {
+                    method: "POST",
+                    mode: "cors",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(data),
+                })
+                .then((r) => r.json())
+                .then((data) => {
+                    // The response comes here
+                    console.log(data);
+                })
+                .catch((error) => {
+                    // Errors are reported there
+                    console.log(error);
+                });
+                
+            }
+            
         </script>
         
     @endsection
