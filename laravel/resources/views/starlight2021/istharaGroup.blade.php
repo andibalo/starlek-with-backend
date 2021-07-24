@@ -9,6 +9,7 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="{{asset('js/starlight2021/smarttab/dist/css/smart_tab.min.css')}}"  />
     <link rel="stylesheet" href="{{asset('css/starlight2021/pages/istharaGroup.css')}}" />
   </head>
@@ -67,7 +68,9 @@
 
 @section('custom_js')
         <script src="{{asset('js/starlight2021/smarttab/dist/js/jquery.smartTab.js')}}"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> --}}
         <script>
             var current_fs, next_fs, previous_fs; //fieldsets
             var left, opacity, scale; //fieldset properties which we will animate
@@ -102,10 +105,13 @@
                     //3. increase opacity of next_fs to 1 as it moves in
                     opacity = 1 - now;
                     current_fs.css({
-                    transform: "scale(" + scale + ")",
-                    position: "absolute"
+                        transform: "scale(" + scale + ")",
+                        position: "absolute"
                     });
-                    next_fs.css({ left: left, opacity: opacity });
+                    next_fs.css({ 
+                        // left: left,
+                        opacity: opacity 
+                    });
                 },
                 duration: 800,
                 complete: function() {
@@ -146,13 +152,17 @@
                     left = (1 - now) * 50 + "%";
                     //3. increase opacity of previous_fs to 1 as it moves in
                     opacity = 1 - now;
-                    current_fs.css({ left: left });
+                    current_fs.css({ 
+                        // left: left,
+                        display: "none"
+                    });
                     previous_fs.css({
-                    transform: "scale(" + scale + ")",
-                    opacity: opacity
+                        transform: "scale(" + scale + ")",
+                        opacity: opacity,
+                        position: "relative",
                     });
                 },
-                duration: 800,
+                duration: 700,
                 complete: function() {
                     current_fs.hide();
                     animating = false;

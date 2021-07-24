@@ -165,11 +165,6 @@ body {
 }
 
 
-
-
-
-
-
 /*custom font*/
 @import url(https://fonts.googleapis.com/css?family=Poppins);
 
@@ -288,11 +283,14 @@ body {
 
 /*progressbar*/
 #progressbar {
+    padding: 0;
     margin-bottom: 30px;
     overflow: hidden;
     /*CSS counters to number the steps*/
     counter-reset: step;
-    position: absolute;
+    /* position: absolute; */
+    display: flex;
+    justify-content: center;
     z-index: 10;
 }
     
