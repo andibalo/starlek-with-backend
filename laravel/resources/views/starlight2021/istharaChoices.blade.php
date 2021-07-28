@@ -21,10 +21,10 @@
                 <h1>Are you entering as:</h1>
             </div>
             <div class="col-6">
-                <a href="contestant/solo">Solo</a>
+                <a href="/contestant/solo">Solo</a>
             </div>
             <div class="col-6">
-                <a href="contestant/group">Group</a>
+                <a href="/contestant/group">Group</a>
             </div>
         </div>
 
