@@ -20,8 +20,8 @@
             <div class="welcome-box">
                 <h1>Welkam</h1>
             </div>
-            <form id="formIsthara" name="formIsthara" method="POST" >
-                
+            <form name="formIsthara" action="" onsubmit="" method="post">
+                @csrf
                 <div class="row ">
                         <div class="col-12 p-2">
                             <label for="fname">Link Video</label><br>
@@ -56,7 +56,7 @@
                             
                         </div>
                     </div>
-                    <input type="button" onclick="istharaFunction()" value="click">
+                    <input type="submit" value="Submit">
             </form> 
         </div>
     </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 use Response;
 use DB;
 use Mail;
@@ -30,7 +31,7 @@ class ContestantRegistrationController extends Controller
     public function createGroupIsthara(Request $request){
         
         $data = $request->input();
-        return Http::post('https://sheet.best/api/sheets/93dcd35d-ad53-41fe-a844-fb49dfdbf1c5')[$data];
+        return Http::post('https://sheet.best/api/sheets/93dcd35d-ad53-41fe-a844-fb49dfdbf1c5/tabs/Group',$data);
     }
 
     public function registrationSolo(){
@@ -43,7 +44,7 @@ class ContestantRegistrationController extends Controller
     public function createSoloIsthara(Request $request){
         
         $data = $request->input();
-        return Http::post('https://sheet.best/api/sheets/93dcd35d-ad53-41fe-a844-fb49dfdbf1c5')[$data];
+        return Http::post('https://sheet.best/api/sheets/93dcd35d-ad53-41fe-a844-fb49dfdbf1c5/tabs/Solo',$data);
     }
 
     public function welcome(){
