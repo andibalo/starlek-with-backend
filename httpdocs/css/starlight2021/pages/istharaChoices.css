@@ -174,12 +174,26 @@ body {
     background-color: var(--color-primary);
 }
 
+.solo-bg {
+    border-radius: 8% 0 0 8%;
+}
+
+.group-bg {
+    border-radius: 0 8% 8% 0;
+}
+
 .choice-text {
     position: absolute;
     transform: translate(-50%,-50%);
     color: var(--color-primary);
     top: 50%;
     left: 50%;
+}
+
+.choice-text:hover {
+    cursor: pointer;
+    text-shadow: 0 0 10px var(--color-primary);
+    transition: all ease 200ms;
 }
 
 .terms-text {

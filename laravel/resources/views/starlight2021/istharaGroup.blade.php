@@ -19,7 +19,7 @@
 <div class="section-1 d-flex justify-content-center align-items-center">
     <div class="row">
         <div class="col-12 col-md-offset-3">
-            <form id="msform" name="formIsthara" action="" onsubmit="" method="post">
+            <form id="msform" name="formIsthara" action="" onsubmit="" method="post" enctype="multipart/form-data">
                 @csrf
                 <!-- progressbar -->
                 <ul id="progressbar">
@@ -32,8 +32,8 @@
                 <fieldset>
                     <div class="row ms-form-wrapper">
                         <div class="col-4">
-                            <h2 class="fs-title">Welcome Starlighters</h2>
-                            <h3 class="fs-subtitle"></h3>
+                            <h2 class="fs-title">Welcome Starlighters!</h2>
+                            <h3 class="fs-subtitle">Welcome, Starlighters! Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
                         </div>
                         <div class="col-8">
                             <label for="link-video d-flex">Video Link</label>
@@ -53,7 +53,7 @@
                 <fieldset>
                     <div class="row ms-form-wrapper">
                         <div class="col-4 d-flex flex-column justify-content-between">
-                            <h2 class="fs-title">Welcome Starlighters</h2>
+                            <h2 class="fs-title">Welcome Starlighters!</h2>
                             <h3 class="fs-subtitle"></h3>
                             <div class="next-container d-flex justify-content-start">
                                 <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
@@ -63,46 +63,109 @@
                             <label for="link-video d-flex">LINE ID (representative)</label>
                             <input type="text" name="line-id" id="line-id" placeholder="@starlightumn"/>
                             <label for="link-video d-flex">Phone Number (representative)</label>
-                            <input type="number" name="phone-number" id="phone-number" placeholder="+6281122334455"/>
+                            <input type="text" name="phone-number" id="phone-number" placeholder="+6281122334455"/>
                             <label for="link-video d-flex">Instagram Username</label>
                             <input type="text" name="instagram" id="instagram" placeholder="@starlightumn"/>
                             <label for="link-video d-flex">E-mail Address</label>
-                            <input type="text" name="e-mail" id="e-mail" placeholder="starlight@umn.ac.id"/>
+                            <input type="email" name="e-mail" id="e-mail" placeholder="starlight@umn.ac.id"/>
                             <label for="link-video d-flex">Number of Performers</label>
-                            <input type="number" name="num-participants" id="num-participants" placeholder="0"/>
-                            
+                            <select class="form-control" name="num-participant" id="num-participants" onchange="numOfParticipants(this)">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
                             <div class="next-container d-flex justify-content-end">
-                                    <input type="button" name="next" class="next action-button" value="Next"/>
+                                <input type="button" name="next" class="next action-button" value="Next"/>
                             </div>
-                        </div>
-                    </div>
-                    
+                        </div>                         
+                    </div>  
                 </fieldset>
                 <fieldset>
                     <div class="row ms-form-wrapper">
                         <div class="col-4 d-flex flex-column justify-content-between">
-                            <h2 class="fs-title">Welcome Starlighters</h2>
+                            <h2 class="fs-title">Welcome Starlighters!</h2>
                             <h3 class="fs-subtitle"></h3>
                             <div class="next-container d-flex justify-content-start">
                                 <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
                             </div>
                         </div>
-                        <div class="col-8">
-                            <label for="link-video d-flex">Full name</label>
-                            <input type="text" id="full-name" name="name" placeholder="Insert your full name here"/>
-                            <label for="link-video d-flex">Date of Birth</label>
-                            <input type="date" name="date-birth" id="date-birth" placeholder="2021-08-21"/>
-                            <label for="link-video d-flex">Address</label>
-                            <input type="text" name="address" id="address" placeholder="Jl. Scientia Boulevard, Gading, Kec. Serpong, Tangerang, Banten 15227"/>
-                            <label for="link-video d-flex">Educational Institution</label>
-                            <input type="text" name="education" id="education" placeholder="Universitas Multimedia Nusantara"/>
-                            <label for="link-video d-flex">Scan Identity Card (KTP/KITAS/Kartu Pelajar/KIA)</label>
-                            <input type="file" name="education" accept="image/png, image/jpeg, image/jpg" id="education" placeholder="Universitas Multimedia Nusantara"/>
+                        <div class="participant-wrapper col-8">
+                            <div class="" id="firstParticipant">
+                                <label for="full-name">Full name</label>
+                                <input type="text" id="full-name" name="full-name" placeholder="Insert your full name here"/>
+                                <label for="date-birth">Date of Birth</label>
+                                <input type="date" name="date-birth" id="date-birth" placeholder="2021-08-21"/>
+                                <label for="address">Address</label>
+                                <input type="text" name="address" id="address" placeholder="Jl. Scientia Boulevard, Gading, Kec. Serpong, Tangerang, Banten 15227"/>
+                                <label for="education">Educational Institution</label>
+                                <input type="text" name="education" id="education" placeholder="Universitas Multimedia Nusantara"/>
+                                <label>Scan Identity Card (KTP/KITAS/Kartu Pelajar/KIA)</label>
+                                <input type="file" name="idCard[]" accept="image/png, image/jpeg, image/jpg" id="idCard" placeholder="Universitas Multimedia Nusantara"/>
+                            </div>
+
+                            <div class="mt-5 mb-5" id="secondParticipant">
+                                <small>2nd Member</small>
+                                <label for="full-name-2">Full name</label>
+                                <input type="text" id="full-name-2" name="full-name-2" placeholder="Insert your full name here"/>
+                                <label for="date-birth-2">Date of Birth</label>
+                                <input type="date" name="date-birth-2" id="date-birth-2" placeholder="2021-08-21"/>
+                                <label for="address-2">Address</label>
+                                <input type="text" name="address-2" id="address-2" placeholder="Jl. Scientia Boulevard, Gading, Kec. Serpong, Tangerang, Banten 15227"/>
+                                <label for="education-2">Educational Institution</label>
+                                <input type="text" name="education-2" id="education-2" placeholder="Universitas Multimedia Nusantara"/>
+                                <label>Scan Identity Card (KTP/KITAS/Kartu Pelajar/KIA)</label>
+                                <input type="file" name="idCard[]" accept="image/png, image/jpeg, image/jpg" id="idCard" placeholder="Universitas Multimedia Nusantara"/>
+                            </div>
+
+                            <div class="mt-5 mb-5" id="thirdParticipant">
+                                <small>3rd Member</small>
+                                <label for="full-name-3">Full name</label>
+                                <input type="text" id="full-name-3" name="full-name-3" placeholder="Insert your full name here"/>
+                                <label for="date-birth-3">Date of Birth</label>
+                                <input type="date" name="date-birth-3" id="date-birth-3" placeholder="2021-08-21"/>
+                                <label for="address-3">Address</label>
+                                <input type="text" name="address-3" id="address-3" placeholder="Jl. Scientia Boulevard, Gading, Kec. Serpong, Tangerang, Banten 15227"/>
+                                <label for="education-3">Educational Institution</label>
+                                <input type="text" name="education-3" id="education-3" placeholder="Universitas Multimedia Nusantara"/>
+                                <label>Scan Identity Card (KTP/KITAS/Kartu Pelajar/KIA)</label>
+                                <input type="file" name="idCard[]" accept="image/png, image/jpeg, image/jpg" id="idCard" placeholder="Universitas Multimedia Nusantara"/>
+                            </div>
+
+                            <div class="mt-5 mb-5" id="fourthParticipant">
+                                <small>4th Member</small>
+                                <label for="full-name-4">Full name</label>
+                                <input type="text" id="full-name-4" name="full-name-4" placeholder="Insert your full name here"/>
+                                <label for="date-birth-4">Date of Birth</label>
+                                <input type="date" name="date-birth-4" id="date-birth-4" placeholder="2021-08-21"/>
+                                <label for="address-4">Address</label>
+                                <input type="text" name="address-4" id="address-4" placeholder="Jl. Scientia Boulevard, Gading, Kec. Serpong, Tangerang, Banten 15227"/>
+                                <label for="education-4">Educational Institution</label>
+                                <input type="text" name="education-4" id="education-4" placeholder="Universitas Multimedia Nusantara"/>
+                                <label>Scan Identity Card (KTP/KITAS/Kartu Pelajar/KIA)</label>
+                                <input type="file" name="idCard[]" accept="image/png, image/jpeg, image/jpg" id="idCard" placeholder="Universitas Multimedia Nusantara"/>
+                            </div>
+
+                            <div class="mt-5 mb-5" id="fifthParticipant">
+                                <small>5th Member</small>
+                                <label for="full-name-5">Full name</label>
+                                <input type="text" id="full-name-5" name="full-name-5" placeholder="Insert your full name here"/>
+                                <label for="date-birth-5">Date of Birth</label>
+                                <input type="date" name="date-birth-5" id="date-birth-5" placeholder="2021-08-21"/>
+                                <label for="address-5">Address</label>
+                                <input type="text" name="address-5" id="address-5" placeholder="Jl. Scientia Boulevard, Gading, Kec. Serpong, Tangerang, Banten 15227"/>
+                                <label for="education-5">Educational Institution</label>
+                                <input type="text" name="education-5" id="education-5" placeholder="Universitas Multimedia Nusantara"/>
+                                <label>Scan Identity Card (KTP/KITAS/Kartu Pelajar/KIA)</label>
+                                <input type="file" name="idCard[]" accept="image/png, image/jpeg, image/jpg" id="idCard" placeholder="Universitas Multimedia Nusantara"/>
+                            </div>
                             <div class="next-container d-flex justify-content-end">
                                 <input type="submit" name="submit" id="submitBtn" class="submit" value="Submit"/>
                             </div>
-                        </div> 
-                    </div>                          
+                        </div>
+                    </div> 
+                </div>                          
                     
                 </fieldset>
             </form>
@@ -122,10 +185,60 @@
         
         {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> --}}
         <script>
+            const secondParticipant = $("#secondParticipant");
+            const thirdParticipant = $("#thirdParticipant");
+            const fourthParticipant = $("#fourthParticipant");
+            const fifthParticipant = $("#fifthParticipant");
             var current_fs, next_fs, previous_fs; //fieldsets
             var left, opacity, scale; //fieldset properties which we will animate
             var animating; //flag to prevent quick multi-click glitches
 
+            $(document).ready(function() {
+                secondParticipant.hide();
+                thirdParticipant.hide();
+                fourthParticipant.hide();
+                fifthParticipant.hide();
+            });
+
+            function numOfParticipants(val) {
+                var participant = val.value;
+
+                switch(participant) {
+                    case "1":
+                        secondParticipant.hide();
+                        thirdParticipant.hide();
+                        fourthParticipant.hide();
+                        fifthParticipant.hide();
+                        break;
+                    case "2":
+                        secondParticipant.show();
+                        thirdParticipant.hide();
+                        fourthParticipant.hide();
+                        fifthParticipant.hide();
+                        break;
+
+                    case "3":
+                        secondParticipant.show();
+                        thirdParticipant.show();
+                        fourthParticipant.hide();
+                        fifthParticipant.hide();
+                        break;
+
+                    case "4":
+                        secondParticipant.show();
+                        thirdParticipant.show();
+                        fourthParticipant.show();
+                        fifthParticipant.hide();
+                        break;
+
+                    case "5":
+                        secondParticipant.show();
+                        thirdParticipant.show();
+                        fourthParticipant.show();
+                        fifthParticipant.show();
+                        break;
+                }
+            }
 
             $(".next").click(function() {
                 if (animating) return false;

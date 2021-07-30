@@ -17,18 +17,20 @@
 @section('content')
     <div class="section-1 d-flex flex-column">
         <div class="pt-5 my-5">
-            <div class="row d-flex justify-content-center pt-5 mt-3">
+            <div class="row d-flex justify-content-center pt-3">
                 <div class="col-6 p-0 position-relative">
-                    <h3 class="choice-text">Solo</h3>
-                    <a href="/contestant/solo"><img src="https://images.unsplash.com/photo-1615789591457-74a63395c990?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80" alt=""></a>
+                    <a href="/contestant/solo"><img class="solo-bg" src="../../../images/starlight2021/isthara/solo-bg.png" alt="">
+                        <h3 class="choice-text">SOLO</h3>
+                    </a>
                 </div>
                 <div class="col-6 p-0">
-                    <h3 class="choice-text">Group</h3>
-                    <a href="/contestant/group"><img src="https://images.unsplash.com/photo-1615789591457-74a63395c990?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80" alt=""></a>
+                    <a href="/contestant/group"><img class="group-bg" src="../../../images/starlight2021/isthara/group-bg.png" alt="">
+                        <h3 class="choice-text">GROUP</h3>
+                    </a>
                 </div>
             </div>
             <div class="row d-flex justify-content-center p-3">
-                <h4 class="terms-text">Terms & regulation</h2>
+                <h4 class="terms-text">Emerging Stage's Terms & Regulations</h2>
             </div>
         </div>
        

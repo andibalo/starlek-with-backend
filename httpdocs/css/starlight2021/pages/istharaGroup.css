@@ -180,6 +180,10 @@ body {
     display: flex;
 }
 
+#msform small {
+    color: var(--color-primary);
+}
+
 /*custom font*/
 @import url(https://fonts.googleapis.com/css?family=Poppins);
 
@@ -187,7 +191,7 @@ body {
 #msform {
     text-align: center;
     
-    margin-top: 30px;
+    /* margin-top: 30px; */
 }
 
 #msform fieldset {
@@ -209,7 +213,7 @@ body {
 }
 
 /*inputs*/
-#msform input, #msform textarea {
+#msform input, #msform textarea, #msform select {
     padding: 7px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -231,6 +235,11 @@ body {
     -webkit-transition: All 0.5s ease-in;
     -moz-transition: All 0.5s ease-in;
     -o-transition: All 0.5s ease-in;
+}
+
+.participant-wrapper {
+    overflow: auto;
+    max-height: 500px;
 }
 
 /*buttons*/
@@ -268,7 +277,7 @@ body {
 .fs-title {
     font-size: 18px;
     text-transform: uppercase;
-    color: #2C3E50;
+    color: #fff;
     margin-bottom: 10px;
     letter-spacing: 2px;
     font-weight: bold;
@@ -277,7 +286,7 @@ body {
 .fs-subtitle {
     font-weight: normal;
     font-size: 13px;
-    color: #666;
+    color: #fff;
     margin-bottom: 20px;
 }
 
