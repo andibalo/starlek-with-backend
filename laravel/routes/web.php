@@ -73,8 +73,8 @@ Route::group(['prefix' => 'admin'], function () {
 Route::group(['prefix'=>'contestant'], function(){
 	Route::get('/','ContestantRegistrationController@index')->name('choices');
 
-	Route::get('/isthara','ContestantRegistrationController@welcome')->name('welcome');
-
+	Route::get('/welcome','ContestantRegistrationController@welcome')->name('welcome');
+	Route::get('/complete','ContestantRegistrationController@complete')->name('complete');
 	Route::get('/group','ContestantRegistrationController@registrationGroup')->name('group');
 	Route::post('/group','ContestantRegistrationController@createGroupIsthara')->name('group');
 	

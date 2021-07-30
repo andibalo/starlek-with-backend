@@ -12,8 +12,6 @@ use Mail;
 class ContestantRegistrationController extends Controller
 {
     //
-    
-
     public function index(){
         $title = "Isthara";
         $nav_menu = "isthara";
@@ -51,5 +49,11 @@ class ContestantRegistrationController extends Controller
         $title = "Isthara";
         $nav_menu = "isthara";
         return view('starlight2021.istharaWelcome', compact('title', 'nav_menu'));
+    }
+
+    public function complete(){
+        $title = "Registration Complete";
+        $nav_menu = "registration-complete";
+        return view('starlight2021.istharaComplete', compact('title', 'nav_menu'));
     }
 }
