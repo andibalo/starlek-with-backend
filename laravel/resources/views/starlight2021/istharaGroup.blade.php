@@ -35,9 +35,9 @@
                     <div class="row ms-form-wrapper">
                         <div class="col-4 d-flex flex-column justify-content-between">
                             <h2 class="fs-title">Welcome Starlighters!</h2>
-                            <h3 class="fs-subtitle">Welcome, Starlighters! Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
+                            <h3 style="margin-bottom:87px "class="fs-subtitle">Welcome, Starlighters! Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>                 
                         </div>
-                        <div class="col-8">
+                        <div class="ms-form-container col-8 pt-3">
                             <label for="link-video d-flex">Video Link</label>
                             <input type="text" id="link-video" name="link-video" placeholder="https://www.instagram.com/starlightumn/"/>
                             <label for="link-video d-flex">Stage Name</label>
@@ -56,12 +56,14 @@
                     <div class="row ms-form-wrapper">
                         <div class="col-4 d-flex flex-column justify-content-between">
                             <h2 class="fs-title">Welcome Starlighters!</h2>
-                            <h3 class="fs-subtitle">Welcome, Starlighters! Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
+                            <h3 style="opacity=0"></h3>
+                            <h3 style="margin-top:240px "class="fs-subtitle">Welcome, Starlighters! Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
+                            <h3 style="opacity=0"></h3>
                             <div class="next-container d-flex justify-content-start">
                                 <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
                             </div>
                         </div>
-                        <div class="col-8">
+                        <div class="ms-form-container col-8 pt-3">
                             <label for="link-video d-flex">LINE ID (representative)</label>
                             <input type="text" name="line-id" id="line-id" placeholder="@starlightumn"/>
                             <label for="link-video d-flex">Phone Number (representative)</label>
@@ -81,12 +83,14 @@
                     <div class="row ms-form-wrapper">
                         <div class="col-4 d-flex flex-column justify-content-between">
                             <h2 class="fs-title">Welcome Starlighters!</h2>
-                            <h3 class="fs-subtitle">Welcome, Starlighters! Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
+                            <h3 style="opacity=0"></h3>
+                            <h3 style="margin-top:240px" class="fs-subtitle">Welcome, Starlighters! Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
+                            <h3 style="opacity=0"></h3>
                             <div class="next-container d-flex justify-content-start">
                                 <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
                             </div>
                         </div>
-                        <div class="participant-wrapper col-8">
+                        <div class="ms-form-container participant-wrapper col-8 pt-3">
                             <label for="link-video d-flex">Number of Performers</label>
                             <select class="form-control mb-2" name="num-participant" id="num-participants" onchange="numOfParticipants(this)">
                                 <option value="2">2</option>
@@ -178,12 +182,12 @@
                         <div class="row ms-form-wrapper">
                             <div class="col-4 d-flex flex-column justify-content-between">
                                 <h2 class="fs-title">Welcome Starlighters!</h2>
-                                <h3 class="fs-subtitle">Welcome, Starlighters! Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
+                                <h3 style="margin-top:240px" class="fs-subtitle">Welcome, Starlighters! Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
                                 <div class="next-container d-flex justify-content-center">
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
                                 </div>
                             </div>
-                            <div class="col-8 decOfAgree pt-2">
+                            <div class="ms-form-container col-8 decOfAgree pt-2 ">
                                 <h6>Declaration of Agreement</h6>
                                 <p>I hereby agree that I truthfully and accurately complete this registration form and that the answers and information I provide are not misleading in any way. Furthermore, I understand that Starlight has the right at any time in its sole discretion to disqualify me from the audition process if at any stage providing personal data that is untrue, inaccurate or misleading, violates the rules or violates the provisions stated here.
                                 </p>

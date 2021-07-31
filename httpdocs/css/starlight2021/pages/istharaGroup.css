@@ -197,6 +197,7 @@ body {
 #msform fieldset {
     border: 0 none;
     max-width: 750px;
+    
     box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
     padding: 20px 30px;
     box-sizing: border-box;
@@ -208,7 +209,7 @@ body {
 }
 
 #msform fieldset .col-8 {
-    min-height: 450px;
+    min-height: 490px;
     height: 100%;
     background-color: rgba(71,88,112, 0.6);
     display: flex;
@@ -241,8 +242,8 @@ body {
     -moz-box-shadow: none !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
-    border: 1px solid #ee0979;
-    outline-width: 0;
+    border: none;
+    outline: none;
     transition: All 0.5s ease-in;
     -webkit-transition: All 0.5s ease-in;
     -moz-transition: All 0.5s ease-in;
@@ -273,6 +274,8 @@ body {
 
 #msform .action-button:hover, #msform .action-button:focus {
     text-shadow: 0 0 0 20px white;
+    border: none;
+    outline: none;
 }
 
 #msform .action-button-previous {
@@ -287,7 +290,9 @@ body {
 }
 
 #msform .action-button-previous:hover, #msform .action-button-previous:focus {
-    box-shadow: 0 0 0 2px white, 0 0 0 3px #C5C5F1;
+    text-shadow: 0 0 0 20px white;
+    border: none;
+    outline: none;
 }
 
 .decOfAgree {

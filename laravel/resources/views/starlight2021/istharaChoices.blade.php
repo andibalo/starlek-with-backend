@@ -17,14 +17,14 @@
 @section('content')
     <div class="section-1 d-flex flex-column">
         <div class="pt-5 my-5">
-            <div class="row d-flex justify-content-center pt-3">
+            <div class="row d-flex justify-content-center pt-3 mt-5">
                 <div class="col-6 p-0 position-relative">
-                    <a href="/contestant/solo"><img class="solo-bg" src="../../../images/starlight2021/isthara/solo-bg.png" alt="">
+                    <a href="/contestant/solo"><img class="solo-bg" src="../../../images/starlight2021/isthara/solo-bg.png" alt="" width="400px">
                         <h3 class="choice-text">SOLO</h3>
                     </a>
                 </div>
                 <div class="col-6 p-0">
-                    <a href="/contestant/group"><img class="group-bg" src="../../../images/starlight2021/isthara/group-bg.png" alt="">
+                    <a href="/contestant/group"><img class="group-bg" src="../../../images/starlight2021/isthara/group-bg.png" alt="" width="400px">
                         <h3 class="choice-text">GROUP</h3>
                     </a>
                 </div>
