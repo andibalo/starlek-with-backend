@@ -78,7 +78,6 @@
                 } else {
                     $('.closeBtn').addClass('disabledBtn');
                 }
-                console.log(e.target.checked);
             })
         </script>
 @endsection

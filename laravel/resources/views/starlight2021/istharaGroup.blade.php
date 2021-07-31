@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="{{asset('js/starlight2021/smarttab/dist/css/smart_tab.min.css')}}"  />
     <link rel="stylesheet" href="{{asset('css/starlight2021/pages/istharaGroup.css')}}" />
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
 @endsection
 
@@ -24,7 +26,6 @@
                 <!-- progressbar -->
                 <ul id="progressbar">
                     <li class="active"></li>
-                    <li></li>
                     <li></li>
                     <li></li>
                     <li></li>
@@ -43,7 +44,7 @@
                             <input type="text" id="stage-name" name="stage-name" placeholder="Insert your stage name here"/>
                             <label for="link-video d-flex">Talent Description</label>
                             <input type="text" id="talent" name="talent" placeholder="Describe your talent briefly"/>
-                            <div class="next-container d-flex justify-content-end">
+                            <div class="next-container d-flex justify-content-end nextBtn">
                                 <input type="button" name="next" class="next action-button" value="Next"/>
                             </div>
                             
@@ -55,7 +56,7 @@
                     <div class="row ms-form-wrapper">
                         <div class="col-4 d-flex flex-column justify-content-between">
                             <h2 class="fs-title">Welcome Starlighters!</h2>
-                            <h3 class="fs-subtitle"></h3>
+                            <h3 class="fs-subtitle">Welcome, Starlighters! Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
                             <div class="next-container d-flex justify-content-start">
                                 <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
                             </div>
@@ -70,7 +71,7 @@
                             <label for="link-video d-flex">E-mail Address</label>
                             <input type="email" name="e-mail" id="e-mail" placeholder="starlight@umn.ac.id"/>
                             
-                            <div class="next-container d-flex justify-content-end">
+                            <div class="next-container d-flex justify-content-end nextBtn">
                                 <input type="button" name="next" class="next action-button" value="Next"/>
                             </div>
                         </div>                         
@@ -80,7 +81,7 @@
                     <div class="row ms-form-wrapper">
                         <div class="col-4 d-flex flex-column justify-content-between">
                             <h2 class="fs-title">Welcome Starlighters!</h2>
-                            <h3 class="fs-subtitle"></h3>
+                            <h3 class="fs-subtitle">Welcome, Starlighters! Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
                             <div class="next-container d-flex justify-content-start">
                                 <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
                             </div>
@@ -88,7 +89,6 @@
                         <div class="participant-wrapper col-8">
                             <label for="link-video d-flex">Number of Performers</label>
                             <select class="form-control mb-2" name="num-participant" id="num-participants" onchange="numOfParticipants(this)">
-                                <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
@@ -163,22 +163,47 @@
                                 <label>Scan Identity Card (KTP/KITAS/Kartu Pelajar/KIA)</label>
                                 <input type="file" name="idCard[]" accept="image/png, image/jpeg, image/jpg" id="idCard" placeholder="Universitas Multimedia Nusantara" style="color: white;"/>
                             </div>
-                            <div class="next-container d-flex justify-content-end">
+                            <div class="next-container d-flex justify-content-end nextBtn">
                                 <input type="button" name="next" class="next action-button" value="Next"/>
                             </div>
                         </div>
-                    </div> 
-                </div>                          
+                    </div>                          
                 </fieldset>
                 <fieldset>
-                    {{-- <button class="g-recaptcha" 
-                    data-sitekey="6Le3u88bAAAAAIjf2kVWaYALTwjHZos0CIiGzc4l" 
-                    data-callback='onSubmit' 
-                    data-action='submit'>Submit</button> --}}
 
-                    {{-- <div class="g-recaptcha" data-sitekey="6Le3u88bAAAAAIjf2kVWaYALTwjHZos0CIiGzc4l"></div> --}}
+                    {{-- <input type="hidden" class="g-recaptcha" name="recaptcha" id="recaptcha" data-sitekey="6Lcfyc8bAAAAAHT_SmEfgzFbTVV0ZTZJWt_IAhjK"> --}}
+                        <div class="row" class="decOfAgreement center" style="color: white">
+                            
+                        </div>
+                        <div class="row ms-form-wrapper">
+                            <div class="col-4 d-flex flex-column justify-content-between">
+                                <h2 class="fs-title">Welcome Starlighters!</h2>
+                                <h3 class="fs-subtitle">Welcome, Starlighters! Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
+                                <div class="next-container d-flex justify-content-center">
+                                    <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                                </div>
+                            </div>
+                            <div class="col-8 decOfAgree pt-2">
+                                <h6>Declaration of Agreement</h6>
+                                <p>I hereby agree that I truthfully and accurately complete this registration form and that the answers and information I provide are not misleading in any way. Furthermore, I understand that Starlight has the right at any time in its sole discretion to disqualify me from the audition process if at any stage providing personal data that is untrue, inaccurate or misleading, violates the rules or violates the provisions stated here.
+                                </p>
+                                <div class="form-check agreeForm my-2">
+                                    <input type="checkbox" id="agree" class="agreeCheckBox">
+                                    <p>I Agree</p>
+                                </div>
 
-                    <input type="hidden" name="recaptcha" id="recaptcha">
+                                <div class="row captcha">
+                                    <form action="" method="POST">
+                                        <div class="g-recaptcha" data-sitekey="6Lcfyc8bAAAAAHT_SmEfgzFbTVV0ZTZJWt_IAhjK"></div>
+                                        <br/>
+                                        {{-- <input type="submit" value="Submit"> --}}
+                                    </form>
+                                </div>
+                                <div class="next-container d-flex justify-content-end nextBtn">
+                                    <input type="button" name="next" class="action-button disabledBtn closeBtn" value="Submit" onclick="window.open('/contestant/complete', '_self')"/>
+                                </div>
+                            </div>
+                        </div>     
                 </fieldset>
             </form>
             <!-- link to designify.me code snippets -->
@@ -192,7 +217,7 @@
 
 @section('custom_js')
         <script src="{{asset('js/starlight2021/smarttab/dist/js/jquery.smartTab.js')}}"></script>
-        <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.sitekey') }}"></script>
+        {{-- <script src="https://www.google.com/recaptcha/api.js?render=6Lcfyc8bAAAAAHT_SmEfgzFbTVV0ZTZJWt_IAhjK"></script> --}}
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         
@@ -207,31 +232,32 @@
             var animating; //flag to prevent quick multi-click glitches
 
             $(document).ready(function() {
-                secondParticipant.hide();
                 thirdParticipant.hide();
                 fourthParticipant.hide();
                 fifthParticipant.hide();
+
+                $('#agree').change(function(e) {
+                    if(e.target.checked) {
+                        $('.closeBtn').removeClass('disabledBtn');
+                    } else {
+                        $('.closeBtn').addClass('disabledBtn');
+                    }
+                })
             });
 
             
-            grecaptcha.ready(function() {
-                    grecaptcha.execute('6Le3u88bAAAAAIjf2kVWaYALTwjHZos0CIiGzc4l', {action: 'contact'}).then(function(token) {
-                        if (token) {
-                            document.getElementById('recaptcha').value = token;
-                        }
-                    });
-                });
+            // grecaptcha.ready(function() {
+            //         grecaptcha.execute('6Lcfyc8bAAAAAHT_SmEfgzFbTVV0ZTZJWt_IAhjK', {action: 'contact'}).then(function(token) {
+            //             if (token) {
+            //                 document.getElementById('recaptcha').value = token;
+            //             }
+            //         });
+            //     });
 
             function numOfParticipants(val) {
                 var participant = val.value;
 
                 switch(participant) {
-                    case "1":
-                        secondParticipant.hide();
-                        thirdParticipant.hide();
-                        fourthParticipant.hide();
-                        fifthParticipant.hide();
-                        break;
                     case "2":
                         secondParticipant.show();
                         thirdParticipant.hide();

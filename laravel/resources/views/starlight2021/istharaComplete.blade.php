@@ -20,7 +20,9 @@
             <div class="cardContainer p-4 mt-5 mb-3">
                 <div class="cardContainerInner d-flex flex-column align-items-center">
                     <img class="cardInnerLogo" src="{{ asset('images/starlight2021/logo.png') }}"  />
-                    <h2 class="title mb-4">Thank You For Joining Starlight 2021!</h2>
+                    <h4 class="text-center text-white font-weight-bold title mb-4">Welcome to Starlight 2021, <br>Dear Isthara!</h4>
+                    <p class="text-center text-white">Don't forget to always check your social media for future updates!</p>
+                    <a class="registerBtn mt-4" href="/">Return Home</a>
                 </div>
             </div>
         </div>

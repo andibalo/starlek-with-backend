@@ -208,7 +208,15 @@ body {
 }
 
 #msform fieldset .col-8 {
+    min-height: 450px;
+    height: 100%;
     background-color: rgba(71,88,112, 0.6);
+    display: flex;
+    flex-direction: column;
+}
+
+.nextBtn {
+    margin-top: auto;
 }
 
 /*Hide all except first fieldset*/
@@ -280,6 +288,43 @@ body {
 
 #msform .action-button-previous:hover, #msform .action-button-previous:focus {
     box-shadow: 0 0 0 2px white, 0 0 0 3px #C5C5F1;
+}
+
+.decOfAgree {
+    text-align: left;
+    color: white;
+}
+
+.decOfAgree h6 {
+    color: var(--color-primary);
+}
+
+.decOfAgree p {
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+.captcha {
+    justify-content: start;
+    margin-left: 3px;
+    margin-bottom: 10px;
+}
+
+.agreeForm {
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+#agree.agreeCheckBox{
+    width: auto;
+    margin: 0;
+    margin-right: 10px;
+}
+
+.disabledBtn {
+    color: #918b8b !important;
+    pointer-events: none;
 }
 
 /*headings*/
