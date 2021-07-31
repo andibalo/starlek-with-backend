@@ -27,11 +27,12 @@
                     <li></li>
                     <li></li>
                     <li></li>
+                    <li></li>
                 </ul>
                 <!-- fieldsets -->
                 <fieldset>
                     <div class="row ms-form-wrapper">
-                        <div class="col-4">
+                        <div class="col-4 d-flex flex-column justify-content-between">
                             <h2 class="fs-title">Welcome Starlighters!</h2>
                             <h3 class="fs-subtitle">Welcome, Starlighters! Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
                         </div>
@@ -68,14 +69,7 @@
                             <input type="text" name="instagram" id="instagram" placeholder="@starlightumn"/>
                             <label for="link-video d-flex">E-mail Address</label>
                             <input type="email" name="e-mail" id="e-mail" placeholder="starlight@umn.ac.id"/>
-                            <label for="link-video d-flex">Number of Performers</label>
-                            <select class="form-control" name="num-participant" id="num-participants" onchange="numOfParticipants(this)">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
+                            
                             <div class="next-container d-flex justify-content-end">
                                 <input type="button" name="next" class="next action-button" value="Next"/>
                             </div>
@@ -92,6 +86,15 @@
                             </div>
                         </div>
                         <div class="participant-wrapper col-8">
+                            <label for="link-video d-flex">Number of Performers</label>
+                            <select class="form-control mb-2" name="num-participant" id="num-participants" onchange="numOfParticipants(this)">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                            <hr >
                             <div class="" id="firstParticipant">
                                 <label for="full-name">Full name</label>
                                 <input type="text" id="full-name" name="full-name" placeholder="Insert your full name here"/>
@@ -102,7 +105,7 @@
                                 <label for="education">Educational Institution</label>
                                 <input type="text" name="education" id="education" placeholder="Universitas Multimedia Nusantara"/>
                                 <label>Scan Identity Card (KTP/KITAS/Kartu Pelajar/KIA)</label>
-                                <input type="file" name="idCard[]" accept="image/png, image/jpeg, image/jpg" id="idCard" placeholder="Universitas Multimedia Nusantara"/>
+                                <input type="file" name="idCard[]" accept="image/png, image/jpeg, image/jpg" id="idCard" placeholder="Universitas Multimedia Nusantara" style="color: white;"/>
                             </div>
 
                             <div class="mt-5 mb-5" id="secondParticipant">
@@ -116,7 +119,7 @@
                                 <label for="education-2">Educational Institution</label>
                                 <input type="text" name="education-2" id="education-2" placeholder="Universitas Multimedia Nusantara"/>
                                 <label>Scan Identity Card (KTP/KITAS/Kartu Pelajar/KIA)</label>
-                                <input type="file" name="idCard[]" accept="image/png, image/jpeg, image/jpg" id="idCard" placeholder="Universitas Multimedia Nusantara"/>
+                                <input type="file" name="idCard[]" accept="image/png, image/jpeg, image/jpg" id="idCard" placeholder="Universitas Multimedia Nusantara" style="color: white;"/>
                             </div>
 
                             <div class="mt-5 mb-5" id="thirdParticipant">
@@ -130,7 +133,7 @@
                                 <label for="education-3">Educational Institution</label>
                                 <input type="text" name="education-3" id="education-3" placeholder="Universitas Multimedia Nusantara"/>
                                 <label>Scan Identity Card (KTP/KITAS/Kartu Pelajar/KIA)</label>
-                                <input type="file" name="idCard[]" accept="image/png, image/jpeg, image/jpg" id="idCard" placeholder="Universitas Multimedia Nusantara"/>
+                                <input type="file" name="idCard[]" accept="image/png, image/jpeg, image/jpg" id="idCard" placeholder="Universitas Multimedia Nusantara" style="color: white;"/>
                             </div>
 
                             <div class="mt-5 mb-5" id="fourthParticipant">
@@ -144,7 +147,7 @@
                                 <label for="education-4">Educational Institution</label>
                                 <input type="text" name="education-4" id="education-4" placeholder="Universitas Multimedia Nusantara"/>
                                 <label>Scan Identity Card (KTP/KITAS/Kartu Pelajar/KIA)</label>
-                                <input type="file" name="idCard[]" accept="image/png, image/jpeg, image/jpg" id="idCard" placeholder="Universitas Multimedia Nusantara"/>
+                                <input type="file" name="idCard[]" accept="image/png, image/jpeg, image/jpg" id="idCard" placeholder="Universitas Multimedia Nusantara" style="color: white;"/>
                             </div>
 
                             <div class="mt-5 mb-5" id="fifthParticipant">
@@ -158,15 +161,24 @@
                                 <label for="education-5">Educational Institution</label>
                                 <input type="text" name="education-5" id="education-5" placeholder="Universitas Multimedia Nusantara"/>
                                 <label>Scan Identity Card (KTP/KITAS/Kartu Pelajar/KIA)</label>
-                                <input type="file" name="idCard[]" accept="image/png, image/jpeg, image/jpg" id="idCard" placeholder="Universitas Multimedia Nusantara"/>
+                                <input type="file" name="idCard[]" accept="image/png, image/jpeg, image/jpg" id="idCard" placeholder="Universitas Multimedia Nusantara" style="color: white;"/>
                             </div>
                             <div class="next-container d-flex justify-content-end">
-                                <input type="submit" name="submit" id="submitBtn" class="submit" value="Submit"/>
+                                <input type="button" name="next" class="next action-button" value="Next"/>
                             </div>
                         </div>
                     </div> 
                 </div>                          
-                    
+                </fieldset>
+                <fieldset>
+                    {{-- <button class="g-recaptcha" 
+                    data-sitekey="6Le3u88bAAAAAIjf2kVWaYALTwjHZos0CIiGzc4l" 
+                    data-callback='onSubmit' 
+                    data-action='submit'>Submit</button> --}}
+
+                    {{-- <div class="g-recaptcha" data-sitekey="6Le3u88bAAAAAIjf2kVWaYALTwjHZos0CIiGzc4l"></div> --}}
+
+                    <input type="hidden" name="recaptcha" id="recaptcha">
                 </fieldset>
             </form>
             <!-- link to designify.me code snippets -->
@@ -180,6 +192,7 @@
 
 @section('custom_js')
         <script src="{{asset('js/starlight2021/smarttab/dist/js/jquery.smartTab.js')}}"></script>
+        <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.sitekey') }}"></script>
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         
@@ -199,6 +212,15 @@
                 fourthParticipant.hide();
                 fifthParticipant.hide();
             });
+
+            
+            grecaptcha.ready(function() {
+                    grecaptcha.execute('6Le3u88bAAAAAIjf2kVWaYALTwjHZos0CIiGzc4l', {action: 'contact'}).then(function(token) {
+                        if (token) {
+                            document.getElementById('recaptcha').value = token;
+                        }
+                    });
+                });
 
             function numOfParticipants(val) {
                 var participant = val.value;

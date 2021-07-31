@@ -195,16 +195,20 @@ body {
 }
 
 #msform fieldset {
-    
     border: 0 none;
+    max-width: 750px;
     box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
     padding: 20px 30px;
     box-sizing: border-box;
     width: 100%;
     height: 100%;
-    border-radius: 5px;
+    border-radius: 20px;
     /*stacking fieldsets above each other*/
     position: relative;
+}
+
+#msform fieldset .col-8 {
+    background-color: rgba(71,88,112, 0.6);
 }
 
 /*Hide all except first fieldset*/
@@ -240,6 +244,11 @@ body {
 .participant-wrapper {
     overflow: auto;
     max-height: 500px;
+}
+
+.participant-wrapper hr {
+    background-color: var(--color-primary);
+    height: 1px;
 }
 
 /*buttons*/

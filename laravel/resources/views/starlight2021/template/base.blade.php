@@ -99,6 +99,11 @@
     <script src="{{asset('js/cms/wow/wow.min.js')}}"></script>
     <!-- MMENU -->
     <script src="{{asset('js/starlight2021/mmenu-js-master/dist/mmenu.js')}}"></script>
+
+  <!-- pdfobject -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.6/pdfobject.min.js" integrity="sha512-B+t1szGNm59mEke9jCc5nSYZTsNXIadszIDSLj79fEV87QtNGFNrD6L+kjMSmYGBLzapoiR9Okz3JJNNyS2TSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>PDFObject.embed("{{asset('files/starlight2021/REGULASI-ISTHARA.pdf')}}", "#example1");</script>
+  
 	<!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();

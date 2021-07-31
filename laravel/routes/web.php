@@ -39,8 +39,8 @@ Route::get('/about', 'CMSController@aboutusnew')->name('aboutusnew');
 
 
 
-Route::group(['prefix'=>'vote'], function(){
-	Route::get('/','VotingStellarController@index')->name('vote');
+Route::group(['prefix' => 'vote'], function () {
+	Route::get('/', 'VotingStellarController@index')->name('vote');
 	Route::post('post', 'VotingStellarController@storeVoteData')->name('vote.store');
 	Route::post('check', 'VotingStellarController@checkVotedData')->name('vote.check');
 	Route::get('announcement', 'CMSController@announcement')->name('announcement');
@@ -70,16 +70,16 @@ Route::group(['prefix' => 'admin'], function () {
 	Route::get('/registration/{dataUmum}', 'PanelController@registration_detail')->name('panel.registration.detail')->middleware('auth');
 });
 
-Route::group(['prefix'=>'contestant'], function(){
-	Route::get('/','ContestantRegistrationController@index')->name('choices');
+Route::group(['prefix' => 'contestant'], function () {
+	Route::get('/', 'ContestantRegistrationController@index')->name('choices');
 
-	Route::get('/welcome','ContestantRegistrationController@welcome')->name('welcome');
-	Route::get('/complete','ContestantRegistrationController@complete')->name('complete');
-	Route::get('/group','ContestantRegistrationController@registrationGroup')->name('group');
-	Route::post('/group','ContestantRegistrationController@createGroupIsthara')->name('group');
-	
-	Route::get('/solo','ContestantRegistrationController@registrationSolo')->name('solo');
-	Route::post('/solo','ContestantRegistrationController@createSoloIsthara')->name('solo');
+	Route::get('/welcome', 'ContestantRegistrationController@welcome')->name('welcome');
+	Route::get('/complete', 'ContestantRegistrationController@complete')->name('complete');
+	Route::get('/group', 'ContestantRegistrationController@registrationGroup')->name('group');
+	Route::post('/group', 'ContestantRegistrationController@createGroupIsthara')->name('group');
+
+	Route::get('/solo', 'ContestantRegistrationController@registrationSolo')->name('solo');
+	Route::post('/solo', 'ContestantRegistrationController@createSoloIsthara')->name('solo');
 });
 
 Route::group(['prefix' => 'regisContestant'], function () {
@@ -89,6 +89,7 @@ Route::group(['prefix' => 'regisContestant'], function () {
 use Illuminate\Http\Request;
 
 Route::post('/upload', function (Request $request) {
+	// dd($request->file("gambar"));
 	dd($request->file("gambar")->store("1aOE8KhzgAI4QuIZI65q7H7XlpATx_N0L", "google"));
 });
 

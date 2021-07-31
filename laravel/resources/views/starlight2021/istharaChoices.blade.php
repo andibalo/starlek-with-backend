@@ -30,9 +30,34 @@
                 </div>
             </div>
             <div class="row d-flex justify-content-center p-3">
-                <h4 class="terms-text">Emerging Stage's Terms & Regulations</h2>
+                <!-- Button trigger modal -->
+                <button type="button" class="regulationBtn" data-toggle="modal" data-target="#istharaModal">
+                    Emerging Stage's Terms & Regulations
+                </button>
             </div>
         </div>
+        
+        
+        <!-- Modal -->
+        <div class="modal fade" id="istharaModal" tabindex="-1" role="dialog" aria-labelledby="istharaModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    {{-- pdf viewer --}}
+                    <div id="example1" class="isthara-regulation">
+                        
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        
        
     </div>
     

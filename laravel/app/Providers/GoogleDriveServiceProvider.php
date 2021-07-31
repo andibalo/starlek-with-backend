@@ -2,9 +2,9 @@
 
 namespace App\Providers;
 
-use Hypweb\Flysystem\GoogleDrive\GoogleDriveAdapter;
-use Illuminate\Support\ServiceProvider;
 use League\Flysystem\Filesystem;
+use Illuminate\Support\ServiceProvider;
+use Hypweb\Flysystem\GoogleDrive\GoogleDriveAdapter;
 
 class GoogleDriveServiceProvider extends ServiceProvider
 {
