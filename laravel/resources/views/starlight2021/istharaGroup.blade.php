@@ -183,13 +183,13 @@
                             <div class="col-4 d-flex flex-column justify-content-between">
                                 <h2 class="fs-title">Welcome Starlighters!</h2>
                                 <h3 style="margin-top:240px" class="fs-subtitle">Welcome, Starlighters! Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
-                                <div class="next-container d-flex justify-content-center">
+                                <div class="next-container d-flex">
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
                                 </div>
                             </div>
                             <div class="ms-form-container col-8 decOfAgree ">
                                 <h6>Declaration of Agreement</h6>
-                                <p>I hereby agree that I truthfully and accurately complete this registration form and that the answers and information I provide are not misleading in any way. Furthermore, I understand that Starlight has the right at any time in its sole discretion to disqualify me from the audition process if at any stage providing personal data that is untrue, inaccurate or misleading, violates the rules or violates the provisions stated here.
+                                <p class="text-justify">I hereby agree that I truthfully and accurately complete this registration form and that the answers and information I provide are not misleading in any way. Furthermore, I understand that Starlight has the right at any time in its sole discretion to disqualify me from the audition process if at any stage providing personal data that is untrue, inaccurate or misleading, violates the rules or violates the provisions stated here.
                                 </p>
                                 <div class="form-check agreeForm ">
                                     <input type="checkbox" id="agree" class="agreeCheckBox">

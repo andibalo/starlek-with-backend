@@ -125,7 +125,7 @@
                             </div>
                             <div class="ms-form-container col-8 decOfAgree ">
                                 <h6>Declaration of Agreement</h6>
-                                <p>I hereby agree that I truthfully and accurately complete this registration form and that the answers and information I provide are not misleading in any way. Furthermore, I understand that Starlight has the right at any time in its sole discretion to disqualify me from the audition process if at any stage providing personal data that is untrue, inaccurate or misleading, violates the rules or violates the provisions stated here.
+                                <p class="text-justify" >I hereby agree that I truthfully and accurately complete this registration form and that the answers and information I provide are not misleading in any way. Furthermore, I understand that Starlight has the right at any time in its sole discretion to disqualify me from the audition process if at any stage providing personal data that is untrue, inaccurate or misleading, violates the rules or violates the provisions stated here.
                                 </p>
                                 <div class="form-check agreeForm">
                                     <input type="checkbox" id="agree" class="agreeCheckBox">

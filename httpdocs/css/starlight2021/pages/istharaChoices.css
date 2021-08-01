@@ -175,7 +175,7 @@ body {
 }
 
 .solo-bg {
-    border-radius: 8% 0 0 8%;
+    
 }
 
 .group-bg {
@@ -218,10 +218,32 @@ body {
     left: 50%;
 }
 
-.choice-text:hover {
+.img-contain{
+    -webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+    overflow: hidden;
+}
+
+.img-contain-solo{
+    border-radius: 8% 0 0 8%;
+}
+
+.img-contain-group{
+    border-radius: 0 8% 8% 0;
+}
+
+
+.img-contain:hover .choice-text{
     cursor: pointer;
     text-shadow: 0 0 10px var(--color-primary);
     transition: all ease 200ms;
+}
+
+.img-contain:hover img{
+    -webkit-transform: scale(1.1);
+	transform: scale(1.1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
 }
 
 .terms-text {
