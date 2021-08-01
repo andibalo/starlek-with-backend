@@ -240,8 +240,20 @@ body {
     background-color: rgba(71,88,112, 0.6);
     display: flex;
     flex-direction: column;
+    padding-top: 40px;
 }
 
+#msform fieldset h6 {
+    margin-bottom: 10px;
+}
+
+#msform fieldset .form-check{
+    margin-top: 20px;
+}
+
+#msform fieldset .captcha{
+    margin-top: 50px;
+}
 .nextBtn {
     margin-top: auto;
 }
