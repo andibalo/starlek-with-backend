@@ -184,6 +184,32 @@ body {
     color: var(--color-primary);
 }
 
+.modal-dialog {
+    max-width: 750px;
+}
+
+#example1{
+    height: 500px;
+}
+
+.regulationBtn {
+    font-size: 1.3rem;
+    background:transparent;
+    color: white;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+    border: none;
+    outline: none;
+}
+
+.regulationBtn:hover, .regulationBtn:focus {
+    border: none;
+    outline: none;
+    text-shadow: 0 0 10px white;
+    transition: all ease 200ms;
+}
+
 /*custom font*/
 @import url(https://fonts.googleapis.com/css?family=Poppins);
 

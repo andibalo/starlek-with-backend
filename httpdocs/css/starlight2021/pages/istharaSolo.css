@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: "Montserrat";
     src: url("../../../fonts/starlight2021/Montserrat-Regular.ttf")
@@ -40,6 +39,9 @@ body {
     font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
         Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
         sans-serif;
+    background-image: url("../../../images/starlight2021/isthara/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .mm-menu {
@@ -161,13 +163,302 @@ body {
 /* ------------- css isthara --------------------------- */
 
 .section-1 {
-    min-height: 100vh;
-    justify-content: center;
-    align-items: center;
+    margin-top: 140px;
+    margin-bottom: 100px;
+    
 }
 
-.form-box {
+#msform fieldset{
+    background-image: url("../../../images/starlight2021/isthara/form-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#msform label {
+    color: var(--color-primary);
+    text-align: left;
+    display: flex;
+}
+
+#msform small {
+    color: var(--color-primary);
+}
+
+.modal-dialog {
+    max-width: 750px;
+}
+
+#example1{
+    height: 500px;
+}
+
+.regulationBtn {
+    font-size: 1.3rem;
+    background:transparent;
+    color: white;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+    border: none;
+    outline: none;
+}
+
+.regulationBtn:hover, .regulationBtn:focus {
+    border: none;
+    outline: none;
+    text-shadow: 0 0 10px white;
+    transition: all ease 200ms;
+}
+
+/*custom font*/
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+
+
+#msform {
+    text-align: center;
+    
+    /* margin-top: 30px; */
+}
+
+#msform fieldset {
+    border: 0 none;
+    max-width: 750px;
+    
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    padding: 20px 30px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    /*stacking fieldsets above each other*/
+    position: relative;
+}
+
+#msform fieldset .col-8 {
+    min-height: 490px;
+    height: 100%;
+    background-color: rgba(71,88,112, 0.6);
+    display: flex;
+    flex-direction: column;
+}
+
+.nextBtn {
+    margin-top: auto;
+}
+
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+    display: none;
+}
+
+/*inputs*/
+#msform input, #msform textarea, #msform select {
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 13px;
+}
+
+#msform input:focus, #msform textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: none;
+    outline: none;
+    transition: All 0.5s ease-in;
+    -webkit-transition: All 0.5s ease-in;
+    -moz-transition: All 0.5s ease-in;
+    -o-transition: All 0.5s ease-in;
+}
+
+.participant-wrapper {
+    overflow: auto;
+    max-height: 500px;
+}
+
+.participant-wrapper hr {
     background-color: var(--color-primary);
+    height: 1px;
+}
+
+/*buttons*/
+#msform .action-button {
+    width: 100px;
+    background:transparent;
+    font-weight: bold;
+    color: var(--color-primary);
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+    border: transparent;
+}
+
+#msform .action-button:hover, #msform .action-button:focus {
+    text-shadow: 0 0 0 20px white;
+    border: none;
+    outline: none;
+}
+
+#msform .action-button-previous {
+    width: 100px;
+    background:transparent;
+    font-weight: bold;
+    color: var(--color-primary);
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+    border: transparent;
+}
+
+#msform .action-button-previous:hover, #msform .action-button-previous:focus {
+    text-shadow: 0 0 0 20px white;
+    border: none;
+    outline: none;
+}
+
+.decOfAgree {
+    text-align: left;
+    color: white;
+}
+
+.decOfAgree h6 {
+    color: var(--color-primary);
+}
+
+.decOfAgree p {
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+.captcha {
+    justify-content: start;
+    margin-left: 3px;
+    margin-bottom: 10px;
+}
+
+.agreeForm {
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+#agree.agreeCheckBox{
+    width: auto;
+    margin: 0;
+    margin-right: 10px;
+}
+
+.disabledBtn {
+    color: #918b8b !important;
+    pointer-events: none;
+}
+
+/*headings*/
+.fs-title {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.fs-subtitle {
+    font-weight: normal;
+    font-size: 13px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/*progressbar*/
+#progressbar {
+    padding: 0;
+    margin-bottom: 30px;
+    overflow: hidden;
+    /*CSS counters to number the steps*/
+    counter-reset: step;
+    /* position: absolute; */
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+    
+
+#progressbar li {
+    list-style-type: none;
+    color: rgb(133, 2, 2);
+    text-transform: uppercase;
+    font-size: 9px;
+    float: left;
+    position: relative;
+    padding-left: 40px;
+    padding-right: 40px;
+
+}
+
+#progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 24px;
+    height: 24px;
+    line-height: 26px;
+    display: block;
+    font-size: 12px;
+    color: #08080b00;
+    background: rgb(124, 3, 3);
+    border-radius: 25px;
+    margin: 0 auto 10px auto;
+}
+
+/*progressbar connectors*/
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: -50%;
+    top: 9px;
+    z-index: -1; /*put it behind the numbers*/
+}
+
+#progressbar li:first-child:after {
+    /*connector not needed before the first step*/
+    content: none;
+}
+
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before, #progressbar li.active:after {
+    background: var(--color-primary);
+    color: rgba(255, 255, 255, 0);
+}
+
+
+/* Not relevant to this form */
+.dme_link {
+    margin-top: 30px;
+    text-align: center;
+}
+.dme_link a {
+    background: #FFF;
+    font-weight: bold;
+    color: #ee0979;
+    border: 0 none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 5px 25px;
+    font-size: 12px;
+}
+
+.dme_link a:hover, .dme_link a:focus {
+    background: #C5C5F1;
+    text-decoration: none;
 }
 
 /* ------------- end --------------------------- */
