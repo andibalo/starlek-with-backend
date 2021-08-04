@@ -20,12 +20,12 @@
             <div class="row d-flex justify-content-center pt-3 mt-5">
                 <div class="col-6 p-0 position-relative img-contain img-contain-solo">
                     <a href="/contestant/solo"><img class="solo-bg" src="../../../images/starlight2021/isthara/solo-bg.png" alt="" width="400px">
-                        <h3 class="choice-text">SOLO</h3>
+                        <h3 class="choice-text font-weight-bold">SOLO</h3>
                     </a>
                 </div>
                 <div class="col-6 p-0 img-contain img-contain-group">
                     <a href="/contestant/group"><img class="group-bg" src="../../../images/starlight2021/isthara/group-bg.png" alt="" width="400px">
-                        <h3 class="choice-text">GROUP</h3>
+                        <h3 class="choice-text font-weight-bold">GROUP</h3>
                     </a>
                 </div>
             </div>

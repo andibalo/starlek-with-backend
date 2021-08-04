@@ -204,7 +204,8 @@
                                     </form>
                                 </div>
                                 <div class="next-container d-flex justify-content-end nextBtn">
-                                    <input type="button" name="next" class="action-button disabledBtn closeBtn" value="Submit" onclick="window.open('/contestant/complete', '_self')"/>
+                                    {{-- <input type="button" name="next" class="action-button disabledBtn closeBtn" value="Submit" onclick="window.open('/contestant/complete', '_self')"/> --}}
+                                    <input type="submit" name="next" class="action-button disabledBtn closeBtn" value="Submit"/>
                                 </div>
                             </div>
                         </div>     

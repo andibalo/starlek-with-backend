@@ -103,6 +103,9 @@
   <!-- pdfobject -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.6/pdfobject.min.js" integrity="sha512-B+t1szGNm59mEke9jCc5nSYZTsNXIadszIDSLj79fEV87QtNGFNrD6L+kjMSmYGBLzapoiR9Okz3JJNNyS2TSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>PDFObject.embed("{{asset('files/starlight2021/REGULASI-ISTHARA.pdf')}}", "#example1");</script>
+
+  {{-- validate js --}}
+  
   
 	<!--Start of Tawk.to Script-->
 <script type="text/javascript">
