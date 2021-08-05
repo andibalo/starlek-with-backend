@@ -300,6 +300,7 @@ body {
 
 /*buttons*/
 #msform .action-button {
+    font-size: 16px;
     width: 100px;
     background:transparent;
     font-weight: bold;
@@ -311,12 +312,14 @@ body {
 }
 
 #msform .action-button:hover, #msform .action-button:focus {
-    text-shadow: 0 0 0 20px white;
+    text-shadow: 0 0 10px var(--color-primary);
+    transition: all ease 200ms;
     border: none;
     outline: none;
 }
 
 #msform .action-button-previous {
+    font-size: 16px;
     width: 100px;
     background:transparent;
     font-weight: bold;
@@ -328,7 +331,8 @@ body {
 }
 
 #msform .action-button-previous:hover, #msform .action-button-previous:focus {
-    text-shadow: 0 0 0 20px white;
+    text-shadow: 0 0 10px var(--color-primary);
+    transition: all ease 200ms;
     border: none;
     outline: none;
 }
@@ -372,12 +376,14 @@ body {
 
 /*headings*/
 .fs-title {
-    font-size: 18px;
+    font-size: 23px;
     text-transform: uppercase;
     color: #fff;
+    margin-top: 50px;
     margin-bottom: 10px;
     letter-spacing: 2px;
     font-weight: bold;
+    text-align: left;
 }
 
 .fs-subtitle {

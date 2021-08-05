@@ -35,7 +35,11 @@
                     <div class="row ms-form-wrapper">
                         <div class="col-4 d-flex flex-column justify-content-between">
                             <h2 class="fs-title">Welcome Starlighters!</h2>
-                            <h3 style="margin-bottom:87px "class="fs-subtitle">Welcome, Starlighters! Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>                 
+                            <div class="next-container d-flex justify-content-end flex-column">
+                                <h3 class="fs-subtitle">Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
+
+                                <input type="button" class="action-button-previous" value="Previous" onclick="window.open('/contestant', '_self')"/>
+                            </div>                   
                         </div>
                         <div class="ms-form-container col-8">
                             <label for="link-video d-flex">Video Link</label>
@@ -56,10 +60,8 @@
                     <div class="row ms-form-wrapper">
                         <div class="col-4 d-flex flex-column justify-content-between">
                             <h2 class="fs-title">Welcome Starlighters!</h2>
-                            <h3 style="opacity=0"></h3>
-                            <h3 style="margin-top:240px "class="fs-subtitle">Welcome, Starlighters! Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
-                            <h3 style="opacity=0"></h3>
-                            <div class="next-container d-flex justify-content-start">
+                            <div class="next-container d-flex justify-content-end flex-column">
+                                <h3 class="fs-subtitle">Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
                                 <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
                             </div>
                         </div>
@@ -83,10 +85,8 @@
                     <div class="row ms-form-wrapper">
                         <div class="col-4 d-flex flex-column justify-content-between">
                             <h2 class="fs-title">Welcome Starlighters!</h2>
-                            <h3 style="opacity=0"></h3>
-                            <h3 style="margin-top:240px" class="fs-subtitle">Welcome, Starlighters! Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
-                            <h3 style="opacity=0"></h3>
-                            <div class="next-container d-flex justify-content-start">
+                            <div class="next-container d-flex justify-content-end flex-column">
+                                <h3 class="fs-subtitle">Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
                                 <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
                             </div>
                         </div>
@@ -105,9 +105,9 @@
                                 <label for="date-birth">Date of Birth</label>
                                 <input type="date" name="date-birth" id="date-birth" placeholder="2021-08-21"/>
                                 <label for="address">Address</label>
-                                <input type="text" name="address" id="address" placeholder="Jl. Scientia Boulevard, Gading, Kec. Serpong, Tangerang, Banten 15227"/>
+                                <input type="text" name="address" id="address" placeholder="Insert your address here"/>
                                 <label for="education">Educational Institution</label>
-                                <input type="text" name="education" id="education" placeholder="Universitas Multimedia Nusantara"/>
+                                <input type="text" name="education" id="education" placeholder="Insert your educational institution here"/>
                                 <label>Scan Identity Card (KTP/KITAS/Kartu Pelajar/KIA)</label>
                                 <input type="file" name="idCard[]" accept="image/png, image/jpeg, image/jpg" id="idCard" placeholder="Universitas Multimedia Nusantara" style="color: white;"/>
                             </div>
@@ -119,9 +119,9 @@
                                 <label for="date-birth-2">Date of Birth</label>
                                 <input type="date" name="date-birth-2" id="date-birth-2" placeholder="2021-08-21"/>
                                 <label for="address-2">Address</label>
-                                <input type="text" name="address-2" id="address-2" placeholder="Jl. Scientia Boulevard, Gading, Kec. Serpong, Tangerang, Banten 15227"/>
+                                <input type="text" name="address-2" id="address-2" placeholder="Insert your address here"/>
                                 <label for="education-2">Educational Institution</label>
-                                <input type="text" name="education-2" id="education-2" placeholder="Universitas Multimedia Nusantara"/>
+                                <input type="text" name="education-2" id="education-2" placeholder="Insert your educational institution here"/>
                                 <label>Scan Identity Card (KTP/KITAS/Kartu Pelajar/KIA)</label>
                                 <input type="file" name="idCard[]" accept="image/png, image/jpeg, image/jpg" id="idCard" placeholder="Universitas Multimedia Nusantara" style="color: white;"/>
                             </div>
@@ -133,9 +133,9 @@
                                 <label for="date-birth-3">Date of Birth</label>
                                 <input type="date" name="date-birth-3" id="date-birth-3" placeholder="2021-08-21"/>
                                 <label for="address-3">Address</label>
-                                <input type="text" name="address-3" id="address-3" placeholder="Jl. Scientia Boulevard, Gading, Kec. Serpong, Tangerang, Banten 15227"/>
+                                <input type="text" name="address-3" id="address-3" placeholder="Insert your address here"/>
                                 <label for="education-3">Educational Institution</label>
-                                <input type="text" name="education-3" id="education-3" placeholder="Universitas Multimedia Nusantara"/>
+                                <input type="text" name="education-3" id="education-3" placeholder="Insert your educational institution here"/>
                                 <label>Scan Identity Card (KTP/KITAS/Kartu Pelajar/KIA)</label>
                                 <input type="file" name="idCard[]" accept="image/png, image/jpeg, image/jpg" id="idCard" placeholder="Universitas Multimedia Nusantara" style="color: white;"/>
                             </div>
@@ -147,9 +147,9 @@
                                 <label for="date-birth-4">Date of Birth</label>
                                 <input type="date" name="date-birth-4" id="date-birth-4" placeholder="2021-08-21"/>
                                 <label for="address-4">Address</label>
-                                <input type="text" name="address-4" id="address-4" placeholder="Jl. Scientia Boulevard, Gading, Kec. Serpong, Tangerang, Banten 15227"/>
+                                <input type="text" name="address-4" id="address-4" placeholder="Insert your address here"/>
                                 <label for="education-4">Educational Institution</label>
-                                <input type="text" name="education-4" id="education-4" placeholder="Universitas Multimedia Nusantara"/>
+                                <input type="text" name="education-4" id="education-4" placeholder="Insert your educational institution here"/>
                                 <label>Scan Identity Card (KTP/KITAS/Kartu Pelajar/KIA)</label>
                                 <input type="file" name="idCard[]" accept="image/png, image/jpeg, image/jpg" id="idCard" placeholder="Universitas Multimedia Nusantara" style="color: white;"/>
                             </div>
@@ -161,9 +161,9 @@
                                 <label for="date-birth-5">Date of Birth</label>
                                 <input type="date" name="date-birth-5" id="date-birth-5" placeholder="2021-08-21"/>
                                 <label for="address-5">Address</label>
-                                <input type="text" name="address-5" id="address-5" placeholder="Jl. Scientia Boulevard, Gading, Kec. Serpong, Tangerang, Banten 15227"/>
+                                <input type="text" name="address-5" id="address-5" placeholder="Insert your address here"/>
                                 <label for="education-5">Educational Institution</label>
-                                <input type="text" name="education-5" id="education-5" placeholder="Universitas Multimedia Nusantara"/>
+                                <input type="text" name="education-5" id="education-5" placeholder="Insert your educational institution here"/>
                                 <label>Scan Identity Card (KTP/KITAS/Kartu Pelajar/KIA)</label>
                                 <input type="file" name="idCard[]" accept="image/png, image/jpeg, image/jpg" id="idCard" placeholder="Universitas Multimedia Nusantara" style="color: white;"/>
                             </div>
@@ -182,8 +182,8 @@
                         <div class="row ms-form-wrapper">
                             <div class="col-4 d-flex flex-column justify-content-between">
                                 <h2 class="fs-title">Welcome Starlighters!</h2>
-                                <h3 style="margin-top:240px" class="fs-subtitle">Welcome, Starlighters! Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
-                                <div class="next-container d-flex">
+                                <div class="next-container d-flex justify-content-end flex-column">
+                                    <h3 class="fs-subtitle">Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
                                 </div>
                             </div>
@@ -353,13 +353,13 @@
                             opacity: opacity 
                         });
                     },
-                    duration: 800,
+                    duration: 1500,
                     complete: function() {
                         current_fs.hide();
                         animating = false;
                     },
                     //this comes from the custom easing plugin
-                    easing: "easeInOutBack"
+                    easing: "easeOutBack"
                     }
                 );
             });
@@ -402,13 +402,13 @@
                         position: "relative",
                     });
                 },
-                duration: 700,
+                duration: 800,
                 complete: function() {
                     current_fs.hide();
                     animating = false;
                 },
                 //this comes from the custom easing plugin
-                easing: "easeInOutBack"
+                easing: "easeOutBack"
                 }
             );
             });
