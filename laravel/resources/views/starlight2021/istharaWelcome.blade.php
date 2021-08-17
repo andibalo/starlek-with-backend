@@ -24,7 +24,9 @@
                     <a class="registerBtn" href="/contestant">Register Here</a>
                 </div>
             </div>
-            <h6 class="text-center text-white">Emerging Stage's Terms & Regulations</h6>
+            <button type="button" class="regulationBtn" data-toggle="modal" data-target="#istharaModal">
+                <h6 class="text-center text-white">Emerging Stage's Terms & Regulations</h6>
+            </button>   
         </div>
        
     </div>

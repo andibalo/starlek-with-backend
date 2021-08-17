@@ -144,6 +144,26 @@ body {
 }
 
 /* modal pdf */
+.regulationBtn {
+    font-size: 1.3rem;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+    border: none;
+    outline: none;
+    display: contents;
+  }
+  
+  .regulationBtn:hover,
+  .regulationBtn:focus {
+    border: none;
+    outline: none;
+    text-shadow: 0 0 10px white;
+    transition: all ease 200ms;
+  }
+
 .isthara-regulation {
     height: 30rem;
     width: 100%; 
