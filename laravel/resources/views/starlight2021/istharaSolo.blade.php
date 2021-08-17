@@ -220,8 +220,8 @@
                     }
                 })
             });
-            
-            
+
+                    
             $('#step-1 input').on("change keyup",(e) => {
                 if(validate.isEmpty($('#link-video').val()) || validate.isEmpty($('#stage-name').val()) || validate.isEmpty($('#talent').val())){
                     if(!$('#step-1 .next').hasClass('disabledBtn')){
@@ -259,11 +259,6 @@
                     }
                 }
             })
-
-            $('#idCard').change(e => {
-                console.log(e.target.value)
-            })
-
 
             function numOfParticipants(val) {
                 var participant = val.value;

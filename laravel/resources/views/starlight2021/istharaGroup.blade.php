@@ -32,13 +32,13 @@
                 </ul>
                 <!-- fieldsets -->
                 <fieldset>
-                    <div class="row ms-form-wrapper">
+                    <div id="step-1" class="row ms-form-wrapper">
                         <div class="col-12 col-md-4 d-flex flex-column justify-content-between">
                             <h2 class="fs-title text-center text-md-left">Welcome Starlighters!</h2>
                             <div class="next-container d-flex justify-content-end flex-column">
                                 <h3 class="fs-subtitle">Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
 
-                                <input type="button" class="action-button-previous d-none d-md-block" value="Previous" onclick="window.open('/contestant', '_self')"/>
+                            
                             </div>                   
                         </div>
                         <div class="ms-form-container col-12 col-md-8">
@@ -49,21 +49,20 @@
                             <label for="link-video d-flex">Talent Description</label>
                             <input type="text" id="talent" name="talent" placeholder="Describe your talent briefly"/>
                             <div class="next-container d-none d-md-flex justify-content-end nextBtn">
-                                <input type="button" name="next" class="next action-button" value="Next"/>
+                                <input type="button" name="next" class="next action-button disabledBtn" value="Next"/>
                             </div>
                             
                         </div>
                     </div>                         
-                    <div class=" d-flex d-md-none justify-content-between "> 
-                            <input type="button" class="action-button-previous" value="Previous" onclick="window.open('/contestant', '_self')"/>
-                            <input type="button" name="next" class="next action-button" value="Next"/>
+                    <div class=" d-flex d-md-none justify-content-end"> 
+                            <input type="button" name="next" class="next action-button disabledBtn" value="Next"/>
                         </div>
                 </fieldset>
                 <fieldset>
-                    <div class="row ms-form-wrapper">
+                    <div id="step-2" class="row ms-form-wrapper">
                         <div class="col-12 col-md-4 d-flex flex-column justify-content-between">
                             <h2 class="fs-title text-center text-md-left">Welcome Starlighters!</h2>
-                            <div class="next-container d-none d-md-flexjustify-content-end flex-column">
+                            <div class="next-container d-none d-md-flex justify-content-end flex-column">
                                 <h3 class="fs-subtitle">Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
                                 <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
                             </div>
@@ -79,7 +78,7 @@
                             <input type="email" name="e-mail" id="e-mail" placeholder="starlight@umn.ac.id"/>
                             
                             <div class="next-container d-none d-md-flex justify-content-end nextBtn">
-                                <input type="button" name="next" class="next action-button" value="Next"/>
+                                <input type="button" name="next" class="next action-button disabledBtn" value="Next"/>
                             </div>
                         </div>                         
                     </div>  
@@ -267,7 +266,7 @@
         {{-- <script src="https://www.google.com/recaptcha/api.js?render=6Lcfyc8bAAAAAHT_SmEfgzFbTVV0ZTZJWt_IAhjK"></script> --}}
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
         {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> --}}
         <script>
             const secondParticipant = $("#secondParticipant");
@@ -293,13 +292,30 @@
             });
 
             
-            // grecaptcha.ready(function() {
-            //         grecaptcha.execute('6Lcfyc8bAAAAAHT_SmEfgzFbTVV0ZTZJWt_IAhjK', {action: 'contact'}).then(function(token) {
-            //             if (token) {
-            //                 document.getElementById('recaptcha').value = token;
-            //             }
-            //         });
-            //     });
+            $('#step-1 input').on("change keyup",(e) => {
+                if(validate.isEmpty($('#link-video').val()) || validate.isEmpty($('#stage-name').val()) || validate.isEmpty($('#talent').val())){
+                    if(!$('#step-1 .next').hasClass('disabledBtn')){
+                        $('#step-1 .next').addClass('disabledBtn')
+                    }
+                } else {
+                    if($('#step-1 .next').hasClass('disabledBtn')){
+                        $('#step-1 .next').removeClass('disabledBtn')
+                    }
+                }
+            })
+
+               
+            $('#step-2 input').on("change keyup",(e) => {
+                if(validate.single($('#e-mail').val(), {presence: true, email: true}) || validate.isEmpty($('#line-id').val()) || validate.single($('#phone-number').val(), {numericality:true}) || validate.isEmpty($('#instagram').val())){
+                    if(!$('#step-2 .next').hasClass('disabledBtn')){
+                        $('#step-2 .next').addClass('disabledBtn')
+                    }
+                } else {
+                    if($('#step-2 .next').hasClass('disabledBtn')){
+                        $('#step-2 .next').removeClass('disabledBtn')
+                    }
+                }
+            })
 
             function numOfParticipants(val) {
                 var participant = val.value;
