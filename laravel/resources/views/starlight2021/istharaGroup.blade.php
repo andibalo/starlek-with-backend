@@ -31,14 +31,12 @@
                     <li></li>
                 </ul>
                 <!-- fieldsets -->
-                <fieldset>
-                    <div id="step-1" class="row ms-form-wrapper">
+                <fieldset id="step-1">
+                    <div  class="row ms-form-wrapper">
                         <div class="col-12 col-md-4 d-flex flex-column justify-content-between">
                             <h2 class="fs-title text-center text-md-left">Welcome Starlighters!</h2>
                             <div class="next-container d-flex justify-content-end flex-column">
                                 <h3 class="fs-subtitle">Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
-
-                            
                             </div>                   
                         </div>
                         <div class="ms-form-container col-12 col-md-8">
@@ -58,15 +56,11 @@
                             <input type="button" name="next" class="next action-button disabledBtn" value="Next"/>
                         </div>
                 </fieldset>
-                <fieldset>
-                    <div id="step-2" class="row ms-form-wrapper">
+                <fieldset id="step-2">
+                    <div  class="row ms-form-wrapper">
                         <div class="col-12 col-md-4 d-flex flex-column justify-content-between">
                             <h2 class="fs-title text-center text-md-left">Welcome Starlighters!</h2>
-<<<<<<< Updated upstream
-                            <div class="next-container d-none d-md-flex justify-content-end flex-column">
-=======
                             <div class="next-container d-flex justify-content-end flex-column">
->>>>>>> Stashed changes
                                 <h3 class="fs-subtitle">Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
                                 <input type="button" name="previous" class="d-md-flex d-none previous action-button-previous" value="Previous"/>
                             </div>
