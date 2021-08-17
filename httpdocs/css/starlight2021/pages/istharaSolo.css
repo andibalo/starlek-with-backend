@@ -1,610 +1,620 @@
 @font-face {
-    font-family: "Montserrat";
-    src: url("../../../fonts/starlight2021/Montserrat-Regular.ttf")
-        format("truetype");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Montserrat";
+  src: url("../../../fonts/starlight2021/Montserrat-Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "Montserrat";
-    src: url("../../../fonts/starlight2021/Montserrat-SemiBold.ttf")
-        format("truetype");
-    font-weight: 600;
-    font-style: normal;
+  font-family: "Montserrat";
+  src: url("../../../fonts/starlight2021/Montserrat-SemiBold.ttf")
+    format("truetype");
+  font-weight: 600;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "Montserrat";
-    src: url("../../../fonts/starlight2021/Montserrat-Bold.ttf")
-        format("truetype");
-    font-weight: 700;
-    font-style: normal;
+  font-family: "Montserrat";
+  src: url("../../../fonts/starlight2021/Montserrat-Bold.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "Royal";
-    src: url("../../../fonts/starlight2021/MBF-Royal.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Royal";
+  src: url("../../../fonts/starlight2021/MBF-Royal.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 :root {
-    --color-primary: #f5dcaf;
-    --color-secondary: #40040b;
-	--color-disabled: #5a5a5a;
+  --color-primary: #f5dcaf;
+  --color-secondary: #40040b;
+  --color-disabled: #5a5a5a;
 }
 
 body {
-    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-        sans-serif;
-    background-image: url("../../../images/starlight2021/isthara/background.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-image: url("../../../images/starlight2021/isthara/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .mm-menu {
-    --mm-color-background: none;
-    --mm-color-text: white;
-    --mm-color-border: var(--color-primary);
-    background-image: linear-gradient(
-        to bottom,
-        #1a0e10,
-        #1a1116,
-        #19151b,
-        #18181e,
-        #171b21
-    );
+  --mm-color-background: none;
+  --mm-color-text: white;
+  --mm-color-border: var(--color-primary);
+  background-image: linear-gradient(
+    to bottom,
+    #1a0e10,
+    #1a1116,
+    #19151b,
+    #18181e,
+    #171b21
+  );
 }
 
 .mm-menu .navBtn {
-    display: inline-block;
-    background: var(--color-secondary);
-    border-radius: 20px;
-    border: 1px solid var(--color-primary);
-    box-shadow: 0 0 10px rgb(245 220 175 / 70%);
-    margin-top: 30px;
-    margin-left: 20px;
-    font-family: "Montserrat";
-    padding-left: 2rem;
-    padding-right: 2rem;
+  display: inline-block;
+  background: var(--color-secondary);
+  border-radius: 20px;
+  border: 1px solid var(--color-primary);
+  box-shadow: 0 0 10px rgb(245 220 175 / 70%);
+  margin-top: 30px;
+  margin-left: 20px;
+  font-family: "Montserrat";
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .mm-listitem:after {
-    left: 0;
+  left: 0;
 }
 
 #page .mburger {
-    color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 .main {
-    min-height: 100vh;
-    min-width: 100vw;
+  min-height: 100vh;
+  min-width: 100vw;
 
-    background-size: cover;
+  background-size: cover;
 }
 
 .mainText {
-    display: inline-block;
-    color: var(--color-primary);
+  display: inline-block;
+  color: var(--color-primary);
 
-    text-shadow: 0 0 10px rgba(245, 220, 175, 0.7), 0 8px 8px rgba(0, 0, 0);
+  text-shadow: 0 0 10px rgba(245, 220, 175, 0.7), 0 8px 8px rgba(0, 0, 0);
 }
 
 .semi-bold {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .navbar {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding-top: 30px;
-    padding-bottom: 30px;
-    transition: all 0.5s;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  transition: all 0.5s;
 }
 
 .navbar-toggler i {
-    color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 .navbar.sticky {
-    background-color: rgba(0, 0, 0, 1);
-    padding-top: 15px;
-    padding-bottom: 15px;
+  background-color: rgba(0, 0, 0, 1);
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .nav-item .nav-link {
-    color: var(--color-primary);
-    font-family: "Royal";
+  color: var(--color-primary);
+  font-family: "Royal";
 }
 
 .nav-item .nav-link:hover {
-    color: var(--color-primary);
-    text-shadow: 0 0 10px rgba(245, 220, 175, 1);
+  color: var(--color-primary);
+  text-shadow: 0 0 10px rgba(245, 220, 175, 1);
 }
 
 #page .nav-link.navBtn {
-    background: var(--color-secondary);
-    border-radius: 50px;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    border: 2px solid var(--color-primary);
-    margin-right: 0;
-    color: var(--color-primary);
-    box-shadow: 0 0 10px rgba(245, 220, 175, 0.7);
+  background: var(--color-secondary);
+  border-radius: 50px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border: 2px solid var(--color-primary);
+  margin-right: 0;
+  color: var(--color-primary);
+  box-shadow: 0 0 10px rgba(245, 220, 175, 0.7);
 }
 
 .nav-item .nav-link {
-    margin-right: 3rem;
+  margin-right: 3rem;
 }
 
 .logo {
-    max-width: 70px;
+  max-width: 70px;
 }
 
 .logo img {
-    width: 100%;
+  width: 100%;
 }
 
 #page .main .nav-link {
-    color: var(--color-primary) !important;
+  color: var(--color-primary) !important;
 }
 
 .header {
-    color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 .content {
-    padding-top: 200px;
-    padding-bottom: 75px;
+  padding-top: 200px;
+  padding-bottom: 75px;
 }
 
 /* ------------- css isthara --------------------------- */
 
 .section-1 {
-    margin-top: 140px;
-    margin-bottom: 100px;
-    
+  margin-top: 140px;
+  margin-bottom: 100px;
 }
 
-#msform fieldset{
-    background-image: url("../../../images/starlight2021/isthara/form-background.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+#msform fieldset {
+  background-image: url("../../../images/starlight2021/isthara/form-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #msform label {
-    color: var(--color-primary);
-    text-align: left;
-    display: flex;
+  color: var(--color-primary);
+  text-align: left;
+  display: flex;
 }
 
 #msform small {
-    color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 .modal-dialog {
-    max-width: 750px;
+  max-width: 750px;
 }
 
-#example1{
-    height: 500px;
+#example1 {
+  height: 500px;
 }
 
 .regulationBtn {
-    font-size: 1.3rem;
-    background:transparent;
-    color: white;
-    cursor: pointer;
-    padding: 10px 5px;
-    margin: 10px 5px;
-    border: none;
-    outline: none;
+  font-size: 1.3rem;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+  border: none;
+  outline: none;
 }
 
-.regulationBtn:hover, .regulationBtn:focus {
-    border: none;
-    outline: none;
-    text-shadow: 0 0 10px white;
-    transition: all ease 200ms;
+.regulationBtn:hover,
+.regulationBtn:focus {
+  border: none;
+  outline: none;
+  text-shadow: 0 0 10px white;
+  transition: all ease 200ms;
 }
 
 /*custom font*/
 @import url(https://fonts.googleapis.com/css?family=Poppins);
 
-
 #msform {
-    text-align: center;
-    
-    /* margin-top: 30px; */
+  text-align: center;
+
+  /* margin-top: 30px; */
 }
 
 #msform fieldset {
-    border: 0 none;
-    max-width: 750px;
-    
-    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
-    padding: 20px 30px;
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    /*stacking fieldsets above each other*/
-    position: relative;
+  border: 0 none;
+  max-width: 750px;
+
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  /*stacking fieldsets above each other*/
+  position: relative;
 }
 
-#msform fieldset .col-8 {
-    min-height: 490px;
-    height: 100%;
-    background-color: rgba(71,88,112, 0.6);
-    display: flex;
-    flex-direction: column;
-    padding-top: 40px;
+#msform fieldset .col-8,
+#msform fieldset .ms-form-container {
+  min-height: 490px;
+  height: 100%;
+  background-color: rgba(71, 88, 112, 0.6);
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
 }
 
 #msform fieldset h6 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
-#msform fieldset .agreeForm{
-    margin-top: 20px;
+#msform fieldset .agreeForm {
+  margin-top: 20px;
 }
 
-#msform fieldset .captcha{
-    margin-top: 50px;
+#msform fieldset .captcha {
+  margin-top: 50px;
 }
 
 .nextBtn {
-    margin-top: auto;
+  margin-top: auto;
 }
 
 /*Hide all except first fieldset*/
 #msform fieldset:not(:first-of-type) {
-    display: none;
+  display: none;
 }
 
 /*inputs*/
-#msform input, #msform textarea, #msform select {
-    padding: 7px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    width: 100%;
-    box-sizing: border-box;
-    font-family: montserrat;
-    color: #2C3E50;
-    font-size: 13px;
+#msform input,
+#msform textarea,
+#msform select {
+  padding: 7px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: montserrat;
+  color: #2c3e50;
+  font-size: 13px;
 }
 
-#msform input:focus, #msform textarea:focus {
-    -moz-box-shadow: none !important;
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
-    border: none;
-    outline: none;
-    transition: All 0.5s ease-in;
-    -webkit-transition: All 0.5s ease-in;
-    -moz-transition: All 0.5s ease-in;
-    -o-transition: All 0.5s ease-in;
+#msform input:focus,
+#msform textarea:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: none;
+  outline: none;
+  transition: All 0.5s ease-in;
+  -webkit-transition: All 0.5s ease-in;
+  -moz-transition: All 0.5s ease-in;
+  -o-transition: All 0.5s ease-in;
 }
 
 .participant-wrapper {
-    overflow: auto;
-    max-height: 500px;
+  overflow: auto;
+  max-height: 500px;
 }
 
 .participant-wrapper hr {
-    background-color: var(--color-primary);
-    height: 1px;
+  background-color: var(--color-primary);
+  height: 1px;
 }
 
 /*buttons*/
 #msform .action-button {
-    font-size: 16px;
-    width: 100px;
-    background:transparent;
-    font-weight: bold;
-    color: var(--color-primary);
-    cursor: pointer;
-    padding: 10px 5px;
-    margin: 10px 5px;
-    border: transparent;
+  font-size: 16px;
+  width: 100px;
+  background: transparent;
+  font-weight: bold;
+  color: var(--color-primary);
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+  border: transparent;
 }
 
-#msform .action-button:hover, #msform .action-button:focus {
-    border: none;
-    outline: none;
-    text-shadow: 0 0 10px var(--color-primary);
-    transition: all ease 200ms;
+#msform .action-button:hover,
+#msform .action-button:focus {
+  border: none;
+  outline: none;
+  text-shadow: 0 0 10px var(--color-primary);
+  transition: all ease 200ms;
 }
 
 #msform .action-button-previous {
-    font-size: 16px;
-    width: 100px;
-    background:transparent;
-    font-weight: bold;
-    color: var(--color-primary);
-    cursor: pointer;
-    padding: 10px 5px;
-    margin: 10px 5px;
-    border: transparent;
+  font-size: 16px;
+  width: 100px;
+  background: transparent;
+  font-weight: bold;
+  color: var(--color-primary);
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+  border: transparent;
 }
 
-#msform .action-button-previous:hover, #msform .action-button-previous:focus {
-    border: none;
-    outline: none;
-    text-shadow: 0 0 10px var(--color-primary);
-    transition: all ease 200ms;
+#msform .action-button-previous:hover,
+#msform .action-button-previous:focus {
+  border: none;
+  outline: none;
+  text-shadow: 0 0 10px var(--color-primary);
+  transition: all ease 200ms;
 }
 
 .decOfAgree {
-    text-align: left;
-    color: white;
+  text-align: left;
+  color: white;
 }
 
 .decOfAgree h6 {
-    color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 .decOfAgree p {
-    font-size: 13px;
-    margin-bottom: 0;
+  font-size: 13px;
+  margin-bottom: 0;
 }
 
 .captcha {
-    justify-content: start;
-    margin-left: 3px;
-    margin-bottom: 10px;
+  justify-content: start;
+  margin-left: 3px;
+  margin-bottom: 10px;
 }
 
 .agreeForm {
-    display: flex;
-    align-items: center;
-    padding: 0;
+  display: flex;
+  align-items: center;
+  padding: 0;
 }
 
-#agree.agreeCheckBox{
-    width: auto;
-    margin: 0;
-    margin-right: 10px;
+#agree.agreeCheckBox {
+  width: auto;
+  margin: 0;
+  margin-right: 10px;
 }
 
 .disabledBtn {
-    color: #918b8b !important;
-    pointer-events: none;
+  color: #918b8b !important;
+  pointer-events: none;
 }
 
 /*headings*/
 .fs-title {
-    font-size: 23px;
-    text-transform: uppercase;
-    color: #fff;
-    margin-top: 50px;
-    margin-bottom: 10px;
-    letter-spacing: 2px;
-    font-weight: bold;
-    text-align: left;
+  font-size: 23px;
+  text-transform: uppercase;
+  color: #fff;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-align: left;
 }
 
 .fs-subtitle {
-    font-weight: normal;
-    font-size: 13px;
-    color: #fff;
-    margin-bottom: 20px;
+  font-weight: normal;
+  font-size: 13px;
+  color: #fff;
+  margin-bottom: 20px;
 }
 
 /*progressbar*/
 #progressbar {
-    padding: 0;
-    margin-bottom: 30px;
-    overflow: hidden;
-    /*CSS counters to number the steps*/
-    counter-reset: step;
-    /* position: absolute; */
-    display: flex;
-    justify-content: center;
-    z-index: 10;
+  padding: 0;
+  margin-bottom: 30px;
+  overflow: hidden;
+  /*CSS counters to number the steps*/
+  counter-reset: step;
+  /* position: absolute; */
+  display: flex;
+  justify-content: center;
+  z-index: 10;
 }
-    
 
 #progressbar li {
-    list-style-type: none;
-    color: rgb(133, 2, 2);
-    text-transform: uppercase;
-    font-size: 9px;
-    float: left;
-    position: relative;
-    padding-left: 40px;
-    padding-right: 40px;
-
+  list-style-type: none;
+  color: rgb(133, 2, 2);
+  text-transform: uppercase;
+  font-size: 9px;
+  float: left;
+  position: relative;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 #progressbar li:before {
-    content: counter(step);
-    counter-increment: step;
-    width: 24px;
-    height: 24px;
-    line-height: 26px;
-    display: block;
-    font-size: 12px;
-    color: #08080b00;
-    background: rgb(124, 3, 3);
-    border-radius: 25px;
-    margin: 0 auto 10px auto;
+  content: counter(step);
+  counter-increment: step;
+  width: 24px;
+  height: 24px;
+  line-height: 26px;
+  display: block;
+  font-size: 12px;
+  color: #08080b00;
+  background: rgb(124, 3, 3);
+  border-radius: 25px;
+  margin: 0 auto 10px auto;
 }
 
 /*progressbar connectors*/
 #progressbar li:after {
-    content: '';
-    width: 100%;
-    height: 2px;
-    background: white;
-    position: absolute;
-    left: -50%;
-    top: 9px;
-    z-index: -1; /*put it behind the numbers*/
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: white;
+  position: absolute;
+  left: -50%;
+  top: 9px;
+  z-index: -1; /*put it behind the numbers*/
 }
 
 #progressbar li:first-child:after {
-    /*connector not needed before the first step*/
-    content: none;
+  /*connector not needed before the first step*/
+  content: none;
 }
 
 /*marking active/completed steps green*/
 /*The number of the step and the connector before it = green*/
-#progressbar li.active:before, #progressbar li.active:after {
-    background: var(--color-primary);
-    color: rgba(255, 255, 255, 0);
+#progressbar li.active:before,
+#progressbar li.active:after {
+  background: var(--color-primary);
+  color: rgba(255, 255, 255, 0);
 }
-
 
 /* Not relevant to this form */
 .dme_link {
-    margin-top: 30px;
-    text-align: center;
+  margin-top: 30px;
+  text-align: center;
 }
 .dme_link a {
-    background: #FFF;
-    font-weight: bold;
-    color: #ee0979;
-    border: 0 none;
-    border-radius: 25px;
-    cursor: pointer;
-    padding: 5px 25px;
-    font-size: 12px;
+  background: #fff;
+  font-weight: bold;
+  color: #ee0979;
+  border: 0 none;
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 5px 25px;
+  font-size: 12px;
 }
 
-.dme_link a:hover, .dme_link a:focus {
-    background: #C5C5F1;
-    text-decoration: none;
+.dme_link a:hover,
+.dme_link a:focus {
+  background: #c5c5f1;
+  text-decoration: none;
 }
 
 /* ------------- end --------------------------- */
 .footer {
-    background-image: linear-gradient(
-        to bottom,
-        #14141a,
-        #111116,
-        #0d0d11,
-        #08080b,
-        #030304
-    );
-    color: var(--color-primary);
-    padding-top: 75px;
-    padding-bottom: 75px;
+  background-image: linear-gradient(
+    to bottom,
+    #14141a,
+    #111116,
+    #0d0d11,
+    #08080b,
+    #030304
+  );
+  color: var(--color-primary);
+  padding-top: 75px;
+  padding-bottom: 75px;
 }
 
 .footer .logo {
-    max-width: 150px;
+  max-width: 150px;
 }
 
 .footerLinks {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .footerLinks .footerLink {
-    flex: 0 0 50%;
-    margin-bottom: 15px;
+  flex: 0 0 50%;
+  margin-bottom: 15px;
 }
 
 .footerLinks .footerLink a {
-    color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 .socialLinks {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 30px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
 }
 
 .socialLinks a:not(:last-child) {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .logoGroup {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .logoGroup .logoGroup-logo {
-    max-width: 70px;
+  max-width: 70px;
 }
 
 .logoGroup .logoGroup-logo img {
-    width: 100%;
+  width: 100%;
 }
 
 .logoGroup .logoGroup-logo:first-child {
-    margin-right: 30px;
+  margin-right: 30px;
 }
 
 @media (max-width: 996px) and (min-width: 768px) {
-    .navbar .nav-link {
-        margin-right: 1rem;
-    }
+  .navbar .nav-link {
+    margin-right: 1rem;
+  }
 
-    .navbar .container {
-        max-width: 820px;
-    }
+  .navbar .container {
+    max-width: 820px;
+  }
 }
 
 @media (max-width: 996px) {
-    #verticalTab .nav,
-    #verticalTab2 .nav,
-    #verticalTab3 .nav {
-        flex: 0 0 40%;
-    }
+  #verticalTab .nav,
+  #verticalTab2 .nav,
+  #verticalTab3 .nav {
+    flex: 0 0 40%;
+  }
 
-    #smarttab .nav {
-        width: 40%;
-    }
+  #smarttab .nav {
+    width: 40%;
+  }
 }
 
 @media (max-width: 767px) {
-    .mainText {
-        text-align: center;
-        font-size: 1.3rem;
-    }
+  #msform fieldset .col-8,
+  #msform fieldset .ms-form-container {
+    min-height: 100%;
 
-    .displayOnMobile {
-        display: block;
-    }
+    padding-bottom: 40px;
+  }
 
-    .hideOnMobile {
-        display: none;
-    }
+  .mainText {
+    text-align: center;
+    font-size: 1.3rem;
+  }
 
-    .footer .logo {
-        margin: auto;
-    }
+  .displayOnMobile {
+    display: block;
+  }
 
-    .footerLinks .footerLink {
-        flex: 0 0 100%;
-        text-align: center;
-    }
+  .hideOnMobile {
+    display: none;
+  }
 
-    .socialLinks {
-        justify-content: center;
-    }
+  .footer .logo {
+    margin: auto;
+  }
 
-    .footer .address {
-        text-align: center;
+  .footerLinks .footerLink {
+    flex: 0 0 100%;
+    text-align: center;
+  }
 
-        padding-left: 3rem;
-        padding-right: 3rem;
-    }
+  .socialLinks {
+    justify-content: center;
+  }
 
-    .footer .col-inner {
-        margin-bottom: 50px;
-    }
+  .footer .address {
+    text-align: center;
 
-    .logoGroup {
-        justify-content: center;
-    }
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .footer .col-inner {
+    margin-bottom: 50px;
+  }
+
+  .logoGroup {
+    justify-content: center;
+  }
 }

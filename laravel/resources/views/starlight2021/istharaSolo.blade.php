@@ -21,7 +21,7 @@
 <div class="section-1 d-flex justify-content-center align-items-center flex-column">
     <div class="row">
         <div class="col-12 col-md-offset-3">
-            <form data-parsley-validate="" id="msform" name="formIsthara" action="" onsubmit="" method="post" enctype="multipart/form-data">
+            <form id="msform" name="formIsthara" action="" onsubmit="" method="post" enctype="multipart/form-data">
                 @csrf
                 <!-- progressbar -->
                 <ul id="progressbar">
@@ -33,91 +33,89 @@
                 <!-- fieldsets -->
                 <fieldset>
                     <div class="row ms-form-wrapper">
-                        <div class="col-4 d-flex flex-column justify-content-between">
-                            <h2 class="fs-title">Welcome Starlighters!</h2>
-                            <div class="next-container d-flex justify-content-end flex-column">
-                                <h3 class="fs-subtitle">Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
-
-                                <input type="button" class="action-button-previous" value="Previous" onclick="window.open('/contestant', '_self')"/>
-                            </div>              
+                        <div class="col-12 col-md-4 d-flex flex-column justify-content-between">
+                            <h2 class="fs-title text-center text-md-left">Welcome Starlighters!</h2>
+                            <h3 class="fs-subtitle">Welcome, Starlighters! Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>                 
                         </div>
-                        <div class="ms-form-container col-8 ">
+                      <div class="ms-form-container col-12 col-md-8 ">
                             <label for="link-video d-flex">Video Link</label>
                             <input type="text" id="link-video" name="link-video" placeholder="https://www.instagram.com/starlightumn/"/>
                             <label for="link-video d-flex">Stage Name</label>
                             <input type="text" id="stage-name" name="stage-name" placeholder="Insert your stage name here"/>
                             <label for="link-video d-flex">Talent Description</label>
                             <input type="text" id="talent" name="talent" placeholder="Describe your talent briefly"/>
-                            <div class="next-container d-flex justify-content-end nextBtn">
+                            <div class="next-container d-none d-md-flex justify-content-end nextBtn">
                                 <input type="button" name="next" class="next action-button" value="Next"/>
                             </div>
                             
                         </div>
                     </div>                         
-                    
+                    <div class=" d-flex d-md-none justify-content-end "> 
+                            <input type="button" name="next" class="next action-button" value="Next"/>
+                        </div>
                 </fieldset>
                 <fieldset>
                     <div class="row ms-form-wrapper">
-                        <div class="col-4 d-flex flex-column justify-content-between">
-                            <h2 class="fs-title">Welcome Starlighters!</h2>
-                            
-                            <div class="next-container d-flex justify-content-end flex-column">
-                                <h3 class="fs-subtitle">Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
-
+                        <div class="col-12 col-md-4 d-flex flex-column justify-content-between">
+                            <h2 class="fs-title text-center text-md-left">Welcome Starlighters!</h2>
+                            <h3 class="fs-subtitle">Welcome, Starlighters! Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
+                            <div class="next-container d-none d-md-flex justify-content-start">
                                 <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
                             </div>
                         </div>
-                        <div class="ms-form-container col-8 ">
-                            <label for="link-video d-flex">LINE ID</label>
-                            <input type="text" name="line-id" id="line-id" placeholder="Insert your LINE ID here"/>
-                            <label for="link-video d-flex">Phone Number</label>
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="addon-wrapping"><img src="{{ asset('images/starlight2021/logo-indo.png') }}" style=""></span>
-                                <input type="text" name="phone-number" id="phone-number" placeholder="Insert your phone number here (+6281122334455)" aria-describedby="addon-wrapping"/>
-                                <br>
-                            </div>
+                    <div class="ms-form-container col-12 col-md-8 ">
+                            <label for="link-video d-flex">LINE ID (representative)</label>
+                            <input type="text" name="line-id" id="line-id" placeholder="@starlightumn"/>
+                            <label for="link-video d-flex">Phone Number (representative)</label>
+                            <input type="text" name="phone-number" id="phone-number" placeholder="+6281122334455"/>
                             <label for="link-video d-flex">Instagram Username</label>
-                            <input type="text" name="instagram" id="instagram" placeholder="Insert your Instagram username here"/>
+                            <input type="text" name="instagram" id="instagram" placeholder="@starlightumn"/>
                             <label for="link-video d-flex">E-mail Address</label>
-                            <input type="email" name="e-mail" id="e-mail" placeholder="Insert your e-mail address here"/>
+                            <input type="email" name="e-mail" id="e-mail" placeholder="starlight@umn.ac.id"/>
                             
-                            <div class="next-container d-flex justify-content-end nextBtn">
+                            <div class="next-container d-none d-md-flex justify-content-end nextBtn">
                                 <input type="button" name="next" class="next action-button" value="Next"/>
                             </div>
                         </div>                         
                     </div>  
+                    <div class=" d-flex d-md-none justify-content-between "> 
+                    <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                            <input type="button" name="next" class="next action-button" value="Next"/>
+                        </div>
                 </fieldset>
                 <fieldset>
                     <div class="row ms-form-wrapper">
-                        <div class="col-4 d-flex flex-column justify-content-between">
-                            <h2 class="fs-title">Welcome Starlighters!</h2>
-                            
-                            
-                            
-                            <div class="next-container d-flex justify-content-end flex-column">
-                                <h3 class="fs-subtitle">Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
-
+                        <div class="col-12 col-md-4 d-flex flex-column justify-content-between">
+                            <h2 class="fs-title text-center text-md-left">Welcome Starlighters!</h2>
+                      
+                            <h3 class="fs-subtitle">Welcome, Starlighters! Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
+                 
+                            <div class="next-container d-none d-md-flex justify-content-start">
                                 <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
                             </div>
                         </div>
-                        <div class="ms-form-container participant-wrapper col-8 ">
+                      <div class="ms-form-container participant-wrapper col-12 col-md-8 ">
                             <div class="" id="firstParticipant">
                                 <label for="full-name">Full name</label>
                                 <input type="text" id="full-name" name="full-name" placeholder="Insert your full name here"/>
                                 <label for="date-birth">Date of Birth</label>
                                 <input type="date" name="date-birth" id="date-birth" placeholder="2021-08-21"/>
                                 <label for="address">Address</label>
-                                <input type="text" name="address" id="address" placeholder="Insert your address here"/>
+                                <input type="text" name="address" id="address" placeholder="Jl. Scientia Boulevard, Gading, Kec. Serpong, Tangerang, Banten 15227"/>
                                 <label for="education">Educational Institution</label>
-                                <input type="text" name="education" id="education" placeholder="Insert your educational institution here"/>
+                                <input type="text" name="education" id="education" placeholder="Universitas Multimedia Nusantara"/>
                                 <label>Scan Identity Card (KTP/KITAS/Kartu Pelajar/KIA)</label>
-                                <input type="file" name="idCard" accept="image/png, image/jpeg, image/jpg" id="idCard" placeholder="Universitas Multimedia Nusantara" style="color: white;"/>
+                                <input type="file" name="idCard[]" accept="image/png, image/jpeg, image/jpg" id="idCard" placeholder="Universitas Multimedia Nusantara" style="color: white;"/>
                             </div>
-                            <div class="next-container d-flex justify-content-end nextBtn">
+                            <div class="next-container d-none d-md-flex justify-content-end nextBtn">
                                 <input type="button" name="next" class="next action-button" value="Next"/>
                             </div>
                         </div>
-                    </div>                          
+                    </div>                  
+                    <div class=" d-flex d-md-none justify-content-between "> 
+                    <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                            <input type="button" name="next" class="next action-button" value="Next"/>
+                        </div>        
                 </fieldset>
                 <fieldset>
 
@@ -126,19 +124,18 @@
                             
                         </div>
                         <div class="row ms-form-wrapper">
-                            <div class="col-4 d-flex flex-column justify-content-between">
-                                <h2 class="fs-title">Welcome Starlighters!</h2>
-                                <div class="next-container d-flex justify-content-end flex-column">
-                                    <h3 class="fs-subtitle">Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
-    
+                            <div class="col-12 col-md-4 d-flex flex-column justify-content-between">
+                                <h2 class="fs-title text-center text-md-left">Welcome Starlighters!</h2>
+                                <h3  class="fs-subtitle">Welcome, Starlighters! Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
+                                <div class="next-container d-none d-md-flex justify-content-center">
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
                                 </div>
                             </div>
-                            <div class="ms-form-container col-8 decOfAgree ">
+                      <div class="ms-form-container col-12 col-md-8 decOfAgree ">
                                 <h6>Declaration of Agreement</h6>
-                                <p class="text-justify" >I hereby agree that I truthfully and accurately complete this registration form and that the answers and information I provide are not misleading in any way. Furthermore, I understand that Starlight has the right at any time in its sole discretion to disqualify me from the audition process if at any stage providing personal data that is untrue, inaccurate or misleading, violates the rules or violates the provisions stated here.
+                             <p class="text-justify" >I hereby agree that I truthfully and accurately complete this registration form and that the answers and information I provide are not misleading in any way. Furthermore, I understand that Starlight has the right at any time in its sole discretion to disqualify me from the audition process if at any stage providing personal data that is untrue, inaccurate or misleading, violates the rules or violates the provisions stated here.
                                 </p>
-                                <div class="form-check agreeForm">
+                            <div class="form-check agreeForm">
                                     <input type="checkbox" id="agree" class="agreeCheckBox">
                                     <p>I Agree</p>
                                 </div>
@@ -150,12 +147,15 @@
                                         {{-- <input type="submit" value="Submit"> --}}
                                     </form>
                                 </div>
-                                <div class="next-container d-flex justify-content-end nextBtn">
-                                    {{-- <input type="button" name="next" class="action-button disabledBtn closeBtn" value="Submit" onclick="window.open('/contestant/complete', '_self')"/> --}}
-                                    <input type="submit" name="next" class="action-button disabledBtn closeBtn" value="Submit"/>
+                                <div class="next-container d-none d-md-flex justify-content-end nextBtn">
+                                    <input type="button" name="next" class="action-button disabledBtn closeBtn" value="Submit" onclick="window.open('/contestant/complete', '_self')"/>
                                 </div>
                             </div>
                         </div>     
+                        <div class=" d-flex d-md-none justify-content-between "> 
+                    <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                    <input type="button" name="next" class="action-button disabledBtn closeBtn" value="Submit" onclick="window.open('/contestant/complete', '_self')"/>
+                        </div>  
                 </fieldset>
             </form>
             <!-- link to designify.me code snippets -->
@@ -193,10 +193,8 @@
 @section('custom_js')
         <script src="{{asset('js/starlight2021/smarttab/dist/js/jquery.smartTab.js')}}"></script>
         {{-- <script src="https://www.google.com/recaptcha/api.js?render=6Lcfyc8bAAAAAHT_SmEfgzFbTVV0ZTZJWt_IAhjK"></script> --}}
-        {{-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> --}}
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        
-        {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js" integrity="sha512-eyHL1atYNycXNXZMDndxrDhNAegH2BDWt1TmkXJPoGf1WLlNYt08CSjkqF5lnCRmdm3IrkHid8s2jOUY4NIZVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> --}}
         
         {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> --}}
         <script>
@@ -207,14 +205,11 @@
             var current_fs, next_fs, previous_fs; //fieldsets
             var left, opacity, scale; //fieldset properties which we will animate
             var animating; //flag to prevent quick multi-click glitches
-
-            
-
             $(document).ready(function() {
+			
                 thirdParticipant.hide();
                 fourthParticipant.hide();
                 fifthParticipant.hide();
-
                 $('#agree').change(function(e) {
                     if(e.target.checked) {
                         $('.closeBtn').removeClass('disabledBtn');
@@ -223,7 +218,6 @@
                     }
                 })
             });
-
             
             // grecaptcha.ready(function() {
             //         grecaptcha.execute('6Lcfyc8bAAAAAHT_SmEfgzFbTVV0ZTZJWt_IAhjK', {action: 'contact'}).then(function(token) {
@@ -232,10 +226,8 @@
             //             }
             //         });
             //     });
-
             function numOfParticipants(val) {
                 var participant = val.value;
-
                 switch(participant) {
                     case "2":
                         secondParticipant.show();
@@ -243,21 +235,18 @@
                         fourthParticipant.hide();
                         fifthParticipant.hide();
                         break;
-
                     case "3":
                         secondParticipant.show();
                         thirdParticipant.show();
                         fourthParticipant.hide();
                         fifthParticipant.hide();
                         break;
-
                     case "4":
                         secondParticipant.show();
                         thirdParticipant.show();
                         fourthParticipant.show();
                         fifthParticipant.hide();
                         break;
-
                     case "5":
                         secondParticipant.show();
                         thirdParticipant.show();
@@ -266,22 +255,17 @@
                         break;
                 }
             }
-
             $(".next").click(function() {
-
                 if (animating) return false;
                 animating = true;
-
                 current_fs = $(this).closest("fieldset");
                 next_fs = $(this)
                     .closest("fieldset")
                     .next();
-
                 //activate next step on progressbar using the index of next_fs
                 $("#progressbar li")
                     .eq($("fieldset").index(next_fs))
                     .addClass("active");
-
                 //show the next fieldset
                 next_fs.show();
                 //hide the current fieldset with style
@@ -305,31 +289,27 @@
                             opacity: opacity 
                         });
                     },
-                    duration: 1500,
+                    duration: 800,
                     complete: function() {
                         current_fs.hide();
                         animating = false;
                     },
                     //this comes from the custom easing plugin
-                    easing: "easeOutBack"
+                    easing: "easeInOutBack"
                     }
                 );
             });
-
             $(".previous").click(function() {
             if (animating) return false;
             animating = true;
-
             current_fs = $(this).closest("fieldset");
             previous_fs = $(this)
                 .closest("fieldset")
                 .prev();
-
             //de-activate current step on progressbar
             $("#progressbar li")
                 .eq($("fieldset").index(current_fs))
                 .removeClass("active");
-
             //show the previous fieldset
             previous_fs.show();
             //hide the current fieldset with style
@@ -354,13 +334,13 @@
                         position: "relative",
                     });
                 },
-                duration: 800,
+                duration: 700,
                 complete: function() {
                     current_fs.hide();
                     animating = false;
                 },
                 //this comes from the custom easing plugin
-                easing: "easeOutBack"
+                easing: "easeInOutBack"
                 }
             );
             });
