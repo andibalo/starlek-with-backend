@@ -291,6 +291,20 @@
                 })
             });
 
+      
+            $('#step-3 input').on("change keyup",(e) => {
+                if(validate.isEmpty($('#full-name').val()) || validate.isEmpty($('#date-birth').val()) || validate.isEmpty($('#education').val()) || validate.isEmpty($('#address').val()) || validate.isEmpty($('#idCard').val())){
+                    if(!$('#step-3 .next').hasClass('disabledBtn')){
+                        $('#step-3 .next').addClass('disabledBtn')
+                    }
+                } else {
+                    if($('#step-3 .next').hasClass('disabledBtn')){
+                        $('#step-3 .next').removeClass('disabledBtn')
+                    }
+                }
+            })
+         
+
             
             $('#step-1 input').on("change keyup",(e) => {
                 if(validate.isEmpty($('#link-video').val()) || validate.isEmpty($('#stage-name').val()) || validate.isEmpty($('#talent').val())){
