@@ -162,9 +162,10 @@ body {
 .cardContainer {
     min-height: 400px;
     background-image: url("../../../images/starlight2021/isthara/card-bg.png");
-    border-radius:10px 30px 30px 10px;
+    border-radius:30px;
     width:100%;
     background-size:cover;
+    background-position: center;
 }
 
 .cardInnerLogo {
@@ -172,7 +173,8 @@ body {
 }
 
 .cardContainer .title {
-    color: var(--color-primary)
+    color: var(--color-primary);
+    text-align: center;
 }
 
 .cardContainer .registerBtn {
@@ -297,6 +299,8 @@ body {
         justify-content: center;
     }
 }
+
+
 
 
 

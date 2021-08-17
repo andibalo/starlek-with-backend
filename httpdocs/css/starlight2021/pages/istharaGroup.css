@@ -29,6 +29,7 @@
   font-style: normal;
 }
 
+
 :root {
   --color-primary: #f5dcaf;
   --color-secondary: #40040b;
@@ -164,12 +165,14 @@ body {
 .section-1 {
   margin-top: 140px;
   margin-bottom: 100px;
+  overflow-x: hidden;
 }
 
 #msform fieldset {
   background-image: url("../../../images/starlight2021/isthara/form-background.png");
   background-repeat: no-repeat;
   background-size: cover;
+
 }
 
 #msform label {
@@ -615,5 +618,23 @@ body {
 
   .logoGroup {
     justify-content: center;
+  }
+}
+
+@media (max-width: 389px){
+  #msform fieldset {
+    padding: 20px 40px 20px 40px;
+    background-position: 20% 50%;
+  }
+  #progressbar li{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 334px){
+  #msform fieldset {
+    padding: 20px 50px 20px 50px;
+    background-position: 20% 50%;
   }
 }

@@ -164,6 +164,7 @@ body {
 .section-1 {
   margin-top: 140px;
   margin-bottom: 100px;
+  overflow-x: hidden;
 }
 
 #msform fieldset {
@@ -616,5 +617,23 @@ body {
 
   .logoGroup {
     justify-content: center;
+  }
+}
+
+@media (max-width: 389px){
+  #msform fieldset {
+    padding: 20px 40px 20px 40px;
+    background-position: 20% 50%;
+  }
+  #progressbar li{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 334px){
+  #msform fieldset {
+    padding: 20px 50px 20px 50px;
+    background-position: 20% 50%;
   }
 }

@@ -17,8 +17,8 @@
 @section('content')
     <div class="section-1 d-flex flex-column">
         <div class="pt-5 my-5">
-            <div class="row d-flex justify-content-center pt-3 mt-5">
-                <div class="col-6 p-0 position-relative img-contain img-contain-solo">
+            <div class="choice-row row d-flex justify-content-center pt-3 mt-5">
+                <div class="image-choice-container col-6 p-0 position-relative img-contain img-contain-solo">
                     <a href="/contestant/solo"><img class="solo-bg" src="../../../images/starlight2021/isthara/solo-bg.png" alt="" width="400px">
                         <h3 class="choice-text font-weight-bold">SOLO</h3>
                     </a>

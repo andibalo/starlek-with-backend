@@ -31,8 +31,8 @@
                     <li></li>
                 </ul>
                 <!-- fieldsets -->
-                <fieldset>
-                    <div id="step-1" class="row ms-form-wrapper">
+                <fieldset id="step-1">
+                    <div class="row ms-form-wrapper">
                         <div class="col-12 col-md-4 d-flex flex-column justify-content-between">
                             <h2 class="fs-title text-center text-md-left">Welcome Starlighters!</h2>
                             <h3 class="fs-subtitle">Welcome, Starlighters! Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>                 
@@ -54,8 +54,8 @@
                             <input type="button" name="next" class="next action-button disabledBtn" value="Next"/>
                         </div>
                 </fieldset>
-                <fieldset>
-                    <div id="step-2" class="row ms-form-wrapper">
+                <fieldset id="step-2">
+                    <div  class="row ms-form-wrapper">
                         <div class="col-12 col-md-4 d-flex flex-column justify-content-between">
                             <h2 class="fs-title text-center text-md-left">Welcome Starlighters!</h2>
                             <h3 class="fs-subtitle">Welcome, Starlighters! Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
@@ -65,13 +65,13 @@
                         </div>
                     <div class="ms-form-container col-12 col-md-8 ">
                             <label for="link-video d-flex">LINE ID (representative)</label>
-                            <input type="text" name="line-id" id="line-id" placeholder="@starlightumn"/>
+                            <input type="text" name="line-id" id="line-id" placeholder="Insert your LINE ID here"/>
                             <label for="link-video d-flex">Phone Number (representative)</label>
-                            <input type="text" name="phone-number" id="phone-number" placeholder="+6281122334455"/>
+                            <input type="text" name="phone-number" id="phone-number" placeholder="Insert your phone number here (+6281122334455)"/>
                             <label for="link-video d-flex">Instagram Username</label>
-                            <input type="text" name="instagram" id="instagram" placeholder="@starlightumn"/>
+                            <input type="text" name="instagram" id="instagram" placeholder="Insert your Instagram username here"/>
                             <label for="link-video d-flex">E-mail Address</label>
-                            <input type="email" name="e-mail" id="e-mail" placeholder="starlight@umn.ac.id"/>
+                            <input type="email" name="e-mail" id="e-mail" placeholder="Insert your e-mail address here "/>
                             
                             <div class="next-container d-none d-md-flex justify-content-end nextBtn">
                                 <input type="button" name="next" class="next action-button disabledBtn" value="Next"/>
@@ -83,8 +83,8 @@
                             <input type="button" name="next" class="next action-button disabledBtn" value="Next"/>
                         </div>
                 </fieldset>
-                <fieldset>
-                    <div id="step-3" class="row ms-form-wrapper">
+                <fieldset id="step-3">
+                    <div  class="row ms-form-wrapper">
                         <div class="col-12 col-md-4 d-flex flex-column justify-content-between">
                             <h2 class="fs-title text-center text-md-left">Welcome Starlighters!</h2>
                       
@@ -99,11 +99,11 @@
                                 <label for="full-name">Full name</label>
                                 <input type="text" id="full-name" name="full-name" placeholder="Insert your full name here"/>
                                 <label for="date-birth">Date of Birth</label>
-                                <input type="date" name="date-birth" id="date-birth" placeholder="2021-08-21"/>
+                                <input type="date" name="date-birth" id="date-birth" placeholder="08-21-2021"/>
                                 <label for="address">Address</label>
-                                <input type="text" name="address" id="address" placeholder="Jl. Scientia Boulevard, Gading, Kec. Serpong, Tangerang, Banten 15227"/>
+                                <input type="text" name="address" id="address" placeholder="Insert your address here"/>
                                 <label for="education">Educational Institution</label>
-                                <input type="text" name="education" id="education" placeholder="Universitas Multimedia Nusantara"/>
+                                <input type="text" name="education" id="education" placeholder="Insert your educational institution here"/>
                                 <label>Scan Identity Card (KTP/KITAS/Kartu Pelajar/KIA)</label>
                                 <input type="file" name="idCard[]" accept="image/png, image/jpeg, image/jpg" id="idCard" placeholder="Universitas Multimedia Nusantara" style="color: white;"/>
                             </div>

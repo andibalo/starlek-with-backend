@@ -29,6 +29,10 @@
     font-style: normal;
 }
 
+html {
+    cursor: url("../../../images/starlight2021/isthara/pointer.png"), auto;
+}
+
 :root {
     --color-primary: #f5dcaf;
     --color-secondary: #40040b;

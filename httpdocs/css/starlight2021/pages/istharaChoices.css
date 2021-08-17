@@ -167,7 +167,6 @@ body {
     background-image: url("../../../images/starlight2021/isthara/background.png");
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
 .form-box {
@@ -382,5 +381,35 @@ body {
 
     .logoGroup {
         justify-content: center;
+    }
+}
+
+@media (max-width: 870px) and (min-width: 580px){
+    img{
+        width: 300px;
+    }
+
+}
+
+@media (max-width: 680px) and (min-width: 576px){
+    img{
+        width: 270px;
+    }
+    
+}
+
+@media (max-width: 576px){
+    img{
+        width: 100%;
+    }
+    .image-choice-container{
+        width: 170px;
+    }
+    .section-1{
+        overflow-x: hidden;
+    }
+    .choice-row{
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }

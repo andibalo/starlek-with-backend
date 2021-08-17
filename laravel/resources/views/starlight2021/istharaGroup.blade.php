@@ -62,20 +62,24 @@
                     <div id="step-2" class="row ms-form-wrapper">
                         <div class="col-12 col-md-4 d-flex flex-column justify-content-between">
                             <h2 class="fs-title text-center text-md-left">Welcome Starlighters!</h2>
+<<<<<<< Updated upstream
                             <div class="next-container d-none d-md-flex justify-content-end flex-column">
+=======
+                            <div class="next-container d-flex justify-content-end flex-column">
+>>>>>>> Stashed changes
                                 <h3 class="fs-subtitle">Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
-                                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                                <input type="button" name="previous" class="d-md-flex d-none previous action-button-previous" value="Previous"/>
                             </div>
                         </div>
                         <div class="ms-form-container col-12 col-md-8">
                             <label for="link-video d-flex">LINE ID (representative)</label>
-                            <input type="text" name="line-id" id="line-id" placeholder="@starlightumn"/>
+                            <input type="text" name="line-id" id="line-id" placeholder="Insert your LINE ID here"/>
                             <label for="link-video d-flex">Phone Number (representative)</label>
-                            <input type="text" name="phone-number" id="phone-number" placeholder="+6281122334455"/>
+                            <input type="text" name="phone-number" id="phone-number" placeholder="Insert your phone number here (+6281122334455)"/>
                             <label for="link-video d-flex">Instagram Username</label>
-                            <input type="text" name="instagram" id="instagram" placeholder="@starlightumn"/>
+                            <input type="text" name="instagram" id="instagram" placeholder="Insert your Instagram username here"/>
                             <label for="link-video d-flex">E-mail Address</label>
-                            <input type="email" name="e-mail" id="e-mail" placeholder="starlight@umn.ac.id"/>
+                            <input type="email" name="e-mail" id="e-mail" placeholder="Insert your e-mail address here"/>
                             
                             <div class="next-container d-none d-md-flex justify-content-end nextBtn">
                                 <input type="button" name="next" class="next action-button disabledBtn" value="Next"/>
@@ -91,9 +95,9 @@
                     <div class="row ms-form-wrapper">
                         <div class="col-12 col-md-4 d-flex flex-column justify-content-between">
                             <h2 class="fs-title text-center text-md-left">Welcome Starlighters!</h2>
-                            <div class="next-container d-none d-md-flex justify-content-end flex-column">
+                            <div class="next-container d-flex justify-content-end flex-column">
                                 <h3 class="fs-subtitle">Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
-                                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                                <input type="button" name="previous" class="d-md-flex d-none previous action-button-previous" value="Previous"/>
                             </div>
                         </div>
                         <div class="ms-form-container participant-wrapper col-12 col-md-8">
@@ -192,9 +196,9 @@
                         <div class="row ms-form-wrapper">
                             <div class="col-12 col-md-4 d-flex flex-column justify-content-between">
                                 <h2 class="fs-title text-center text-md-left">Welcome Starlighters!</h2>
-                                <div class="next-container d-none d-md-flex justify-content-end flex-column">
+                                <div class="next-container d-flex justify-content-end flex-column">
                                     <h3 class="fs-subtitle">Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
-                                    <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                                    <input type="button" name="previous" class=" d-md-flex d-none previous action-button-previous" value="Previous"/>
                                 </div>
                             </div>
                             <div class="ms-form-container col-12 col-md-8 decOfAgree ">

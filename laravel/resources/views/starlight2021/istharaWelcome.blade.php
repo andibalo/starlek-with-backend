@@ -16,7 +16,7 @@
 
 @section('content')
     <div class="main d-flex align-items-center justify-content-center">
-        <div class="mainContent">
+        <div class="mainContent px-4">
             <div class="cardContainer p-4 mt-5 mb-3">
                 <div class="cardContainerInner d-flex flex-column align-items-center">
                     <img class="cardInnerLogo" src="{{ asset('images/starlight2021/logo.png') }}"  />
