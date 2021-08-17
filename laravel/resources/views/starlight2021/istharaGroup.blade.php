@@ -33,39 +33,42 @@
                 <!-- fieldsets -->
                 <fieldset>
                     <div class="row ms-form-wrapper">
-                        <div class="col-4 d-flex flex-column justify-content-between">
-                            <h2 class="fs-title">Welcome Starlighters!</h2>
+                        <div class="col-12 col-md-4 d-flex flex-column justify-content-between">
+                            <h2 class="fs-title text-center text-md-left">Welcome Starlighters!</h2>
                             <div class="next-container d-flex justify-content-end flex-column">
                                 <h3 class="fs-subtitle">Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
 
-                                <input type="button" class="action-button-previous" value="Previous" onclick="window.open('/contestant', '_self')"/>
+                                <input type="button" class="action-button-previous d-none d-md-block" value="Previous" onclick="window.open('/contestant', '_self')"/>
                             </div>                   
                         </div>
-                        <div class="ms-form-container col-8">
+                        <div class="ms-form-container col-12 col-md-8">
                             <label for="link-video d-flex">Video Link</label>
                             <input type="text" id="link-video" name="link-video" placeholder="https://www.instagram.com/starlightumn/"/>
                             <label for="link-video d-flex">Stage Name</label>
                             <input type="text" id="stage-name" name="stage-name" placeholder="Insert your stage name here"/>
                             <label for="link-video d-flex">Talent Description</label>
                             <input type="text" id="talent" name="talent" placeholder="Describe your talent briefly"/>
-                            <div class="next-container d-flex justify-content-end nextBtn">
+                            <div class="next-container d-none d-md-flex justify-content-end nextBtn">
                                 <input type="button" name="next" class="next action-button" value="Next"/>
                             </div>
                             
                         </div>
                     </div>                         
-                    
+                    <div class=" d-flex d-md-none justify-content-between "> 
+                            <input type="button" class="action-button-previous" value="Previous" onclick="window.open('/contestant', '_self')"/>
+                            <input type="button" name="next" class="next action-button" value="Next"/>
+                        </div>
                 </fieldset>
                 <fieldset>
                     <div class="row ms-form-wrapper">
-                        <div class="col-4 d-flex flex-column justify-content-between">
-                            <h2 class="fs-title">Welcome Starlighters!</h2>
-                            <div class="next-container d-flex justify-content-end flex-column">
+                        <div class="col-12 col-md-4 d-flex flex-column justify-content-between">
+                            <h2 class="fs-title text-center text-md-left">Welcome Starlighters!</h2>
+                            <div class="next-container d-none d-md-flexjustify-content-end flex-column">
                                 <h3 class="fs-subtitle">Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
                                 <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
                             </div>
                         </div>
-                        <div class="ms-form-container col-8">
+                        <div class="ms-form-container col-12 col-md-8">
                             <label for="link-video d-flex">LINE ID (representative)</label>
                             <input type="text" name="line-id" id="line-id" placeholder="@starlightumn"/>
                             <label for="link-video d-flex">Phone Number (representative)</label>
@@ -75,22 +78,26 @@
                             <label for="link-video d-flex">E-mail Address</label>
                             <input type="email" name="e-mail" id="e-mail" placeholder="starlight@umn.ac.id"/>
                             
-                            <div class="next-container d-flex justify-content-end nextBtn">
+                            <div class="next-container d-none d-md-flex justify-content-end nextBtn">
                                 <input type="button" name="next" class="next action-button" value="Next"/>
                             </div>
                         </div>                         
                     </div>  
+                    <div class=" d-flex d-md-none justify-content-between "> 
+                    <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                            <input type="button" name="next" class="next action-button" value="Next"/>
+                        </div>
                 </fieldset>
                 <fieldset>
                     <div class="row ms-form-wrapper">
-                        <div class="col-4 d-flex flex-column justify-content-between">
-                            <h2 class="fs-title">Welcome Starlighters!</h2>
-                            <div class="next-container d-flex justify-content-end flex-column">
+                        <div class="col-12 col-md-4 d-flex flex-column justify-content-between">
+                            <h2 class="fs-title text-center text-md-left">Welcome Starlighters!</h2>
+                            <div class="next-container d-none d-md-flex justify-content-end flex-column">
                                 <h3 class="fs-subtitle">Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
                                 <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
                             </div>
                         </div>
-                        <div class="ms-form-container participant-wrapper col-8">
+                        <div class="ms-form-container participant-wrapper col-12 col-md-8">
                             <label for="link-video d-flex">Number of Performers</label>
                             <select class="form-control mb-2" name="num-participant" id="num-participants" onchange="numOfParticipants(this)">
                                 <option value="2">2</option>
@@ -167,11 +174,15 @@
                                 <label>Scan Identity Card (KTP/KITAS/Kartu Pelajar/KIA)</label>
                                 <input type="file" name="idCard[]" accept="image/png, image/jpeg, image/jpg" id="idCard" placeholder="Universitas Multimedia Nusantara" style="color: white;"/>
                             </div>
-                            <div class="next-container d-flex justify-content-end nextBtn">
+                            <div class="next-container d-none d-md-flex justify-content-end nextBtn">
                                 <input type="button" name="next" class="next action-button" value="Next"/>
                             </div>
                         </div>
-                    </div>                          
+                    </div>                  
+                    <div class=" d-flex d-md-none justify-content-between "> 
+                    <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                            <input type="button" name="next" class="next action-button" value="Next"/>
+                        </div>        
                 </fieldset>
                 <fieldset>
 
@@ -180,14 +191,14 @@
                             
                         </div>
                         <div class="row ms-form-wrapper">
-                            <div class="col-4 d-flex flex-column justify-content-between">
-                                <h2 class="fs-title">Welcome Starlighters!</h2>
-                                <div class="next-container d-flex justify-content-end flex-column">
+                            <div class="col-12 col-md-4 d-flex flex-column justify-content-between">
+                                <h2 class="fs-title text-center text-md-left">Welcome Starlighters!</h2>
+                                <div class="next-container d-none d-md-flex justify-content-end flex-column">
                                     <h3 class="fs-subtitle">Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
                                 </div>
                             </div>
-                            <div class="ms-form-container col-8 decOfAgree ">
+                            <div class="ms-form-container col-12 col-md-8 decOfAgree ">
                                 <h6>Declaration of Agreement</h6>
                                 <p class="text-justify">I hereby agree that I truthfully and accurately complete this registration form and that the answers and information I provide are not misleading in any way. Furthermore, I understand that Starlight has the right at any time in its sole discretion to disqualify me from the audition process if at any stage providing personal data that is untrue, inaccurate or misleading, violates the rules or violates the provisions stated here.
                                 </p>
@@ -203,12 +214,20 @@
                                         {{-- <input type="submit" value="Submit"> --}}
                                     </form>
                                 </div>
-                                <div class="next-container d-flex justify-content-end nextBtn">
+                                <div class="next-container d-none d-md-flex justify-content-end nextBtn">
                                     {{-- <input type="button" name="next" class="action-button disabledBtn closeBtn" value="Submit" onclick="window.open('/contestant/complete', '_self')"/> --}}
                                     <input type="submit" name="next" class="action-button disabledBtn closeBtn" value="Submit"/>
                                 </div>
                             </div>
                         </div>     
+                        <div class=" d-flex d-md-none justify-content-between "> 
+                    <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                    <div class="next-container d-flex justify-content-end nextBtn">
+                                    {{-- <input type="button" name="next" class="action-button disabledBtn closeBtn" value="Submit" onclick="window.open('/contestant/complete', '_self')"/> --}}
+                                    <input type="submit" name="next" class="action-button disabledBtn closeBtn" value="Submit"/>
+                                </div>
+                   
+                        </div>
                 </fieldset>
             </form>
             <!-- link to designify.me code snippets -->
