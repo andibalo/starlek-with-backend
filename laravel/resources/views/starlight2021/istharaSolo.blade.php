@@ -35,7 +35,10 @@
                     <div class="row ms-form-wrapper">
                         <div class="col-12 col-md-4 d-flex flex-column justify-content-between">
                             <h2 class="fs-title text-center text-md-left">Welcome Starlighters!</h2>
-                            <h3 class="fs-subtitle">Welcome, Starlighters! Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>                 
+                            <div class="next-container d-flex justify-content-end flex-column">
+                                <h3 class="fs-subtitle">Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
+                                <a class="text-left d-md-flex d-none" href="/contestant"><input type="button" name="previous" class="previous action-button-previous" value="Previous"/></a>
+                            </div>
                         </div>
                       <div class="ms-form-container col-12 col-md-8 ">
                             <label for="link-video d-flex">Video Link</label>
@@ -50,17 +53,18 @@
                             
                         </div>
                     </div>                         
-                    <div class=" d-flex d-md-none justify-content-end "> 
-                            <input type="button" name="next" class="next action-button disabledBtn" value="Next"/>
-                        </div>
+                    <div class=" d-flex d-md-none justify-content-between"> 
+                        <a class="text-left" href="/contestant"><input type="button" name="previous" class="previous action-button-previous" value="Previous"/></a>
+                        <input type="button" name="next" class="next action-button disabledBtn" value="Next"/>
+                    </div>
                 </fieldset>
                 <fieldset id="step-2">
                     <div  class="row ms-form-wrapper">
                         <div class="col-12 col-md-4 d-flex flex-column justify-content-between">
                             <h2 class="fs-title text-center text-md-left">Welcome Starlighters!</h2>
-                            <h3 class="fs-subtitle">Welcome, Starlighters! Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
-                            <div class="next-container d-none d-md-flex justify-content-start">
-                                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                            <div class="next-container d-flex justify-content-end flex-column">
+                                <h3 class="fs-subtitle">Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
+                                <input type="button" name="previous" class="d-md-flex d-none previous action-button-previous" value="Previous"/>
                             </div>
                         </div>
                     <div class="ms-form-container col-12 col-md-8 ">
@@ -79,19 +83,17 @@
                         </div>                         
                     </div>  
                     <div class=" d-flex d-md-none justify-content-between "> 
-                    <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
-                            <input type="button" name="next" class="next action-button disabledBtn" value="Next"/>
-                        </div>
+                        <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                        <input type="button" name="next" class="next action-button disabledBtn" value="Next"/>
+                    </div>
                 </fieldset>
                 <fieldset id="step-3">
                     <div  class="row ms-form-wrapper">
                         <div class="col-12 col-md-4 d-flex flex-column justify-content-between">
                             <h2 class="fs-title text-center text-md-left">Welcome Starlighters!</h2>
-                      
-                            <h3 class="fs-subtitle">Welcome, Starlighters! Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
-                 
-                            <div class="next-container d-none d-md-flex justify-content-start">
-                                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                            <div class="next-container d-flex justify-content-end flex-column">
+                                <h3 class="fs-subtitle">Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
+                                <input type="button" name="previous" class="d-md-flex d-none previous action-button-previous" value="Previous"/>
                             </div>
                         </div>
                       <div class="ms-form-container participant-wrapper col-12 col-md-8 ">
@@ -113,9 +115,9 @@
                         </div>
                     </div>                  
                     <div class=" d-flex d-md-none justify-content-between "> 
-                    <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
-                            <input type="button" name="next" class="next action-button" value="Next"/>
-                        </div>        
+                        <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                        <input type="button" name="next" class="next action-button" value="Next"/>
+                    </div>        
                 </fieldset>
                 <fieldset>
 
@@ -126,9 +128,9 @@
                         <div class="row ms-form-wrapper">
                             <div class="col-12 col-md-4 d-flex flex-column justify-content-between">
                                 <h2 class="fs-title text-center text-md-left">Welcome Starlighters!</h2>
-                                <h3  class="fs-subtitle">Welcome, Starlighters! Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
-                                <div class="next-container d-none d-md-flex justify-content-center">
-                                    <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                                <div class="next-container d-flex justify-content-end flex-column">
+                                    <h3 class="fs-subtitle">Before you start your journey with us, please do fill out these forms. The city awaits you!</h3>
+                                    <input type="button" name="previous" class="d-md-flex d-none previous action-button-previous" value="Previous"/>
                                 </div>
                             </div>
                       <div class="ms-form-container col-12 col-md-8 decOfAgree ">
@@ -153,8 +155,8 @@
                             </div>
                         </div>     
                         <div class=" d-flex d-md-none justify-content-between "> 
-                    <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
-                    <input type="button" name="next" class="action-button disabledBtn closeBtn" value="Submit" onclick="window.open('/contestant/complete', '_self')"/>
+                            <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                            <input type="button" name="next" class="action-button disabledBtn closeBtn" value="Submit" onclick="window.open('/contestant/complete', '_self')"/>
                         </div>  
                 </fieldset>
             </form>
