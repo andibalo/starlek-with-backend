@@ -104,4 +104,12 @@ class CMSController extends Controller
 
         return view('starlight2021.regis', compact('title', 'nav_menu'));
     }
+
+    public function judge()
+    {
+        $title = "Contestant Form";
+        $nav_menu = "regis";
+
+        return view('starlight2021.judge', compact('title', 'nav_menu'));
+    }
 }

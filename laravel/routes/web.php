@@ -82,6 +82,8 @@ Route::group(['prefix' => 'contestant'], function () {
 	Route::post('/solo', 'ContestantRegistrationController@createSoloIsthara')->name('solo');
 });
 
+Route::get('/judge', 'CMSController@judge')->name('judge');
+
 Route::group(['prefix' => 'regisContestant'], function () {
 	Route::get('/', 'CMSController@regisContestant')->name('panel.regis');
 });
