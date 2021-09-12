@@ -107,9 +107,25 @@ class CMSController extends Controller
 
     public function judge()
     {
-        $title = "Contestant Form";
-        $nav_menu = "regis";
+        $title = "Judge";
+        $nav_menu = "Judge";
 
         return view('starlight2021.judge', compact('title', 'nav_menu'));
+    }
+
+    public function starbook()
+    {
+        $title = "About - Starbook";
+        $nav_menu = "starbook";
+
+        return view('starlight2021.about-starbook', compact('title', 'nav_menu'));
+    }
+
+    public function pick()
+    {
+        $title = "PICK - Starbook";
+        $nav_menu = "starbook";
+
+        return view('starlight2021.pick', compact('title', 'nav_menu'));
     }
 }
