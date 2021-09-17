@@ -150,13 +150,13 @@
                                     </form>
                                 </div>
                                 <div class="next-container d-none d-md-flex justify-content-end nextBtn">
-                                    <input type="button" name="next" class="action-button disabledBtn closeBtn" value="Submit" onclick="window.open('/contestant/complete', '_self')"/>
+                                   <input type="submit" name="next" class="action-button disabledBtn closeBtn" value="Submit"/>
                                 </div>
                             </div>
                         </div>     
                         <div class=" d-flex d-md-none justify-content-between "> 
                             <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
-                            <input type="button" name="next" class="action-button disabledBtn closeBtn" value="Submit" onclick="window.open('/contestant/complete', '_self')"/>
+                            <input type="submit" name="next" class="action-button disabledBtn closeBtn" value="Submit" />
                         </div>  
                 </fieldset>
             </form>

@@ -61,26 +61,26 @@ class ContestantRegistrationController extends Controller
         // end 
 
         $data = $request->input();
-        $idCard = $request->file("idCard");
-        $stageName = $data['stage-name'];
-        $numParticipant = $request->input("num-participant");
-        $username[0] = $request->input("full-name");
-        $username[1] = $request->input("full-name-2");
-        $username[2] = $request->input("full-name-3");
-        $username[3] = $request->input("full-name-4");
-        $username[4] = $request->input("full-name-5");
+        // $idCard = $request->file("idCard");
+        // $stageName = $data['stage-name'];
+        // $numParticipant = $request->input("num-participant");
+        // $username[0] = $request->input("full-name");
+        // $username[1] = $request->input("full-name-2");
+        // $username[2] = $request->input("full-name-3");
+        // $username[3] = $request->input("full-name-4");
+        // $username[4] = $request->input("full-name-5");
 
-        $picture = count($idCard);
+        // $picture = count($idCard);
 
-        for ($i = 0; $i < $picture; $i++) {
-            $idCard[$i]->storeAs(
-                "1aOE8KhzgAI4QuIZI65q7H7XlpATx_N0L",
-                $stageName . '_' . $username[$i] . '_image',
-                "google"
-            );
-        }
+        // for ($i = 0; $i < $picture; $i++) {
+        //     $idCard[$i]->storeAs(
+        //         "1aOE8KhzgAI4QuIZI65q7H7XlpATx_N0L",
+        //         $stageName . '_' . $username[$i] . '_image',
+        //         "google"
+        //     );
+        // }
 
-        Http::post('https://sheet.best/api/sheets/93dcd35d-ad53-41fe-a844-fb49dfdbf1c5/tabs/Group', $data);
+        Http::post('https://sheet.best/api/sheets/704dadc4-002b-4d23-9bcf-31646417765e/tabs/Group', $data);
 
         return redirect('/contestant/complete');
     }
@@ -95,8 +95,8 @@ class ContestantRegistrationController extends Controller
 
     public function createSoloIsthara(Request $request)
     {
-
         $data = $request->input();
+
         $stageName = $data['stage-name'];
         $username = $data['full-name'];
 
@@ -106,9 +106,10 @@ class ContestantRegistrationController extends Controller
             "google"
         );
 
-        Http::post('https://sheet.best/api/sheets/93dcd35d-ad53-41fe-a844-fb49dfdbf1c5/tabs/Solo', $data);
+        return Http::post('https://sheet.best/api/sheets/704dadc4-002b-4d23-9bcf-31646417765e/tabs/Solo', $data);
 
-        return redirect('/contestant/complete');
+        dd($data);
+
     }
 
     public function welcome()
