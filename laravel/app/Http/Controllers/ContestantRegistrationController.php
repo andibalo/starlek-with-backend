@@ -100,16 +100,17 @@ class ContestantRegistrationController extends Controller
         $stageName = $data['stage-name'];
         $username = $data['full-name'];
 
-        $request->file("idCard")->storeAs(
-            "1aOE8KhzgAI4QuIZI65q7H7XlpATx_N0L",
-            $stageName . '_' . $username . '_image',
-            "google"
-        );
+        $request->file("idCard")->store('public/images/');
 
-        return Http::post('https://sheet.best/api/sheets/704dadc4-002b-4d23-9bcf-31646417765e/tabs/Solo', $data);
+        // $request->file("idCard")->storeAs(
+        //     "1aOE8KhzgAI4QuIZI65q7H7XlpATx_N0L",
+        //     $stageName . '_' . $username . '_image',
+        //     "google"
+        // );
+        return "oke";
 
-        dd($data);
 
+        //return Http::post('https://sheet.best/api/sheets/704dadc4-002b-4d23-9bcf-31646417765e/tabs/Solo', $data);
     }
 
     public function welcome()
