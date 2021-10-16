@@ -85,9 +85,18 @@ Route::group(['prefix' => 'contestant'], function () {
 
 Route::group(['prefix' => 'judge'], function () {
 	Route::get('/', 'CMSController@judge')->name('judge');
-	Route::get('/starbook', 'CMSController@starbook')->name('starbook');	
+	Route::get('/starbook', 'CMSController@starbook')->name('starbook');
 	Route::get('/pick', 'CMSController@pick')->name('pick');
 	Route::get('/pick/isthara', 'CMSController@isthara')->name('isthara');
+});
+
+Route::group(['prefix' => 'starbook'], function () {
+	Route::post('/judge', 'StarbookController@createJudge')->name('createJudge');
+	Route::post('/login', 'StarbookController@loginJudge')->name('loginJudge');
+	// Route::get('/', 'CMSController@judge')->name('judge');
+	// Route::get('/starbook', 'CMSController@starbook')->name('starbook');	
+	// Route::get('/pick', 'CMSController@pick')->name('pick');
+	// Route::get('/pick/isthara', 'CMSController@isthara')->name('isthara');
 });
 
 
@@ -96,10 +105,11 @@ Route::group(['prefix' => 'regisContestant'], function () {
 });
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\StarbookController;
 
 Route::post('/upload', function (Request $request) {
 	// dd($request->file("gambar"));
-	dd($request->file("gambar")->store("1aOE8KhzgAI4QuIZI65q7H7XlpATx_N0L", "google"));
+	//dd($request->file("gambar")->store("1aOE8KhzgAI4QuIZI65q7H7XlpATx_N0L", "google"));
 });
 
 Route::any(
