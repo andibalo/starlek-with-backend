@@ -87,6 +87,7 @@ Route::group(['prefix' => 'judge'], function () {
 	Route::get('/', 'CMSController@judge')->name('judge');
 	Route::get('/starbook', 'CMSController@starbook')->name('starbook');	
 	Route::get('/pick', 'CMSController@pick')->name('pick');
+	Route::get('/pick/isthara', 'CMSController@isthara')->name('isthara');
 });
 
 

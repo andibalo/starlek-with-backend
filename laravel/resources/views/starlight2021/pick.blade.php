@@ -14,39 +14,39 @@
 <div class="section-1 container">
     <h1>Pick The Isthara</h1>
     <div class="row">
-        <div class="col-2">
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 p-2">
             <img src="https://images.unsplash.com/photo-1597589827317-4c6d6e0a90bd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="" width="100%">
             <button>NEXT</button>
         </div>
-        <div class="col-2">
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 p-2">
             <img src="https://images.unsplash.com/photo-1597589827317-4c6d6e0a90bd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="" width="100%">
             <button>NEXT</button>
         </div>
-        <div class="col-2">
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 p-2">
             <img src="https://images.unsplash.com/photo-1597589827317-4c6d6e0a90bd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="" width="100%">
             <button>NEXT</button>
         </div>
-        <div class="col-2">
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 p-2">
             <img src="https://images.unsplash.com/photo-1597589827317-4c6d6e0a90bd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="" width="100%">
             <button>NEXT</button>
         </div>
-        <div class="col-2">
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 p-2">
             <img src="https://images.unsplash.com/photo-1597589827317-4c6d6e0a90bd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="" width="100%">
             <button>NEXT</button>
         </div>
-        <div class="col-2">
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 p-2">
             <img src="https://images.unsplash.com/photo-1597589827317-4c6d6e0a90bd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="" width="100%">
             <button>NEXT</button>
         </div>
-        <div class="col-2">
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 p-2">
             <img src="https://images.unsplash.com/photo-1597589827317-4c6d6e0a90bd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="" width="100%">
             <button>NEXT</button>
         </div>
-        <div class="col-2">
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 p-2">
             <img src="https://images.unsplash.com/photo-1597589827317-4c6d6e0a90bd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="" width="100%">
             <button>NEXT</button>
         </div>
-        <div class="col-2">
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 p-2">
             <img src="https://images.unsplash.com/photo-1597589827317-4c6d6e0a90bd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="" width="100%">
             <button>NEXT</button>
         </div>

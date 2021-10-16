@@ -128,4 +128,12 @@ class CMSController extends Controller
 
         return view('starlight2021.pick', compact('title', 'nav_menu'));
     }
+
+    public function isthara()
+    {
+        $title = "PICK - Starbook";
+        $nav_menu = "starbook";
+
+        return view('starlight2021.istharaScore', compact('title', 'nav_menu'));
+    }
 }

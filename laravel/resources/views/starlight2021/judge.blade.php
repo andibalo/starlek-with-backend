@@ -11,18 +11,18 @@
 @endsection
 
 @section('content')
-<div class="section-1 container">
+<div class="section-1 container py-5">
     <div class="row">
-        <div class="col-6 justify-content-center d-flex flex-column">
+        <div class="col-lg-6 col-12 order-md-1 order-2 justify-content-center d-flex flex-column">
             <h1 class="pb-2">STARBOOK</h1>
             <h3>Rubrik Penilaian Juri Dazzling Stage</h2>
             <input class="mt-5" type="text" value="ENTER THE CODE">
         </div>
-        <div class="col-6 d-flex justify-content-end">
+        <div class="col-lg-6 col-12 order-md-2 order-1 d-flex justify-content-end position-relative">
             <img src="{{ asset('images/starlight2021/logo.png') }}" alt="" width="100%">
+            <div class="blue-box"></div>
         </div>
     </div>
-    <button>NEXT</button>
 </div>
 @endsection
 
