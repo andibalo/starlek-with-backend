@@ -179,6 +179,7 @@ padding-bottom: 75px;
     align-items: center;
     min-height: 100vh;
     display: flex;
+    color: var(--color-primary);
     
 }
 
@@ -223,17 +224,25 @@ padding-bottom: 75px;
     outline: none;
     border: var(--color-primary) 3pt solid;
     text-transform: uppercase;
-    box-shadow: -2px 1px 37px 3px var(--color-primary);
+    box-shadow: 0px 0px 7px 0px #ffffff;
     font-weight: 800;
+    font-size: 20px;
 }
 
 .section-1 input[type="text"]:focus{
     outline: none;
     
 }
+
+::placeholder {
+    color: var(--color-primary);
+    font-size: 20px;
+    font-weight: 700;
+}
 /* end */
 
 .footer {
+display: none;
 background-image: linear-gradient(
     to bottom,
     #14141a,

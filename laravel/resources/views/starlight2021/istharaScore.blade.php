@@ -10,13 +10,15 @@
 
 @section('content')
 <div class="section-1 container">
-    <div class="row pb-2">
-        <button>
-            Back
-        </button>
-    </div>
+
 
     <div class="container">
+        <div class="row pb-2 mb-2 ml-1">
+            <button>
+                Back
+            </button>
+        </div>
+        <h1 class="pb-2 text-center m-0">TABEL PENILAIAN ISTHARA</h1>
         <form action="" method="post">
             @csrf
             <table>
@@ -24,7 +26,6 @@
                 <thead>
                     <tr>
                         <th scope="col">Nama Isthara</th>
-                        <th scope="col">Talent</th>
                         <th scope="col">Penguasaan Skill</th>
                         <th scope="col">Konsep</th>
                         <th scope="col">Kreativitas</th>
@@ -32,11 +33,11 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <input type="hidden" id="judges" name="judge" value="">
                     @foreach($data as $data)
                     <tr>
                         <input type="hidden" name="namaIsthara[]" value="{{$data[0]}}" />
                         <td data-label="nama-isthara" name="nama-isthara">{{$data[0]}}</td>
-                        <td data-label="talent-isthara" name="talent-isthara">Nyanyi</td>
                         <td data-label="penguasaan-skill">
                             <input type="number" name="penguasaanSkill[]" min="1" max="5" value="1">
                         </td>
@@ -53,15 +54,15 @@
                     @endforeach
                 </tbody>
             </table>
-            <div class="row p-2 justify-content-center">
+            <div class="row p-2 my-3 mr-1 justify-content-end">
                 <button type="submit" name="submit">
-                    Submit
+                    Submit All
                 </button>
             </div>
         </form>
     </div>
 
-    <div class="row justify-content-between pt-2">
+    <div class="d-none row justify-content-between pt-2">
         <div class="col-md-3 col-12 isthara-profile d-flex flex-column text-left align-items-md-start align-items-center">
             <div class="profile-picture">
                 <img src="{{ asset('images/starlight2021/logo.png') }}" />
@@ -193,5 +194,10 @@
 @endsection
 
 @section('custom_js')
+<script>
+    var code = localStorage.getItem("judgeCode");
+    $('#judges').val(code);
+    console.log($('#judges').val());
+</script>
 
 @endsection

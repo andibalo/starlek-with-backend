@@ -132,7 +132,7 @@ class CMSController extends Controller
 
     public function isthara()
     {
-        $dataJSON = Http::get("https://sheet.best/api/sheets/31734eb2-83de-4f1a-ab96-a795f77fb406")->json();
+        $dataJSON = Http::get("https://sheet.best/api/sheets/31734eb2-83de-4f1a-ab96-a795f77fb406/tabs/Data")->json();
         $dataIsthara = collect($dataJSON);
 
         $title = "PICK - Starbook";
@@ -147,11 +147,23 @@ class CMSController extends Controller
 
     public function istharaScoring(Request $request)
     {
-        // dd($request->input());
+        //dd($request->input());
         $transformedData = [];
 
+        $judgeCode = $request->judge;
+        switch ($judgeCode) {
+            case "JDZ01":
+                $judgeName = "Wanda-Omar";
+            case "JDZ02":
+                $judgeName = "Vellania-Suganda";
+            case "JDZ03":
+                $judgeName = "Abraham-Gustavito";
+            default:
+                $judgeName = "CORVUS";
+        }
+
         $app = app();
-        for ($i = 0; $i < 14; $i++) {
+        for ($i = 0; $i <= 14; $i++) {
             $peserta = $app->make('stdClass');
             $peserta->peserta = $request->namaIsthara[$i];
             $peserta->penguasaanSkill = $request->penguasaanSkill[$i];
@@ -162,9 +174,13 @@ class CMSController extends Controller
             array_push($transformedData, $peserta);
         }
 
-        Http::post('https://sheet.best/api/sheets/31734eb2-83de-4f1a-ab96-a795f77fb406/tabs/Coba-coba', $transformedData);
+        Http::post('https://sheet.best/api/sheets/31734eb2-83de-4f1a-ab96-a795f77fb406/tabs/' . $judgeName, $transformedData);
 
         // buat view berhasil.
+        $title = "Judge";
+        $nav_menu = "Judge";
+
+        return view('starlight2021.judge', compact('title', 'nav_menu'));
     }
 
 

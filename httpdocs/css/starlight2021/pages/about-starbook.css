@@ -211,19 +211,22 @@ padding-bottom: 75px;
 }
 
 .section-1 button{
-    border: none;
-    color: white;
-    background-color: #101434;
-    padding: 15px 20px;
+    background: var(--color-secondary);
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    padding: 10px 20px;
     font-size: 18px;
     border-radius: 30px;
     transition: 0.2s;
+    font-family: 'Royal';
 
 }
 .section-1 button:hover{
-    color: #101434;
-    background-color: var(--color-primary);
+    transform: translateY(-3px); 
+    -webkit-box-shadow: 0 10px 15px rgb(245 220 175 / 30%);
+    box-shadow: 0 10px 15px rgb(245 220 175 / 30%);
     transition: 0.2s;
+    text-shadow: 0 0 10px rgb(245 220 175), 0 0 10px rgb(245 220 175);
 }
 
 .section-1 button:focus{
