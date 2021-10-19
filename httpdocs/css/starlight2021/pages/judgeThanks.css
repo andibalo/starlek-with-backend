@@ -187,9 +187,16 @@ padding-bottom: 75px;
     width: 100%;
 }
 
-.section-1 h1{
-    font-size: 72px;
+.section-1 h2{
+    font-size: 44px;
     font-weight: 800;
+    color: var(--color-primary);
+
+}
+
+.section-1 h4{
+    color: var(--color-primary);
+
 }
 
 .section-1 img{
