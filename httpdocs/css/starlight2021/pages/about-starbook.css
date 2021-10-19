@@ -176,7 +176,7 @@ padding-bottom: 75px;
 }
 
 .section-1 h1{
-    font-size: 36px;
+    font-size: 54px;
     font-weight: 800;
 }
 
@@ -201,7 +201,11 @@ padding-bottom: 75px;
 
 .section-1 .starbook-bg{
     position: absolute;
+    left: -10%;
     width: 100%;
+    bottom: -10%;
+    z-index: -1;
+    transform: scale(1.5, 2.5);
 }
 
 .button{

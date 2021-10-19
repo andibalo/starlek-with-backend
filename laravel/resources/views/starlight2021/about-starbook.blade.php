@@ -14,8 +14,8 @@
 <div class="section-1 pt-5 mt-5 container flex-column">
     <div class="row">
         <div class="col-lg-4 col-12 justify-content-center d-flex flex-column pb-3 position-relative">
-            <h1 class="pb-2 text-uppercase">All About The StarBook</h1>
-            <img src="{{ asset('images/starlight2021/judge/background2-2.png') }}" alt="" class="starbook-bg">
+            <h1 class="pb-2 text-uppercase text-center text-lg-left">All </br>About</br> The</br> StarBook</h1>
+            <img src="{{ asset('images/starlight2021/judge/background2-2.jpg') }}" alt="" class="d-none d-lg-block starbook-bg">
         </div>
         <div class="col-lg-7 col-12">
             <p><b>Hello Judges! Welcome to Dazzling Stage!</b></p>

@@ -205,13 +205,13 @@ padding-bottom: 75px;
     position: absolute;
     left: 50%;
     z-index: -1;
-    transform: scaleY(1.5);
+    transform: scaleY(3);
 }
 
 .section-1 .blue-box img{
     position: absolute;
     right: 12%;
-    bottom: -30%;
+    bottom: -95%;
 }
 
 .section-1 input[type="text"]{

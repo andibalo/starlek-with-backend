@@ -20,8 +20,8 @@
                     <input class="mt-3 w-md-50 w-75" type="text" placeholder="ENTER THE CODE HERE" id="code">
                 </form>
         </div>
-        <div class="col-lg-6 col-12 order-lg-2 order-1 d-flex justify-content-end position-relative">
-            <img src="{{ asset('images/starlight2021/logo.png') }}" alt="" width="100%">
+        <div class="col-lg-6 col-12 order-lg-2 order-1 d-flex justify-content-center position-relative">
+            <img src="{{ asset('images/starlight2021/logo.png') }}" alt="" width="50%">
             <div class="blue-box"><img src="{{ asset('images/starlight2021/judge/background1-2.png') }}" alt="" width="100%"></div>
         </div>
     </div>

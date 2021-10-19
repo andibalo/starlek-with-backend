@@ -180,7 +180,7 @@ class CMSController extends Controller
         $title = "Judge";
         $nav_menu = "Judge";
 
-        return view('starlight2021.judge', compact('title', 'nav_menu'));
+        return view('starlight2021.judgeThanks', compact('title', 'nav_menu'));
     }
 
 
