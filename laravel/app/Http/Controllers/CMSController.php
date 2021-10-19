@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 use Response;
 use DB;
 use Mail;
@@ -131,9 +132,38 @@ class CMSController extends Controller
 
     public function isthara()
     {
+        $dataJSON = Http::get("https://sheet.best/api/sheets/31734eb2-83de-4f1a-ab96-a795f77fb406")->json();
+        $dataIsthara = collect($dataJSON);
+
         $title = "PICK - Starbook";
         $nav_menu = "starbook";
 
-        return view('starlight2021.istharaScore', compact('title', 'nav_menu'));
+        return view('starlight2021.istharaScore', [
+            'title' => $title,
+            'nav_menu' => $nav_menu,
+            'data' => $dataIsthara
+        ]);
+    }
+
+    public function istharaScoring(Request $request)
+    {
+        // dd($request->input());
+        $transformedData = [];
+
+        $app = app();
+        for ($i = 0; $i < 14; $i++) {
+            $peserta = $app->make('stdClass');
+            $peserta->peserta = $request->namaIsthara[$i];
+            $peserta->penguasaanSkill = $request->penguasaanSkill[$i];
+            $peserta->Konsep = $request->konsep[$i];
+            $peserta->Kreativitas = $request->kreativitas[$i];
+            $peserta->Kostum = $request->kostum[$i];
+
+            array_push($transformedData, $peserta);
+        }
+
+        Http::post('https://sheet.best/api/sheets/31734eb2-83de-4f1a-ab96-a795f77fb406/tabs/Coba-coba', $transformedData);
+
+        // buat view berhasil.
     }
 }
