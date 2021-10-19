@@ -166,4 +166,15 @@ class CMSController extends Controller
 
         // buat view berhasil.
     }
+
+
+    public function istharaThanks()
+    {
+
+        $title = "Thank You - Starbook";
+        $nav_menu = "starbook";
+
+        return view('starlight2021.judgeThanks', compact('title', 'nav_menu'));
+    }
+    
 }

@@ -89,6 +89,8 @@ Route::group(['prefix' => 'judge'], function () {
 	Route::get('/pick', 'CMSController@pick')->name('pick');
 	Route::get('/pick/isthara', 'CMSController@isthara')->name('isthara');
 	Route::post('/pick/isthara', 'CMSController@istharaScoring')->name('istharaScoring');
+	Route::get('/thanks', 'CMSController@istharaThanks')->name('istharaThanks');
+
 });
 
 Route::group(['prefix' => 'starbook'], function () {
