@@ -34,91 +34,195 @@
             <div class="scoring-box py-4">
                 <div class="wrapper ">
                     <p>Penguasaan Skill</p>
-                    <div class="range-slider p-3">
-                        <div class="circle-wrapper">
-                            <div class="circle"></div>
-                            <div class="circle"></div>
-                            <div class="circle"></div>
-                            <div class="circle"></div>
-
+                    <form action="#" class="d-flex justify-content-around p-3">
+                        <div class="d-flex flex-column">
+                            <label for="test1">1</label>
+                            <input type="radio" id="test1" name="radio-group" value="1" checked>
                         </div>
-                        <div class="boost-label">
-                            <p>1</p>
-                            <p>2</p>
-                            <p>3</p>
-                            <p>4</p>
+                        <div class="d-flex flex-column">
+                            <label for="test2">2</label>
+                            <input type="radio" id="test2" name="radio-group" value="2">
                         </div>
-                        <input type="range" class="w-100 form-range" min="0" max="3" id="customRange2">
-                        
-                    </div>
+                        <div class="d-flex flex-column">
+                            <label for="test3">3</label>
+                            <input type="radio" id="test3" name="radio-group" value="3">
+                        </div>
+                        <div class="d-flex flex-column">
+                            <label for="test3">4</label>
+                            <input type="radio" id="test3" name="radio-group" value="4">
+                        </div>
+                        <div class="d-flex flex-column">
+                            <label for="test3">5</label>
+                            <input type="radio" id="test3" name="radio-group" value="5">
+                        </div>  
+                    </form>
                 </div>
             </div>
             <div class="scoring-box py-4">
                 <div class="wrapper ">
                     <p>Penguasaan Skill</p>
-                    <div class="range-slider p-3">
-                        <div class="circle-wrapper">
-                            <div class="circle"></div>
-                            <div class="circle"></div>
-                            <div class="circle"></div>
-                            <div class="circle"></div>
-
+                    <form action="#" class="d-flex justify-content-around p-3">
+                        <div class="d-flex flex-column">
+                            <label for="test1">1</label>
+                            <input type="radio" id="test1" name="radio-group" value="1" checked>
                         </div>
-                        <div class="boost-label">
-                            <p>1</p>
-                            <p>2</p>
-                            <p>3</p>
-                            <p>4</p>
+                        <div class="d-flex flex-column">
+                            <label for="test2">2</label>
+                            <input type="radio" id="test2" name="radio-group" value="2">
                         </div>
-                        <input type="range" class="w-100 form-range" min="0" max="3" id="customRange2">
-                        
-                    </div>
+                        <div class="d-flex flex-column">
+                            <label for="test3">3</label>
+                            <input type="radio" id="test3" name="radio-group" value="3">
+                        </div>
+                        <div class="d-flex flex-column">
+                            <label for="test3">4</label>
+                            <input type="radio" id="test3" name="radio-group" value="4">
+                        </div>
+                        <div class="d-flex flex-column">
+                            <label for="test3">5</label>
+                            <input type="radio" id="test3" name="radio-group" value="5">
+                        </div>  
+                    </form>
                 </div>
             </div>
-            <div class="scoring-box py-4">
-                <div class="wrapper ">
-                    <p>Penguasaan Skill</p>
-                    <div class="range-slider p-3">
-                        <div class="circle-wrapper">
-                            <div class="circle"></div>
-                            <div class="circle"></div>
-                            <div class="circle"></div>
-                            <div class="circle"></div>
+            <form action="">
 
+                <div class="scoring-box py-4">
+                    <div class="wrapper ">
+                        <p>Penguasaan Skill</p>
+                        <div action="#" class="d-flex justify-content-around p-3">
+                            <div class="d-flex flex-column">
+                                <label for="test1">1</label>
+                                <input type="radio" id="test1" name="radio-group" value="1">
+                            </div>
+                            <div class="d-flex flex-column">
+                                <label for="test2">2</label>
+                                <input type="radio" id="test2" name="radio-group" value="2">
+                            </div>
+                            <div class="d-flex flex-column">
+                                <label for="test3">3</label>
+                                <input type="radio" id="test3" name="radio-group" value="3">
+                            </div>
+                            <div class="d-flex flex-column">
+                                <label for="test3">4</label>
+                                <input type="radio" id="test3" name="radio-group" value="4">
+                            </div>
+                            <div class="d-flex flex-column">
+                                <label for="test3">5</label>
+                                <input type="radio" id="test3" name="radio-group" value="5">
+                            </div>  
                         </div>
-                        <div class="boost-label">
-                            <p>1</p>
-                            <p>2</p>
-                            <p>3</p>
-                            <p>4</p>
-                        </div>
-                        <input type="range" class="w-100 form-range" min="0" max="3" id="customRange2">
-                        
                     </div>
                 </div>
-            </div>
-            <div class="scoring-box py-4">
-                <div class="wrapper ">
-                    <p>Penguasaan Skill</p>
-                    <div class="range-slider p-3">
-                        <div class="circle-wrapper">
-                            <div class="circle"></div>
-                            <div class="circle"></div>
-                            <div class="circle"></div>
-                            <div class="circle"></div>
-
+                <div class="scoring-box py-4">
+                    <div class="wrapper ">
+                        <p>Penguasaan Skill</p>
+                        <div action="#" class="d-flex justify-content-around p-3">
+                            <div class="d-flex flex-column">
+                                <label for="test1">1</label>
+                                <input type="radio" id="test1" name="radio-group" value="1">
+                            </div>
+                            <div class="d-flex flex-column">
+                                <label for="test2">2</label>
+                                <input type="radio" id="test2" name="radio-group" value="2">
+                            </div>
+                            <div class="d-flex flex-column">
+                                <label for="test3">3</label>
+                                <input type="radio" id="test3" name="radio-group" value="3">
+                            </div>
+                            <div class="d-flex flex-column">
+                                <label for="test3">4</label>
+                                <input type="radio" id="test3" name="radio-group" value="4">
+                            </div>
+                            <div class="d-flex flex-column">
+                                <label for="test3">5</label>
+                                <input type="radio" id="test3" name="radio-group" value="5">
+                            </div>  
                         </div>
-                        <div class="boost-label">
-                            <p>1</p>
-                            <p>2</p>
-                            <p>3</p>
-                            <p>4</p>
-                        </div>
-                        <input type="range" class="w-100 form-range" min="0" max="3" id="customRange2">
-                        
                     </div>
                 </div>
-            </div>
+                <div class="scoring-box py-4">
+                    <div class="wrapper ">
+                        <p>Penguasaan Skill</p>
+                        <div action="#" class="d-flex justify-content-around p-3">
+                            <div class="d-flex flex-column">
+                                <label for="test1">1</label>
+                                <input type="radio" id="test1" name="radio-group" value="1">
+                            </div>
+                            <div class="d-flex flex-column">
+                                <label for="test2">2</label>
+                                <input type="radio" id="test2" name="radio-group" value="2">
+                            </div>
+                            <div class="d-flex flex-column">
+                                <label for="test3">3</label>
+                                <input type="radio" id="test3" name="radio-group" value="3">
+                            </div>
+                            <div class="d-flex flex-column">
+                                <label for="test3">4</label>
+                                <input type="radio" id="test3" name="radio-group" value="4">
+                            </div>
+                            <div class="d-flex flex-column">
+                                <label for="test3">5</label>
+                                <input type="radio" id="test3" name="radio-group" value="5">
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+                <div class="scoring-box py-4">
+                    <div class="wrapper ">
+                        <p>Penguasaan Skill</p>
+                        <div action="#" class="d-flex justify-content-around p-3">
+                            <div class="d-flex flex-column">
+                                <label for="test1">1</label>
+                                <input type="radio" id="test1" name="radio-group" value="1">
+                            </div>
+                            <div class="d-flex flex-column">
+                                <label for="test2">2</label>
+                                <input type="radio" id="test2" name="radio-group" value="2">
+                            </div>
+                            <div class="d-flex flex-column">
+                                <label for="test3">3</label>
+                                <input type="radio" id="test3" name="radio-group" value="3">
+                            </div>
+                            <div class="d-flex flex-column">
+                                <label for="test3">4</label>
+                                <input type="radio" id="test3" name="radio-group" value="4">
+                            </div>
+                            <div class="d-flex flex-column">
+                                <label for="test3">5</label>
+                                <input type="radio" id="test3" name="radio-group" value="5">
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+                <div class="scoring-box py-4">
+                    <div class="wrapper ">
+                        <p>Penguasaan Skill</p>
+                        <div action="#" class="d-flex justify-content-around p-3">
+                            <div class="d-flex flex-column">
+                                <label for="test1">1</label>
+                                <input type="radio" id="test1" name="radio-group" value="1">
+                            </div>
+                            <div class="d-flex flex-column">
+                                <label for="test2">2</label>
+                                <input type="radio" id="test2" name="radio-group" value="2">
+                            </div>
+                            <div class="d-flex flex-column">
+                                <label for="test3">3</label>
+                                <input type="radio" id="test3" name="radio-group" value="3">
+                            </div>
+                            <div class="d-flex flex-column">
+                                <label for="test3">4</label>
+                                <input type="radio" id="test3" name="radio-group" value="4">
+                            </div>
+                            <div class="d-flex flex-column">
+                                <label for="test3">5</label>
+                                <input type="radio" id="test3" name="radio-group" value="5">
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </div>

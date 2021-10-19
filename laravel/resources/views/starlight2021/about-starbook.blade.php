@@ -13,9 +13,9 @@
 @section('content')
 <div class="section-1 pt-5 mt-5 container flex-column">
     <div class="row">
-        <div class="col-lg-4 col-12 justify-content-center d-flex flex-column pb-3">
+        <div class="col-lg-4 col-12 justify-content-center d-flex flex-column pb-3 position-relative">
             <h1 class="pb-2">All About The StarBook</h1>
-            <img src="https://images.unsplash.com/photo-1504600770771-fb03a6961d33?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=502&q=80" alt="" width="100%">
+            <img src="{{ asset('images/starlight2021/judge/background2-2.png') }}" alt="" class="starbook-bg">
         </div>
         <div class="col-lg-7 col-12">
             <p><b>Hello Judges! Welcome to Dazzling Stage!</b></p>
