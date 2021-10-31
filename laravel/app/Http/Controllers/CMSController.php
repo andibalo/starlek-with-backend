@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Route;
 use Response;
 use DB;
 use Mail;
@@ -153,13 +154,13 @@ class CMSController extends Controller
         $judgeCode = $request->judge;
         switch ($judgeCode) {
             case "JDZ01":
-                $judgeName = "Wanda-Omar";
+                $judgeName = "Wanda-Omar"; break;
             case "JDZ02":
-                $judgeName = "Vellania-Suganda";
+                $judgeName = "Vellania-Suganda";break;
             case "JDZ03":
-                $judgeName = "Abraham-Gustavito";
+                $judgeName = "Abraham-Gustavito";break;
             default:
-                $judgeName = "CORVUS";
+                $judgeName = "CORVUS";break;
         }
 
         $app = app();
