@@ -133,9 +133,9 @@ class CMSController extends Controller
 
     public function isthara()
     {
-        $dataJSON = Http::get("https://sheet.best/api/sheets/31734eb2-83de-4f1a-ab96-a795f77fb406/tabs/Data")->json();
+        $dataJSON = Http::get("https://sheet.best/api/sheets/31734eb2-83de-4f1a-ab96-a795f77fb406/tabs/Rising")->json();
         $dataIsthara = collect($dataJSON);
-
+        // dd($dataIsthara);
         $title = "PICK - Starbook";
         $nav_menu = "starbook";
 

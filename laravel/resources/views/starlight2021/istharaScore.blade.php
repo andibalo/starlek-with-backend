@@ -38,6 +38,7 @@
                     <tr>
                         <input type="hidden" name="namaIsthara[]" value="{{$data[0]}}" />
                         <td data-label="nama-isthara" name="nama-isthara">{{$data[0]}}</td>
+
                         <td data-label="penguasaan-skill">
                             <input type="number" name="penguasaanSkill[]" min="1" max="5" value="1">
                         </td>
@@ -190,189 +191,159 @@
             </form>
         </div>
     </div>
-</div> -->
-
-<div class="row">
-
-    <div class="col-4 pick-isthara-section">
-        <div class="container text-center mt-5 pt-5">
-            <div class="box-container p-3">
-                <div class="box">
-        
-                </div>
-            </div>
-            <div class="box-container p-3">
-                <div class="box">
-        
-                </div>
-            </div>
-            <div class="box-container p-3">
-                <div class="box">
-        
-                </div>
-            </div>
-            <div class="box-container p-3">
-                <div class="box">
-        
-                </div>
-            </div>
-            <div class="box-container p-3">
-                <div class="box">
-        
-                </div>
-            </div>
-            <div class="box-container p-3">
-                <div class="box">
-        
-                </div>
-            </div>
-            <div class="box-container p-3">
-                <div class="box">
-        
-                </div>
-            </div>
-            <div class="box-container p-3">
-                <div class="box">
-        
-                </div>
-            </div>
-            <div class="box-container p-3">
-                <div class="box">
-        
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-8 ">
-        <div class="row pt-5 scoring-section">
-            <div class="col-2 scoring-text">
-                <h4> DAZZLING STAGE </h4>
-                <p>TALENT</p>
-                <p>SKALA PENILAIAN</p>
-                <ul>
-                    <li>1 Bintang = Sangat Kurang</li>
-                    <li>2 Bintang = Kurang</li>
-                    <li>3 Bintang = Cukup</li>
-                    <li>4 Bintang = Baik</li>
-                    <li>5 Bintang = Sangat Baik</li>
-                </ul>
-            </div>
-            <div class="col-9 d-flex flex-column justify-content-center align-items-center">
-                <div class="scoring-box w-100 py-2">
-                    <div class="wrapper ">
-                        <p>Penguasaan Skill</p>
-                        <div class="d-flex justify-content-around p-3">
-                            <div class="d-flex flex-column">
-                                <label for="test1">1</label>
-                                <input type="radio" id="test1" name="radio-group" value="1" checked>
-                            </div>
-                            <div class="d-flex flex-column">
-                                <label for="test2">2</label>
-                                <input type="radio" id="test2" name="radio-group" value="2">
-                            </div>
-                            <div class="d-flex flex-column">
-                                <label for="test3">3</label>
-                                <input type="radio" id="test3" name="radio-group" value="3">
-                            </div>
-                            <div class="d-flex flex-column">
-                                <label for="test3">4</label>
-                                <input type="radio" id="test3" name="radio-group" value="4">
-                            </div>
-                            <div class="d-flex flex-column">
-                                <label for="test3">5</label>
-                                <input type="radio" id="test3" name="radio-group" value="5">
-                            </div>  
-                        </div>
-                    </div>
-                </div>
-                <div class="scoring-box w-100 py-2">
-                    <div class="wrapper ">
-                        <p>Penguasaan Skill</p>
-                        <div action="#" class="d-flex justify-content-around p-3">
-                            <div class="d-flex flex-column">
-                                <label for="test1">1</label>
-                                <input type="radio" id="test1" name="radio-group" value="1" checked>
-                            </div>
-                            <div class="d-flex flex-column">
-                                <label for="test2">2</label>
-                                <input type="radio" id="test2" name="radio-group" value="2">
-                            </div>
-                            <div class="d-flex flex-column">
-                                <label for="test3">3</label>
-                                <input type="radio" id="test3" name="radio-group" value="3">
-                            </div>
-                            <div class="d-flex flex-column">
-                                <label for="test3">4</label>
-                                <input type="radio" id="test3" name="radio-group" value="4">
-                            </div>
-                            <div class="d-flex flex-column">
-                                <label for="test3">5</label>
-                                <input type="radio" id="test3" name="radio-group" value="5">
-                            </div>  
-                        </div>
-                    </div>
-                </div>
-                <div class="scoring-box w-100 py-2">
-                    <div class="wrapper ">
-                        <p>Penguasaan Skill</p>
-                        <div action="#" class="d-flex justify-content-around p-3">
-                            <div class="d-flex flex-column">
-                                <label for="test1">1</label>
-                                <input type="radio" id="test1" name="radio-group" value="1" checked>
-                            </div>
-                            <div class="d-flex flex-column">
-                                <label for="test2">2</label>
-                                <input type="radio" id="test2" name="radio-group" value="2">
-                            </div>
-                            <div class="d-flex flex-column">
-                                <label for="test3">3</label>
-                                <input type="radio" id="test3" name="radio-group" value="3">
-                            </div>
-                            <div class="d-flex flex-column">
-                                <label for="test3">4</label>
-                                <input type="radio" id="test3" name="radio-group" value="4">
-                            </div>
-                            <div class="d-flex flex-column">
-                                <label for="test3">5</label>
-                                <input type="radio" id="test3" name="radio-group" value="5">
-                            </div>  
-                        </div>
-                    </div>
-                </div>
-                <div class="scoring-box w-100 py-2">
-                    <div class="wrapper ">
-                        <p>Penguasaan Skill</p>
-                        <div action="#" class="d-flex justify-content-around p-3">
-                            <div class="d-flex flex-column">
-                                <label for="test1">1</label>
-                                <input type="radio" id="test1" name="radio-group" value="1" checked>
-                            </div>
-                            <div class="d-flex flex-column">
-                                <label for="test2">2</label>
-                                <input type="radio" id="test2" name="radio-group" value="2">
-                            </div>
-                            <div class="d-flex flex-column">
-                                <label for="test3">3</label>
-                                <input type="radio" id="test3" name="radio-group" value="3">
-                            </div>
-                            <div class="d-flex flex-column">
-                                <label for="test3">4</label>
-                                <input type="radio" id="test3" name="radio-group" value="4">
-                            </div>
-                            <div class="d-flex flex-column">
-                                <label for="test3">5</label>
-                                <input type="radio" id="test3" name="radio-group" value="5">
-                            </div>  
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-    </div>
-
 </div>
+ -->
 
+<!-- judges baru -->
+
+<form action="" method="post">
+    <div class="row">
+    
+            @csrf
+            <div class="col-4 pick-isthara-section">
+                <div class="container text-center mt-5 pt-5">
+                    @foreach($data as $data)
+                    <div class="box-container p-3">
+                        <div class="box">
+                            <img src="{{$data[0]}}" alt="">
+                            <img src="" alt="">
+                        </div>
+                        {{$data[0]}}
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+            <div class="col-8 ">
+                <div class="row pt-5 scoring-section">
+                    <div class="col-2 scoring-text">
+                        <h4> DAZZLING STAGE </h4>
+                        <p>TALENT</p>
+                        <p>SKALA PENILAIAN</p>
+                        <ul>
+                            <li>1 Bintang = Sangat Kurang</li>
+                            <li>2 Bintang = Kurang</li>
+                            <li>3 Bintang = Cukup</li>
+                            <li>4 Bintang = Baik</li>
+                            <li>5 Bintang = Sangat Baik</li>
+                        </ul>
+                    </div>
+                    <div class="col-9 d-flex flex-column justify-content-center align-items-center">
+                        <div class="scoring-box w-100 py-2">
+                            <div class="wrapper ">
+                                <p>Penguasaan Skill</p>
+                                <div class="d-flex justify-content-around p-3">
+                                    <div class="d-flex flex-column">
+                                        <label for="test1">1</label>
+                                        <input type="radio" id="test1" name="radio-group" value="1" checked>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <label for="test2">2</label>
+                                        <input type="radio" id="test2" name="radio-group" value="2">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <label for="test3">3</label>
+                                        <input type="radio" id="test3" name="radio-group" value="3">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <label for="test3">4</label>
+                                        <input type="radio" id="test3" name="radio-group" value="4">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <label for="test3">5</label>
+                                        <input type="radio" id="test3" name="radio-group" value="5">
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scoring-box w-100 py-2">
+                            <div class="wrapper ">
+                                <p>Penguasaan Skill</p>
+                                <div action="#" class="d-flex justify-content-around p-3">
+                                    <div class="d-flex flex-column">
+                                        <label for="test1">1</label>
+                                        <input type="radio" id="test1" name="radio-group" value="1" checked>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <label for="test2">2</label>
+                                        <input type="radio" id="test2" name="radio-group" value="2">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <label for="test3">3</label>
+                                        <input type="radio" id="test3" name="radio-group" value="3">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <label for="test3">4</label>
+                                        <input type="radio" id="test3" name="radio-group" value="4">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <label for="test3">5</label>
+                                        <input type="radio" id="test3" name="radio-group" value="5">
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scoring-box w-100 py-2">
+                            <div class="wrapper ">
+                                <p>Penguasaan Skill</p>
+                                <div action="#" class="d-flex justify-content-around p-3">
+                                    <div class="d-flex flex-column">
+                                        <label for="test1">1</label>
+                                        <input type="radio" id="test1" name="radio-group" value="1" checked>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <label for="test2">2</label>
+                                        <input type="radio" id="test2" name="radio-group" value="2">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <label for="test3">3</label>
+                                        <input type="radio" id="test3" name="radio-group" value="3">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <label for="test3">4</label>
+                                        <input type="radio" id="test3" name="radio-group" value="4">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <label for="test3">5</label>
+                                        <input type="radio" id="test3" name="radio-group" value="5">
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scoring-box w-100 py-2">
+                            <div class="wrapper ">
+                                <p>Penguasaan Skill</p>
+                                <div action="#" class="d-flex justify-content-around p-3">
+                                    <div class="d-flex flex-column">
+                                        <label for="test1">1</label>
+                                        <input type="radio" id="test1" name="radio-group" value="1" checked>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <label for="test2">2</label>
+                                        <input type="radio" id="test2" name="radio-group" value="2">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <label for="test3">3</label>
+                                        <input type="radio" id="test3" name="radio-group" value="3">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <label for="test3">4</label>
+                                        <input type="radio" id="test3" name="radio-group" value="4">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <label for="test3">5</label>
+                                        <input type="radio" id="test3" name="radio-group" value="5">
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+       
+
+    </div>
+</form>
 @endsection
 
 @section('custom_js')
