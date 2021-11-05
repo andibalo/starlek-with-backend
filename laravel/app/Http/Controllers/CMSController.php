@@ -194,4 +194,10 @@ class CMSController extends Controller
         return view('starlight2021.judgeThanks', compact('title', 'nav_menu'));
     }
     
+    public function voting(){
+        $title = "Voting - Starbook";
+        $nav_menu = "Voting";
+
+        return view('starlight2021.voting', compact('title', 'nav_menu'));
+    }
 }

@@ -107,6 +107,10 @@ Route::group(['prefix' => 'regisContestant'], function () {
 	Route::get('/', 'CMSController@regisContestant')->name('panel.regis');
 });
 
+Route::group(['prefix' => 'voting'], function (){
+	Route::get('/', 'CMSController@voting')->name('voting');
+});
+
 use Illuminate\Http\Request;
 use App\Http\Controllers\StarbookController;
 
