@@ -55,7 +55,7 @@
         </div>
     </div>
     <div class="button py-5">
-        <a href="/judge/pick/isthara"><button>NEXT</button></a>
+        <a id="nextBtn"><button>NEXT</button></a>
     </div>
 </div>
 @endsection
@@ -63,5 +63,34 @@
 @section('custom_js')
 <script src="{{asset('js/starlight2021/smarttab/dist/js/jquery.smartTab.js')}}"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+    $("#nextBtn").on('click', function(e) {
+        e.preventDefault();
+        var judgeCode = localStorage.getItem('judgeCode');
+        let judgeName;
+        switch (judgeCode) {
+            case "JDZ01":
+                judgeName = "Wanda-Omar";
+                break;
+            case "JDZ02":
+                judgeName = "Vellania-Suganda";
+                break;
+            case "JDZ03":
+                judgeName = "Abraham-Gustavito";
+                break;
+            case "JDZ04":
+                judgeName = "Rifqi-Fitriyansah";
+                break;
+            case "JDZ05":
+                judgeName = "Dandy-Hendstyo";
+                break;
+            default:
+                judgeName = "CORVUS";
+                break;
+        }
+        window.location.href = "/judge/pick/isthara/" + judgeName;
+    })
+</script>
 
 @endsection

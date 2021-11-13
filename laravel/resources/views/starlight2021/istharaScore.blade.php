@@ -11,11 +11,19 @@
 @section('content')
 <div class="row">
     <div class="col-4 pick-isthara-section">
-        <div class="container text-center mt-5 pt-5">
+        <div class="isthara-section-title text-center">
+            <h1>ISTHARA</h1>
+        </div>
+        <div class="container text-center">
             @foreach($data as $val)
             <div class="box-container p-3">
-                <div class="box istharaPic" data-attr="{{$val[1]}}">
-                    <img src="{{$val[0]}}" alt="" class="img-fluid">
+                <div class="box istharaPic d-flex align-items-center" data-attr="{{$val['peserta']}}">
+                    <img src="{{$val[0]}}" alt="" class="img-fluid istharaImg">
+                    @if($val['status'] == 'terisi')
+                    <div class="isthara-check">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    @endif
                 </div>
             </div>
             @endforeach
@@ -36,33 +44,34 @@
                 </ul>
             </div>
             <div class="col-9 d-flex flex-column">
-                <form action="" method="post">
+                <form action="/judge/pick/isthara" method="post">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <input type="hidden" id="judges" name="judge" value="">
-                    <input type="hidden" name="namaIsthara" value="{{$data[0][1]}}">
+                    <input type="hidden" name="namaIsthara" value="{{$data[0]['peserta']}}">
                     <div class="scoring-box w-100 py-2">
                         <p class="criteria-title">Penguasaan Skill</p>
                         <div class="wrapper">
                             <div class="d-flex justify-content-around">
                                 <div class="d-flex flex-column">
                                     <label for="skill1">1</label>
-                                    <input type="radio" id="skill1" name="penguasaanSkill" value="1" checked>
+                                    <input type="radio" id="skill1" name="penguasaanSkill" value="1" checked class="skill-star test-star">
+                                    <img src="" alt="">
                                 </div>
                                 <div class="d-flex flex-column">
                                     <label for="skill2">2</label>
-                                    <input type="radio" id="skill2" name="penguasaanSkill" value="2">
+                                    <input type="radio" id="skill2" name="penguasaanSkill" value="2" class="skill-star">
                                 </div>
                                 <div class="d-flex flex-column">
                                     <label for="skill3">3</label>
-                                    <input type="radio" id="skill3" name="penguasaanSkill" value="3">
+                                    <input type="radio" id="skill3" name="penguasaanSkill" value="3" class="skill-star">
                                 </div>
                                 <div class="d-flex flex-column">
                                     <label for="skill4">4</label>
-                                    <input type="radio" id="skill4" name="penguasaanSkill" value="4">
+                                    <input type="radio" id="skill4" name="penguasaanSkill" value="4" class="skill-star">
                                 </div>
                                 <div class="d-flex flex-column">
                                     <label for="skill5">5</label>
-                                    <input type="radio" id="skill5" name="penguasaanSkill" value="5">
+                                    <input type="radio" id="skill5" name="penguasaanSkill" value="5" class="skill-star">
                                 </div>
                             </div>
                         </div>
@@ -73,23 +82,23 @@
                             <div action="#" class="d-flex justify-content-around">
                                 <div class="d-flex flex-column">
                                     <label for="konsep1">1</label>
-                                    <input type="radio" id="konsep6" name="konsep" value="1" checked>
+                                    <input type="radio" id="konsep6" name="konsep" value="1" checked class="konsep-star test-star">
                                 </div>
                                 <div class="d-flex flex-column">
                                     <label for="konsep2">2</label>
-                                    <input type="radio" id="konsep2" name="konsep" value="2">
+                                    <input type="radio" id="konsep2" name="konsep" value="2" class="konsep-star">
                                 </div>
                                 <div class="d-flex flex-column">
                                     <label for="konsep3">3</label>
-                                    <input type="radio" id="konsep3" name="konsep" value="3">
+                                    <input type="radio" id="konsep3" name="konsep" value="3" class="konsep-star">
                                 </div>
                                 <div class="d-flex flex-column">
                                     <label for="konsep4">4</label>
-                                    <input type="radio" id="konsep4" name="konsep" value="4">
+                                    <input type="radio" id="konsep4" name="konsep" value="4" class="konsep-star">
                                 </div>
                                 <div class="d-flex flex-column">
                                     <label for="konsep5">5</label>
-                                    <input type="radio" id="konsep5" name="konsep" value="5">
+                                    <input type="radio" id="konsep5" name="konsep" value="5" class="konsep-star">
                                 </div>
                             </div>
                         </div>
@@ -100,23 +109,23 @@
                             <div action="#" class="d-flex justify-content-around">
                                 <div class="d-flex flex-column">
                                     <label for="kreativitas1">1</label>
-                                    <input type="radio" id="kreativitas1" name="kreativitas" value="1" checked>
+                                    <input type="radio" id="kreativitas1" name="kreativitas" value="1" checked class="kreativitas-star test-star">
                                 </div>
                                 <div class="d-flex flex-column">
                                     <label for="kreativitas2">2</label>
-                                    <input type="radio" id="kreativitas2" name="kreativitas" value="2">
+                                    <input type="radio" id="kreativitas2" name="kreativitas" value="2" class="kreativitas-star">
                                 </div>
                                 <div class="d-flex flex-column">
                                     <label for="kreativitas3">3</label>
-                                    <input type="radio" id="kreativitas3" name="kreativitas" value="3">
+                                    <input type="radio" id="kreativitas3" name="kreativitas" value="3" class="kreativitas-star">
                                 </div>
                                 <div class="d-flex flex-column">
                                     <label for="kreativitas4">4</label>
-                                    <input type="radio" id="kreativitas4" name="kreativitas" value="4">
+                                    <input type="radio" id="kreativitas4" name="kreativitas" value="4" class="kreativitas-star">
                                 </div>
                                 <div class="d-flex flex-column">
                                     <label for="kreativitas5">5</label>
-                                    <input type="radio" id="kreativitas5" name="kreativitas" value="5">
+                                    <input type="radio" id="kreativitas5" name="kreativitas" value="5" class="kreativitas-star">
                                 </div>
                             </div>
                         </div>
@@ -127,29 +136,30 @@
                             <div action="#" class="d-flex justify-content-around">
                                 <div class="d-flex flex-column">
                                     <label for="kostum1">1</label>
-                                    <input type="radio" id="kostum1" name="kostum" value="1" checked>
+                                    <input type="radio" id="kostum1" name="kostum" value="1" checked class="kostum-star test-star">
                                 </div>
                                 <div class="d-flex flex-column">
                                     <label for="kostum2">2</label>
-                                    <input type="radio" id="kostum2" name="kostum" value="2">
+                                    <input type="radio" id="kostum2" name="kostum" value="2" class="kostum-star">
                                 </div>
                                 <div class="d-flex flex-column">
                                     <label for="kostum3">3</label>
-                                    <input type="radio" id="kostum3" name="kostum" value="3">
+                                    <input type="radio" id="kostum3" name="kostum" value="3" class="kostum-star">
                                 </div>
                                 <div class="d-flex flex-column">
                                     <label for="kostum4">4</label>
-                                    <input type="radio" id="kostum4" name="kostum" value="4">
+                                    <input type="radio" id="kostum4" name="kostum" value="4" class="kostum-star">
                                 </div>
                                 <div class="d-flex flex-column">
                                     <label for="kostum5">5</label>
-                                    <input type="radio" id="kostum5" name="kostum" value="5">
+                                    <input type="radio" id="kostum5" name="kostum" value="5" class="kostum-star">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="btn-container">
-                        <button type="submit" name="submit" class="submitBtn">Submit</button>
+                    <div class="btn-container mt-4">
+                        <button type="submit" name="submit" class="submitBtn">Save</button>
+                        <button class="submitBtn" id="logoutBtn">Log Out</button>
                     </div>
                 </form>
             </div>
@@ -340,163 +350,7 @@
             </form>
         </div>
     </div>
-<<<<<<< Updated upstream
-</div>
- -->
-
-<!-- judges baru -->
-
-<form action="" method="post">
-    <div class="row">
-    
-            @csrf
-            <div class="col-4 pick-isthara-section">
-                <div class="container text-center mt-5 pt-5">
-                    @foreach($data as $data)
-                    <div class="box-container p-3">
-                        <div class="box">
-                            <img src="{{$data[0]}}" alt="">
-                            <img src="" alt="">
-                        </div>
-                        {{$data[0]}}
-                    </div>
-                    @endforeach
-                </div>
-            </div>
-            <div class="col-8 ">
-                <div class="row pt-5 scoring-section">
-                    <div class="col-2 scoring-text">
-                        <h4> DAZZLING STAGE </h4>
-                        <p>TALENT</p>
-                        <p>SKALA PENILAIAN</p>
-                        <ul>
-                            <li>1 Bintang = Sangat Kurang</li>
-                            <li>2 Bintang = Kurang</li>
-                            <li>3 Bintang = Cukup</li>
-                            <li>4 Bintang = Baik</li>
-                            <li>5 Bintang = Sangat Baik</li>
-                        </ul>
-                    </div>
-                    <div class="col-9 d-flex flex-column justify-content-center align-items-center">
-                        <div class="scoring-box w-100 py-2">
-                            <div class="wrapper ">
-                                <p>Penguasaan Skill</p>
-                                <div class="d-flex justify-content-around p-3">
-                                    <div class="d-flex flex-column">
-                                        <label for="test1">1</label>
-                                        <input type="radio" id="test1" name="radio-group" value="1" checked>
-                                    </div>
-                                    <div class="d-flex flex-column">
-                                        <label for="test2">2</label>
-                                        <input type="radio" id="test2" name="radio-group" value="2">
-                                    </div>
-                                    <div class="d-flex flex-column">
-                                        <label for="test3">3</label>
-                                        <input type="radio" id="test3" name="radio-group" value="3">
-                                    </div>
-                                    <div class="d-flex flex-column">
-                                        <label for="test3">4</label>
-                                        <input type="radio" id="test3" name="radio-group" value="4">
-                                    </div>
-                                    <div class="d-flex flex-column">
-                                        <label for="test3">5</label>
-                                        <input type="radio" id="test3" name="radio-group" value="5">
-                                    </div>  
-                                </div>
-                            </div>
-                        </div>
-                        <div class="scoring-box w-100 py-2">
-                            <div class="wrapper ">
-                                <p>Penguasaan Skill</p>
-                                <div action="#" class="d-flex justify-content-around p-3">
-                                    <div class="d-flex flex-column">
-                                        <label for="test1">1</label>
-                                        <input type="radio" id="test1" name="radio-group" value="1" checked>
-                                    </div>
-                                    <div class="d-flex flex-column">
-                                        <label for="test2">2</label>
-                                        <input type="radio" id="test2" name="radio-group" value="2">
-                                    </div>
-                                    <div class="d-flex flex-column">
-                                        <label for="test3">3</label>
-                                        <input type="radio" id="test3" name="radio-group" value="3">
-                                    </div>
-                                    <div class="d-flex flex-column">
-                                        <label for="test3">4</label>
-                                        <input type="radio" id="test3" name="radio-group" value="4">
-                                    </div>
-                                    <div class="d-flex flex-column">
-                                        <label for="test3">5</label>
-                                        <input type="radio" id="test3" name="radio-group" value="5">
-                                    </div>  
-                                </div>
-                            </div>
-                        </div>
-                        <div class="scoring-box w-100 py-2">
-                            <div class="wrapper ">
-                                <p>Penguasaan Skill</p>
-                                <div action="#" class="d-flex justify-content-around p-3">
-                                    <div class="d-flex flex-column">
-                                        <label for="test1">1</label>
-                                        <input type="radio" id="test1" name="radio-group" value="1" checked>
-                                    </div>
-                                    <div class="d-flex flex-column">
-                                        <label for="test2">2</label>
-                                        <input type="radio" id="test2" name="radio-group" value="2">
-                                    </div>
-                                    <div class="d-flex flex-column">
-                                        <label for="test3">3</label>
-                                        <input type="radio" id="test3" name="radio-group" value="3">
-                                    </div>
-                                    <div class="d-flex flex-column">
-                                        <label for="test3">4</label>
-                                        <input type="radio" id="test3" name="radio-group" value="4">
-                                    </div>
-                                    <div class="d-flex flex-column">
-                                        <label for="test3">5</label>
-                                        <input type="radio" id="test3" name="radio-group" value="5">
-                                    </div>  
-                                </div>
-                            </div>
-                        </div>
-                        <div class="scoring-box w-100 py-2">
-                            <div class="wrapper ">
-                                <p>Penguasaan Skill</p>
-                                <div action="#" class="d-flex justify-content-around p-3">
-                                    <div class="d-flex flex-column">
-                                        <label for="test1">1</label>
-                                        <input type="radio" id="test1" name="radio-group" value="1" checked>
-                                    </div>
-                                    <div class="d-flex flex-column">
-                                        <label for="test2">2</label>
-                                        <input type="radio" id="test2" name="radio-group" value="2">
-                                    </div>
-                                    <div class="d-flex flex-column">
-                                        <label for="test3">3</label>
-                                        <input type="radio" id="test3" name="radio-group" value="3">
-                                    </div>
-                                    <div class="d-flex flex-column">
-                                        <label for="test3">4</label>
-                                        <input type="radio" id="test3" name="radio-group" value="4">
-                                    </div>
-                                    <div class="d-flex flex-column">
-                                        <label for="test3">5</label>
-                                        <input type="radio" id="test3" name="radio-group" value="5">
-                                    </div>  
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-       
-
-    </div>
-</form>
-=======
 </div> -->
->>>>>>> Stashed changes
 @endsection
 
 @section('custom_js')
@@ -515,6 +369,19 @@
             // console.log($('input[name="namaIsthara"]').val())
             // console.log($(this).attr("data-attr"));
         })
+    })
+
+    $('input[type="radio"]').on("click", function(event) {
+        var cat = event.target.classList[0];
+        $("." + cat).removeClass('test-star');
+        $(this).addClass('test-star');
+    })
+
+    $('#logoutBtn').on("click", function(e) {
+        e.preventDefault();
+        localStorage.removeItem('judgeCode');
+        window.location.replace('/judge/thanks');
+        console.log("Bye bye!");
     })
 </script>
 

@@ -162,11 +162,21 @@
     /* NEWER Judge Section  */
 
     .pick-isthara-section{
-        background-color: var(--color-primary);
+        background-image: url('/images/starlight2021/judge/background3-1.png');
         height: 100%;
         width: 100%;
         max-height: 100vh;
-        overflow-y:scroll;
+        overflow-y: scroll;
+    }
+
+    .isthara-section-title {
+        margin-top: 11vw;
+    }
+
+    .isthara-section-title h1{
+        color: var(--color-primary);
+        font-size: 48px;
+        font-weight: 600;
     }
 
     .scoring-section{
@@ -178,9 +188,11 @@
 
     .scoring-text{
         color: var(--color-primary);
+        font-weight: 700;
     }
     .scoring-text h4{
         font-size: 14px;
+        letter-spacing: .7px;
     }
     .scoring-text p{
         font-size: 10px;
@@ -192,14 +204,29 @@
         padding: 0;
     }
 
+    .isthara-check {
+        margin-left: 30px;
+    }
+
+    .fa-check {
+        color: var(--color-primary);
+        font-size: 36px;
+    }
 
 
     .box{
-        background-color: var(--color-secondary);
         width: 200px;
         height: 200px;
-        border-radius: 50%;
         margin: auto;
+    }
+
+    .box img {
+        border-radius: 50%;
+        filter: brightness(.5);
+    }
+
+    .istharaPic.isActive img {
+        filter: brightness(1);
     }
 
 
@@ -295,9 +322,9 @@
         line-height: 1.25;
       }
 
-      .istharaPic.isActive {
-          border-radius: 50%;
-          overflow: hidden;
+      .istharaPic.isActive img {
+        border-radius: 50%;
+        box-shadow: 0 -5px 40px 1px rgb(255 255 255 / 50%);
       }
     /* END OF NEw Judge Section */
     
@@ -307,8 +334,19 @@
         justify-content: end;
     }
 
-    .criteria-title {
+    .scoring-box {
         color: var(--color-primary);
+    }
+
+    .scoring-box label {
+        color: var(--color-primary);
+        font-weight: 600;
+    }
+
+    .criteria-title {
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: .5px;
     }
     
     .section-1{
@@ -358,6 +396,23 @@
         bottom: -10%;
         width: 45%;
     }
+
+    /* radio button */
+    .test-star::before {
+        content: "";
+        width: 50px;
+        height: 50px;
+        background-image: url('/images/starlight2021/judge/rate-star.png');
+        position: absolute;
+        background-size: cover;
+        display: block;
+        top: -20px;
+        left: -20px;
+    }
+
+    .test-star {
+        position: relative;
+    }
     /* slider score  */
 
     .wrapper {
@@ -367,9 +422,10 @@
         justify-content: center;
         color: black;
         padding: 10px;
-        background-color: var(--color-primary);
+        background-color: #55050e;
         box-shadow: 7px 7px 0px -1px rgba(0,0,0,0.23);
-        border-radius: 20px;
+        border-radius: 15px;
+        border: 3px solid var(--color-primary);
     }
     .boost-label {
         display: flex;

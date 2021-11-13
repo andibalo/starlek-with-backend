@@ -87,7 +87,7 @@ Route::group(['prefix' => 'judge'], function () {
 	Route::get('/', 'CMSController@judge')->name('judge');
 	Route::get('/starbook', 'CMSController@starbook')->name('starbook');
 	Route::get('/pick', 'CMSController@pick')->name('pick');
-	Route::get('/pick/isthara', 'CMSController@isthara')->name('isthara');
+	Route::get('/pick/isthara/{nama?}', 'CMSController@isthara')->name('isthara');
 	Route::post('/pick/isthara', 'CMSController@NEWistharaScoring')->name('NEWistharaScoring');
 	Route::get('/thanks', 'CMSController@istharaThanks')->name('istharaThanks');
 });
@@ -106,7 +106,7 @@ Route::group(['prefix' => 'regisContestant'], function () {
 	Route::get('/', 'CMSController@regisContestant')->name('panel.regis');
 });
 
-Route::group(['prefix' => 'voting'], function (){
+Route::group(['prefix' => 'voting'], function () {
 	Route::get('/', 'CMSController@voting')->name('voting');
 });
 

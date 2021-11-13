@@ -37,7 +37,9 @@
         'JDZ00',
         'JDZ01',
         'JDZ02',
-        'JDZ03'
+        'JDZ03',
+        'JDZ04',
+        'JDZ05'
     ];
 
     $('#judges').submit(function(e) {

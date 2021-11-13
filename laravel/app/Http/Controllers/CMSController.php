@@ -133,52 +133,47 @@ class CMSController extends Controller
         return view('starlight2021.pick', compact('title', 'nav_menu'));
     }
 
-    public function isthara()
+    public function isthara($nama)
     {
-<<<<<<< Updated upstream
-        $dataJSON = Http::get("https://sheet.best/api/sheets/31734eb2-83de-4f1a-ab96-a795f77fb406/tabs/Rising")->json();
+        $dataJSON = Http::get("https://sheet.best/api/sheets/bcba5d83-906a-4626-9522-96b8afee68e3/tabs/Rising" . $nama)->json();
         $dataIsthara = collect($dataJSON);
-        // dd($dataIsthara);
-=======
-        // $dataJSON = Http::get("https://sheet.best/api/sheets/bcba5d83-906a-4626-9522-96b8afee68e3/tabs/Rising")->json();
-        // $dataIsthara = collect($dataJSON);
+        //dd($dataIsthara);
 
-        $dataIsthara = [
-            0 => [
-                0 => "https://drive.google.com/uc?export=view&id=1M1h0dQt7TsIodL1xO6CY1y0qweldCMVf",
-                1 => "FelasVegas"
-            ],
-            1 => [
-                0 => "https://drive.google.com/uc?export=view&id=1M1h0dQt7TsIodL1xO6CY1y0qweldCMVf",
-                1 => "ArchietaAditya"
-            ],
-            2 => [
-                0 => "https://drive.google.com/uc?export=view&id=1M1h0dQt7TsIodL1xO6CY1y0qweldCMVf",
-                1 => "AurelliaGraciaLusi"
-            ],
-            3 => [
-                0 => "https://drive.google.com/uc?export=view&id=1M1h0dQt7TsIodL1xO6CY1y0qweldCMVf",
-                1 => "BryanZen"
-            ],
-            4 => [
-                0 => "https://drive.google.com/uc?export=view&id=1M1h0dQt7TsIodL1xO6CY1y0qweldCMVf",
-                1 => "ChikaMegan"
-            ],
-            5 => [
-                0 => "https://drive.google.com/uc?export=view&id=1M1h0dQt7TsIodL1xO6CY1y0qweldCMVf",
-                1 => "FadlyAli"
-            ],
-            6 => [
-                0 => "https://drive.google.com/uc?export=view&id=1M1h0dQt7TsIodL1xO6CY1y0qweldCMVf",
-                1 => "GraciellaOlivia"
-            ],
-            7 => [
-                0 => "https://drive.google.com/uc?export=view&id=1M1h0dQt7TsIodL1xO6CY1y0qweldCMVf",
-                1 => "ROBERTTAN"
-            ]
-        ];
+        // $dataIsthara = [
+        //     0 => [
+        //         0 => "https://drive.google.com/uc?export=view&id=1M1h0dQt7TsIodL1xO6CY1y0qweldCMVf",
+        //         1 => "FelasVegas"
+        //     ],
+        //     1 => [
+        //         0 => "https://drive.google.com/uc?export=view&id=1M1h0dQt7TsIodL1xO6CY1y0qweldCMVf",
+        //         1 => "ArchietaAditya"
+        //     ],
+        //     2 => [
+        //         0 => "https://drive.google.com/uc?export=view&id=1M1h0dQt7TsIodL1xO6CY1y0qweldCMVf",
+        //         1 => "AurelliaGraciaLusi"
+        //     ],
+        //     3 => [
+        //         0 => "https://drive.google.com/uc?export=view&id=1M1h0dQt7TsIodL1xO6CY1y0qweldCMVf",
+        //         1 => "BryanZen"
+        //     ],
+        //     4 => [
+        //         0 => "https://drive.google.com/uc?export=view&id=1M1h0dQt7TsIodL1xO6CY1y0qweldCMVf",
+        //         1 => "ChikaMegan"
+        //     ],
+        //     5 => [
+        //         0 => "https://drive.google.com/uc?export=view&id=1M1h0dQt7TsIodL1xO6CY1y0qweldCMVf",
+        //         1 => "FadlyAli"
+        //     ],
+        //     6 => [
+        //         0 => "https://drive.google.com/uc?export=view&id=1M1h0dQt7TsIodL1xO6CY1y0qweldCMVf",
+        //         1 => "GraciellaOlivia"
+        //     ],
+        //     7 => [
+        //         0 => "https://drive.google.com/uc?export=view&id=1M1h0dQt7TsIodL1xO6CY1y0qweldCMVf",
+        //         1 => "ROBERTTAN"
+        //     ]
+        // ];
 
->>>>>>> Stashed changes
         $title = "PICK - Starbook";
         $nav_menu = "starbook";
 
@@ -204,6 +199,12 @@ class CMSController extends Controller
                 break;
             case "JDZ03":
                 $judgeName = "Abraham-Gustavito";
+                break;
+            case "JDZ04":
+                $judgeName = "Rifqi-Fitriyansah";
+                break;
+            case "JDZ05":
+                $judgeName = "Dandy-Hendstyo";
                 break;
             default:
                 $judgeName = "CORVUS";
@@ -233,7 +234,7 @@ class CMSController extends Controller
 
     public function NEWistharaScoring(Request $request)
     {
-        //dd($request->input());
+        // dd($request->input());
 
         $judgeCode = $request->judge;
         switch ($judgeCode) {
@@ -246,6 +247,12 @@ class CMSController extends Controller
             case "JDZ03":
                 $judgeName = "Abraham-Gustavito";
                 break;
+            case "JDZ04":
+                $judgeName = "Rifqi-Fitriyansah";
+                break;
+            case "JDZ05":
+                $judgeName = "Dandy-Hendstyo";
+                break;
             default:
                 $judgeName = "CORVUS";
                 break;
@@ -255,7 +262,12 @@ class CMSController extends Controller
         $sbAPI = 'https://sheet.best/api/sheets/bcba5d83-906a-4626-9522-96b8afee68e3/tabs/' . $judgeName . '/peserta';
         $sbAPI .= "/" . $request->namaIsthara;
 
+        $sbAPI2 = 'https://sheet.best/api/sheets/bcba5d83-906a-4626-9522-96b8afee68e3/tabs/Rising' . $judgeName . '/peserta';
+        $sbAPI2 .= "/" . $request->namaIsthara;
+
         // Http::post('https://sheet.best/api/sheets/bcba5d83-906a-4626-9522-96b8afee68e3/tabs/' . $judgeName, $transformedData);
+        Http::patch($sbAPI2, ['status' => 'terisi']);
+
         Http::patch($sbAPI, [
             'penguasaanSkill' => $request->penguasaanSkill,
             'Konsep' => $request->konsep,
@@ -267,26 +279,22 @@ class CMSController extends Controller
         $title = "Judge";
         $nav_menu = "Judge";
 
-        return view('starlight2021.judgeThanks', compact('title', 'nav_menu'));
+        return back();
     }
 
 
     public function istharaThanks()
     {
-
         $title = "Thank You - Starbook";
         $nav_menu = "starbook";
 
         return view('starlight2021.judgeThanks', compact('title', 'nav_menu'));
     }
-<<<<<<< Updated upstream
-    
-    public function voting(){
+    public function voting()
+    {
         $title = "Voting - Starbook";
         $nav_menu = "Voting";
 
         return view('starlight2021.voting', compact('title', 'nav_menu'));
     }
-=======
->>>>>>> Stashed changes
 }
