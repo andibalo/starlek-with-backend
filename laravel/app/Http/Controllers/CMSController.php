@@ -135,11 +135,6 @@ class CMSController extends Controller
 
     public function isthara()
     {
-<<<<<<< Updated upstream
-        $dataJSON = Http::get("https://sheet.best/api/sheets/31734eb2-83de-4f1a-ab96-a795f77fb406/tabs/Rising")->json();
-        $dataIsthara = collect($dataJSON);
-        // dd($dataIsthara);
-=======
         // $dataJSON = Http::get("https://sheet.best/api/sheets/bcba5d83-906a-4626-9522-96b8afee68e3/tabs/Rising")->json();
         // $dataIsthara = collect($dataJSON);
 
@@ -178,7 +173,6 @@ class CMSController extends Controller
             ]
         ];
 
->>>>>>> Stashed changes
         $title = "PICK - Starbook";
         $nav_menu = "starbook";
 
@@ -279,7 +273,6 @@ class CMSController extends Controller
 
         return view('starlight2021.judgeThanks', compact('title', 'nav_menu'));
     }
-<<<<<<< Updated upstream
     
     public function voting(){
         $title = "Voting - Starbook";
@@ -287,6 +280,4 @@ class CMSController extends Controller
 
         return view('starlight2021.voting', compact('title', 'nav_menu'));
     }
-=======
->>>>>>> Stashed changes
 }
