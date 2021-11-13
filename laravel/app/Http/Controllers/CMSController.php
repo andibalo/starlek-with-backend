@@ -9,6 +9,8 @@ use Response;
 use DB;
 use Mail;
 
+use function GuzzleHttp\json_encode;
+
 class CMSController extends Controller
 {
     public function home()
@@ -133,9 +135,50 @@ class CMSController extends Controller
 
     public function isthara()
     {
+<<<<<<< Updated upstream
         $dataJSON = Http::get("https://sheet.best/api/sheets/31734eb2-83de-4f1a-ab96-a795f77fb406/tabs/Rising")->json();
         $dataIsthara = collect($dataJSON);
         // dd($dataIsthara);
+=======
+        // $dataJSON = Http::get("https://sheet.best/api/sheets/bcba5d83-906a-4626-9522-96b8afee68e3/tabs/Rising")->json();
+        // $dataIsthara = collect($dataJSON);
+
+        $dataIsthara = [
+            0 => [
+                0 => "https://drive.google.com/uc?export=view&id=1M1h0dQt7TsIodL1xO6CY1y0qweldCMVf",
+                1 => "FelasVegas"
+            ],
+            1 => [
+                0 => "https://drive.google.com/uc?export=view&id=1M1h0dQt7TsIodL1xO6CY1y0qweldCMVf",
+                1 => "ArchietaAditya"
+            ],
+            2 => [
+                0 => "https://drive.google.com/uc?export=view&id=1M1h0dQt7TsIodL1xO6CY1y0qweldCMVf",
+                1 => "AurelliaGraciaLusi"
+            ],
+            3 => [
+                0 => "https://drive.google.com/uc?export=view&id=1M1h0dQt7TsIodL1xO6CY1y0qweldCMVf",
+                1 => "BryanZen"
+            ],
+            4 => [
+                0 => "https://drive.google.com/uc?export=view&id=1M1h0dQt7TsIodL1xO6CY1y0qweldCMVf",
+                1 => "ChikaMegan"
+            ],
+            5 => [
+                0 => "https://drive.google.com/uc?export=view&id=1M1h0dQt7TsIodL1xO6CY1y0qweldCMVf",
+                1 => "FadlyAli"
+            ],
+            6 => [
+                0 => "https://drive.google.com/uc?export=view&id=1M1h0dQt7TsIodL1xO6CY1y0qweldCMVf",
+                1 => "GraciellaOlivia"
+            ],
+            7 => [
+                0 => "https://drive.google.com/uc?export=view&id=1M1h0dQt7TsIodL1xO6CY1y0qweldCMVf",
+                1 => "ROBERTTAN"
+            ]
+        ];
+
+>>>>>>> Stashed changes
         $title = "PICK - Starbook";
         $nav_menu = "starbook";
 
@@ -154,13 +197,17 @@ class CMSController extends Controller
         $judgeCode = $request->judge;
         switch ($judgeCode) {
             case "JDZ01":
-                $judgeName = "Wanda-Omar"; break;
+                $judgeName = "Wanda-Omar";
+                break;
             case "JDZ02":
-                $judgeName = "Vellania-Suganda";break;
+                $judgeName = "Vellania-Suganda";
+                break;
             case "JDZ03":
-                $judgeName = "Abraham-Gustavito";break;
+                $judgeName = "Abraham-Gustavito";
+                break;
             default:
-                $judgeName = "CORVUS";break;
+                $judgeName = "CORVUS";
+                break;
         }
 
         $app = app();
@@ -175,7 +222,46 @@ class CMSController extends Controller
             array_push($transformedData, $peserta);
         }
 
-        Http::post('https://sheet.best/api/sheets/31734eb2-83de-4f1a-ab96-a795f77fb406/tabs/' . $judgeName, $transformedData);
+        Http::post('https://sheet.best/api/sheets/bcba5d83-906a-4626-9522-96b8afee68e3/tabs/' . $judgeName, $transformedData);
+
+        // buat view berhasil.
+        $title = "Judge";
+        $nav_menu = "Judge";
+
+        return view('starlight2021.judgeThanks', compact('title', 'nav_menu'));
+    }
+
+    public function NEWistharaScoring(Request $request)
+    {
+        //dd($request->input());
+
+        $judgeCode = $request->judge;
+        switch ($judgeCode) {
+            case "JDZ01":
+                $judgeName = "Wanda-Omar";
+                break;
+            case "JDZ02":
+                $judgeName = "Vellania-Suganda";
+                break;
+            case "JDZ03":
+                $judgeName = "Abraham-Gustavito";
+                break;
+            default:
+                $judgeName = "CORVUS";
+                break;
+        }
+
+
+        $sbAPI = 'https://sheet.best/api/sheets/bcba5d83-906a-4626-9522-96b8afee68e3/tabs/' . $judgeName . '/peserta';
+        $sbAPI .= "/" . $request->namaIsthara;
+
+        // Http::post('https://sheet.best/api/sheets/bcba5d83-906a-4626-9522-96b8afee68e3/tabs/' . $judgeName, $transformedData);
+        Http::patch($sbAPI, [
+            'penguasaanSkill' => $request->penguasaanSkill,
+            'Konsep' => $request->konsep,
+            'Kreativitas' => $request->kreativitas,
+            'Kostum' => $request->kostum
+        ]);
 
         // buat view berhasil.
         $title = "Judge";
@@ -193,6 +279,7 @@ class CMSController extends Controller
 
         return view('starlight2021.judgeThanks', compact('title', 'nav_menu'));
     }
+<<<<<<< Updated upstream
     
     public function voting(){
         $title = "Voting - Starbook";
@@ -200,4 +287,6 @@ class CMSController extends Controller
 
         return view('starlight2021.voting', compact('title', 'nav_menu'));
     }
+=======
+>>>>>>> Stashed changes
 }

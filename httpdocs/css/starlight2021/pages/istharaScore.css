@@ -294,9 +294,22 @@
         font-family: "Open Sans", sans-serif;
         line-height: 1.25;
       }
+
+      .istharaPic.isActive {
+          border-radius: 50%;
+          overflow: hidden;
+      }
     /* END OF NEw Judge Section */
     
     /* judge section */
+    .btn-container {
+        display: flex;
+        justify-content: end;
+    }
+
+    .criteria-title {
+        color: var(--color-primary);
+    }
     
     .section-1{
         font-family: "Montserrat" !important;
@@ -305,7 +318,7 @@
         color: var(--color-primary);
     }
     
-    .section-1 button{
+    .submitBtn{
         background: var(--color-secondary);
         border: 2px solid var(--color-primary);
         color: var(--color-primary);
@@ -317,7 +330,7 @@
     
     }
     
-    .section-1 button:hover{
+    .submitBtn:hover{
         transform: translateY(-3px); 
         -webkit-box-shadow: 0 10px 15px rgb(245 220 175 / 30%);
         box-shadow: 0 10px 15px rgb(245 220 175 / 30%);
@@ -325,7 +338,7 @@
         text-shadow: 0 0 10px rgb(245 220 175), 0 0 10px rgb(245 220 175);
     }
     
-    .section-1 button:focus{
+    .submitBtn:focus{
         border: none;
         outline: none;
     }
@@ -345,10 +358,6 @@
         bottom: -10%;
         width: 45%;
     }
-
-    
-
-
     /* slider score  */
 
     .wrapper {
