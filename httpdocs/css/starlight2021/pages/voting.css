@@ -31,7 +31,7 @@
     
     html{
     overflow-x: hidden!important;
-    
+    overflow: hidden;
     }
     
     :root {
@@ -54,7 +54,7 @@
     background-size: contain;
     background-position: center;
     overflow-x: hidden;
-    background-image: url("../../../images/starlight2021/voting/background.png");
+    
     
     }
     
@@ -176,36 +176,222 @@
     
  /* VOTING SECTION  */
 
-    .section-voting{
-        min-height: 100vh;
-        padding-top: 150px;
+    .section-voting h1{
+        text-align: center;
+        color: var(--color-primary);
+        font-weight: 700;
     }
+ 
+ .vote-bg {
+    /* The image used */
+    background-image: url("../../../images/starlight2021/voting/background.png");
+    /* Set a specific height */
+    min-height: 100vh; 
+    
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
 
-    .box-container{
-        padding: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        color: white;
-    }
+.login-vote {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background-image: url("../../../images/starlight2021/voting/form-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 40px;
+    color: white;
+    display: flex;
+}
 
-    .box{
-        width: 200px;
-        height: 300px;
-        background-color: white;
-        border-radius: 35px;
-    }
+.login-vote input[type=text]{
+    padding: 7px 20px;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+}
+.login-vote input[type=text]:focus{
+outline: none;
+    border: none;
+}
+ 
+.login-vote input[type=button]{
+    background:transparent;
+    padding: 0 40px;
+    border: white 3pt solid;
+    border-radius: 27px; 
+    color: white;
+    transition: 0.2s;
+    
+}
 
-    .sweet-alert-container{
-        background-image: url("../../../images/starlight2021/voting/submit-bg.png")!important;
-        background-position: center!important;
-        background-size: cover!important;
-        background-color: transparent!important;
-    }
+.login-vote input[type=button]:hover{
+    box-shadow: 0 1px 10px white;
+    transform: scale(1.01);
+    transition: 0.2s;
+}
+
+
+.section-voting{
+    padding: 100px 0;
+    display: none;
+}
+
+.box-container{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+.box-container p{
+    margin: 0;
+    padding: 10px 0;
+}
+
+.box{
+    width: 250px;
+    height: 330px;
+    background-color: white;
+    border-radius: 35px;
+    display: flex;
+}
+.box img{
+    border-radius: 35px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: 0.2s;
+
+}
+
+.box img:hover{
+    filter: grayscale(0%);
+    box-shadow: 0 5px 15px var(--color-primary);
+    transition: 0.2s;
+}
+
+
+.box img:focus{
+    filter: grayscale(0%);
+}
+
+
+.sweet-alert-popup{
+    background-image: url("../../../images/starlight2021/voting/submit-bg.png")!important;
+    background-position: center!important;
+    background-size: cover!important;
+    background-color: transparent!important;
+    border-radius: 15px!important;
+    width: 24em!important;
+    
+}
 
 
 
+
+.sweet-alert-cancel{
+    background:transparent!important;
+    padding: 0 20px!important;
+    border-radius: 27px!important; 
+    transition: 0.2s!important;
+
+    color: white!important;
+}
+
+.sweet-alert-cancel:hover{
+    text-shadow: 0 1px 10px white!important;
+    transform: scale(1.01)!important;
+    transition: 0.2s!important;
+}
+
+
+.sweet-alert-button{
+    background:transparent!important;
+    padding: 0 20px!important;
+    border: white 2pt solid!important;
+    border-radius: 27px!important; 
+    color: white!important;
+    outline: none;
+    transition: 0.2s!important;
+
+}
+.sweet-alert-button:focus{
+    box-shadow: none!important;
+ }
+ 
+.sweet-alert-button:hover{
+    box-shadow: 0 1px 10px white!important;
+    transform: scale(1.01)!important;
+    transition: 0.2s!important;
+}
+
+
+.sweet-alert-actions{
+    display: flex;
+    flex-direction: column;
+}
+.sweet-alert-title{
+   color: white!important;
+   font-size: 20px!important;
+}
+.vote-button button{
+    background:transparent;
+    padding: 0 40px;
+    border: white 3pt solid;
+    border-radius: 27px; 
+    color: white;
+    transition: 0.2s;
+    
+}
+
+.vote-button button:hover{
+    box-shadow: 0 1px 10px white;
+    transform: scale(1.01);
+    transition: 0.2s;
+}
+
+
+.sweet-alert-container{
+    padding: 2rem!important;
+}
+.sweet-alert-popup2{
+    background-image: url("../../../images/starlight2021/voting/1.png")!important;
+    background-position: center!important;
+    background-size: cover!important;
+    background-color: transparent!important;
+    border-radius: 15px!important; 
+    padding-left: 1em!important;
+    padding-right: 1em!important;
+
+    width: auto!important;
+}
+
+.sweet-alert-title2{
+    color: white!important;
+    font-size: 20px!important;
+ }
+
+ 
+.sweet-alert-text2{
+    color: white!important;
+    font-size: 16px!important;
+ }
+
+ .sweet-alert-footer2{
+    color: #bdbdbd!important;
+    font-size: 12px!important;
+    border: none!important;
+ }
  /* END  */
     
     .footer {
