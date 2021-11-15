@@ -191,19 +191,19 @@ class CMSController extends Controller
 
         $judgeCode = $request->judge;
         switch ($judgeCode) {
-            case "JDZ01":
+            case "RSWD08":
                 $judgeName = "Wanda-Omar";
                 break;
-            case "JDZ02":
+            case "RSVL08":
                 $judgeName = "Vellania-Suganda";
                 break;
-            case "JDZ03":
+            case "RSAG08":
                 $judgeName = "Abraham-Gustavito";
                 break;
-            case "JDZ04":
+            case "RSRQ08":
                 $judgeName = "Rifqi-Fitriyansah";
                 break;
-            case "JDZ05":
+            case "RSDN08":
                 $judgeName = "Dandy-Hendstyo";
                 break;
             default:
@@ -238,19 +238,19 @@ class CMSController extends Controller
 
         $judgeCode = $request->judge;
         switch ($judgeCode) {
-            case "JDZ01":
+            case "RSWD08":
                 $judgeName = "Wanda-Omar";
                 break;
-            case "JDZ02":
+            case "RSVL08":
                 $judgeName = "Vellania-Suganda";
                 break;
-            case "JDZ03":
+            case "RSAG08":
                 $judgeName = "Abraham-Gustavito";
                 break;
-            case "JDZ04":
+            case "RSRQ08":
                 $judgeName = "Rifqi-Fitriyansah";
                 break;
-            case "JDZ05":
+            case "RSDN08":
                 $judgeName = "Dandy-Hendstyo";
                 break;
             default:

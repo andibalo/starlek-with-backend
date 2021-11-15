@@ -15,7 +15,7 @@
     <div class="row">
         <div class="starbook-title col-lg-6 col-12 order-lg-1 order-2 justify-content-center d-flex flex-column">
             <h1 class="pb-2 text-center m-0">STARBOOK</h1>
-            <h3 class="text-center">Rubrik penilaian juri Dazzling Stage</h2>
+            <h3 class="text-center">Rubrik penilaian juri Rising Stage</h2>
                 <form id="judges" class="text-center">
                     <input class="mt-3 w-md-50 w-75" type="text" placeholder="ENTER THE CODE HERE" id="code">
                 </form>
@@ -35,11 +35,11 @@
 <script>
     const validToken = [
         'JDZ00',
-        'JDZ01',
-        'JDZ02',
-        'JDZ03',
-        'JDZ04',
-        'JDZ05'
+        'RSWD08',
+        'RSVL08',
+        'RSRQ08',
+        'RSDN08',
+        'RSAG08'
     ];
 
     $('#judges').submit(function(e) {

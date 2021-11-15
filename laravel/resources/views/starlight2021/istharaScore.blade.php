@@ -32,7 +32,7 @@
     <div class="col-8 ">
         <div class="row pt-5 scoring-section">
             <div class="col-2 scoring-text">
-                <h4> DAZZLING STAGE </h4>
+                <h4> RISING STAGE </h4>
                 <p>TALENT</p>
                 <p>SKALA PENILAIAN</p>
                 <ul>

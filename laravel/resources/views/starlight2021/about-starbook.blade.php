@@ -18,7 +18,7 @@
             <img src="{{ asset('images/starlight2021/judge/background2-2.jpg') }}" alt="" class="d-none d-lg-block starbook-bg">
         </div>
         <div class="col-lg-7 col-12">
-            <p><b>Hello Judges! Welcome to Dazzling Stage!</b></p>
+            <p><b>Hello Judges! Welcome to Rising Stage!</b></p>
             <p>Berikut langkah-langkah juri untuk dapat menilai para Isthara:</p>
             <ol>
                 <li>Berikan penilaian Anda untuk seluruh Isthara, sesuai dengan persentase yang tertera.</li>
@@ -39,7 +39,7 @@
                 <tr>
                     <td>Konsep</td>
                     <td>25%</td>
-                    <td>Isthara dapat mengemas bakat dan keterampilan mereka sesuai dengan konsep Dazzling Starlight 2021.</td>
+                    <td>Isthara dapat mengemas bakat dan keterampilan mereka sesuai dengan konsep Rising Starlight 2021.</td>
                 </tr>
                 <tr>
                     <td>Kreativitas</td>
@@ -49,7 +49,7 @@
                 <tr>
                     <td>Kostum</td>
                     <td>15%</td>
-                    <td>Isthara dapat menyesuaikan kostum atau pakaian yang Isthara gunakan sesuai dengan konsep Dazzling.</td>
+                    <td>Isthara dapat menyesuaikan kostum atau pakaian yang Isthara gunakan sesuai dengan konsep Rising.</td>
                 </tr>
             </table>
         </div>
@@ -70,19 +70,19 @@
         var judgeCode = localStorage.getItem('judgeCode');
         let judgeName;
         switch (judgeCode) {
-            case "JDZ01":
+            case "RSWD08":
                 judgeName = "Wanda-Omar";
                 break;
-            case "JDZ02":
+            case "RSVL08":
                 judgeName = "Vellania-Suganda";
                 break;
-            case "JDZ03":
+            case "RSRQ08":
                 judgeName = "Abraham-Gustavito";
                 break;
-            case "JDZ04":
+            case "RSDN08":
                 judgeName = "Rifqi-Fitriyansah";
                 break;
-            case "JDZ05":
+            case "RSAG08":
                 judgeName = "Dandy-Hendstyo";
                 break;
             default:
