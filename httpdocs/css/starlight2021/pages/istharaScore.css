@@ -338,6 +338,12 @@
         color: var(--color-primary);
     }
 
+    .scoring-text, .scoring-text h4{
+        font-weight: 700;
+    }
+    
+
+
     .scoring-box label {
         color: var(--color-primary);
         font-weight: 600;
@@ -413,6 +419,10 @@
     .test-star {
         position: relative;
     }
+
+    .test-star:hover, input[type=radio]:hover{
+        cursor: pointer;
+    }
     /* slider score  */
 
     .wrapper {
@@ -433,6 +443,9 @@
         width: 100%;
     }
     
+    .footer{
+        display: none!important;
+    }
 
     /* end */
     

@@ -27,6 +27,9 @@
                 </div>
             </div>
             @endforeach
+            <div class="btn-container justify-content-center my-4">
+                <button class="submitBtn" id="logoutBtn">Log Out</button>
+            </div>
         </div>
     </div>
     <div class="col-8 ">
@@ -159,7 +162,6 @@
                     </div>
                     <div class="btn-container mt-4">
                         <button type="submit" name="submit" class="submitBtn">Save</button>
-                        <button class="submitBtn" id="logoutBtn">Log Out</button>
                     </div>
                 </form>
             </div>

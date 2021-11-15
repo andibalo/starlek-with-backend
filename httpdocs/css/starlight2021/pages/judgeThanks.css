@@ -201,6 +201,7 @@ padding-bottom: 75px;
 
 .section-1 img{
     padding: 0;
+    height: fit-content;
 }
 
 .section-1 .blue-box{
@@ -238,6 +239,10 @@ padding-bottom: 75px;
 .section-1 input[type="text"]:focus{
     outline: none;
     
+}
+
+.footer{
+    display: none!important;
 }
 /* end */
 

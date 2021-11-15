@@ -237,6 +237,10 @@ padding-bottom: 75px;
     border: none;
     outline: none;
 }
+
+.footer{
+    display: none!important;
+}
 /* end */
 
 .footer {

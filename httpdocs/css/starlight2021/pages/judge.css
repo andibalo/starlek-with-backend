@@ -195,6 +195,7 @@ padding-bottom: 75px;
 
 .section-1 img{
     padding: 0;
+    height: fit-content;
 }
 
 .section-1 .blue-box{
@@ -238,6 +239,10 @@ padding-bottom: 75px;
     color: var(--color-primary);
     font-size: 20px;
     font-weight: 700;
+}
+
+.footer{
+    display: none!important;
 }
 /* end */
 
