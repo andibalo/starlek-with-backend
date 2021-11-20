@@ -108,6 +108,8 @@ Route::group(['prefix' => 'regisContestant'], function () {
 
 Route::group(['prefix' => 'voting'], function () {
 	Route::get('/', 'CMSController@voting')->name('voting');
+	Route::post('/', 'CMSController@votingIsthara')->name('voting');
+	Route::post('/voters', 'CMSController@dataVoters')->name('voting');
 });
 
 use Illuminate\Http\Request;

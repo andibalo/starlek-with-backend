@@ -296,6 +296,51 @@ class CMSController extends Controller
         $title = "Voting - Starbook";
         $nav_menu = "Voting";
 
-        return view('starlight2021.voting', compact('title', 'nav_menu'));
+        $dataJSON = Http::get("https://sheet.best/api/sheets/259b6aff-3c82-4ca1-8f3f-61c32272bf1a/tabs/dataIsthara")->json();
+        $dataIsthara = collect($dataJSON);
+
+        return view('starlight2021.voting', [
+            'title' => $title,
+            'nav_menu' => $nav_menu,
+            'data' => $dataIsthara
+        ]);
+    }
+
+    public function votingIsthara(Request $request)
+    {
+        $email = $request->input('email');
+        $istharaName = $request->input('istharaName');
+        $totalVote = $request->input('totalVote');
+
+        // update voters flag HasVoted
+        Http::patch('https://sheet.best/api/sheets/259b6aff-3c82-4ca1-8f3f-61c32272bf1a/tabs/hasilVote/Email/' . $email, [
+            'Vote' => $istharaName,
+            'HasVoted' => 1
+        ]);
+
+        // update isthara vote count
+        Http::patch('https://sheet.best/api/sheets/259b6aff-3c82-4ca1-8f3f-61c32272bf1a/tabs/dataIsthara/peserta/' . $istharaName, [
+            'totalVote' => $totalVote + 1
+        ]);
+    }
+
+    public function dataVoters(Request $request)
+    {
+        //dd($request->input());
+        $nama = $request->input('name');
+        $email = $request->input('email');
+
+        $dataJSON = Http::get("https://sheet.best/api/sheets/259b6aff-3c82-4ca1-8f3f-61c32272bf1a/tabs/hasilVote/Email/" . $email)->json();
+        $dataIsthara = collect($dataJSON);
+
+        if (count($dataIsthara) > 0 && $dataIsthara[0]['HasVoted'] == "1") {
+            return true;
+        }
+
+        Http::post('https://sheet.best/api/sheets/259b6aff-3c82-4ca1-8f3f-61c32272bf1a/tabs/hasilVote', [
+            'Name' => $nama,
+            'Email' => $email,
+            'HasVoted' => 0
+        ]);
     }
 }
